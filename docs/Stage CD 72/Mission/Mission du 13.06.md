@@ -8,7 +8,7 @@ Il faudra vous connectez avec vos codes fourni aux préalables :
 
 ![Image connexion GITHUB](../../images/conexiongit.jpg)
 
-Une fois connecté il faudra **Cliquer sur new en haut à droite de la page**
+Une fois connecté il faudra **Cliquer sur "new" en haut à droite de la page**
 
 ![new dépôt](../../images/new.jpg)
 
@@ -22,5 +22,10 @@ Ensuite renseigner les informations suivante :
 
 Aller dans l'onglet **"settings"** 
 
-Puis aller dans l'onglet pages 
-hjnkjbin kinbk 
+Puis aller dans l'onglet pages :
+
+![Page](../../images/page.jpg)
+
+Vous devriez arriver sur cet onglet : 
+
+![Page_2.0](../../images/page_2.0.jpg)
