@@ -1,6 +1,6 @@
 # Mission du 13/06
 
-##  Création d'un dépôt **GITHUB** pour héberger mon Portfolio
+##  Création d'un dépôt GITHUB pour héberger mon Portfolio
 
 ## Comment crée un dépot GITHUB 
 
