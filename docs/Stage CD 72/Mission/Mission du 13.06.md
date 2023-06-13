@@ -23,3 +23,4 @@ Ensuite renseigner les informations suivante :
 Aller dans l'onglet **"settings"** 
 
 Puis aller dans l'onglet pages 
+hjnkjbin kinbk 
