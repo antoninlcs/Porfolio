@@ -24,7 +24,7 @@ jobs:
       - run: pip install mkdocs-material
       - run: pip install mkdocs-mermaid2-plugin
       - run: mkdocs build
-       - name: "Deploy Github Pages"
+      - name: "Deploy Github Pages"
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
