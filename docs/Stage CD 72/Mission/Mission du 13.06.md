@@ -16,4 +16,10 @@ Ensuite renseigner les informations suivante :
 
 ![dépôt](../../images/dépôt.jpg)
 
-ùmkldzp,nn  no
+**<span style="color:red">Voilà votre dépôt GITHUB créer !!</span>**
+
+## Activer la page web 
+
+Aller dans l'onglet **"settings"** 
+
+Puis aller dans l'onglet pages 
