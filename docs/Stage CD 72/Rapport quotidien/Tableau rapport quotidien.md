@@ -115,8 +115,28 @@ Visite des serveurs
 Installation SRV LINUX DOCKER 
 
 
+## Le 6/06 
+
+Visite d'un collège + manipulation registry docker 
+
+### Preuve 
+
+[Mission registry](https://antoninlcs.github.io/cd72/Stage%20CD%2072/Mission/Registry%20docker/)
 
 
+## Le 7/06
+
+Réunion avec Chef de projet 
+
+## Le 8/06
+
+Journée teletravail
+
+## Le 12/06
+
+Push une image sur le registry depuis une VM extérieur 
+
+Problème : Proxy
 
 
 
