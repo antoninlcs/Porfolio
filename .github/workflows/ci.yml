@@ -1,24 +1,35 @@
-name: ci 
+name: CI/CD
+
 on:
   push:
     branches:
-      - master 
       - main
-  pull_request:
-    branches:
-      - main
-  workflow_dispatch:    
-permissions:
-  contents: write
+
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Python
+        uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+
+      - name: Install MkDocs
+        run: pip install mkdocs
+
+      - name: Build Documentation
+        run: mkdocs build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+    - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
       - uses: actions/cache@v3
         with:
           key: mkdocs-material-${{ env.cache_id }}
@@ -28,4 +39,3 @@ jobs:
       - run: pip install mkdocs-material
       - run: pip install mkdocs-mermaid2-plugin  
       - run: mkdocs gh-deploy --force
-
