@@ -1,4 +1,4 @@
-# <span style="color:red"> Création d'un dépôt **GITHUB** pour héberger mon Portfolio
+#  Création d'un dépôt **GITHUB** pour héberger mon Portfolio
 
 ## Comment crée un dépot GITHUB 
 
