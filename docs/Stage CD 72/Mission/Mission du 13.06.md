@@ -31,3 +31,17 @@ Puis aller dans l'onglet pages :
 Vous devriez arriver sur cet onglet : 
 
 ![Page_2.0](../../images/page_2.0.jpg)
+
+## Création fichier "ci.yml"
+
+<span style="color:red">Ce fichier est un script qui permet de construire et de déployer son site automatiquement</span>
+
+Pour ce faire :
+
+~~~bash
+mkdir .github
+mkdir workflows
+vim ci.yml
+~~~
+
+<span style="color:red">Voilà dépôt prêt à être utiliser !!! </span>
