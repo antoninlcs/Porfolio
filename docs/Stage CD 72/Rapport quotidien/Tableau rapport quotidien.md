@@ -1,0 +1,186 @@
+RAPPORT QUOTIDIEN
+
+
+## Le 22 juin : 
+
+**Matin** : Réunion avec les différents responsable de chaque services
+
+
+Après-midi :
+Recherche sur le docker 
+
+
+
+
+## Le 23 juin 
+
+**Matin** : Installation multipass
+ 
+manipulation VM
+
+Install et conf docker 
+
+**Après-midi** : J’ai héberger un site web sur un docker qui fait office de serveur web
+
+### Preuve : 
+
+[Mission 23/05](/Stage%20CD%2072/Mission/Mission%20du%2023.05/)
+
+
+
+
+## Le 24 juin
+
+
+**Matin et Après Midi:** 
+
+Prise en main SSH 
+Clé prv et pub
+Git-lab ( Clone et push un dépôt ) 
+
+### Preuve :
+
+[Mission 24/05](/Stage%20CD%2072/Mission/Mission%20du%2024.05/)
+
+
+
+## Le 25 juin 
+
+**Matin et Après Midi:** 
+
+Création docker-compose
+Apache MariaDB
+avec Wordpress
+
+### Preuve :
+
+[Mission 25/05](/Stage%20CD%2072/Mission/Mission%20du%2025.05/)
+
+
+
+## Le 26 juin 
+
+**Matin et Après Midi:**  
+
+Création d’un script bash qui récupère la taille de la partition “home”. Cette information sera stocker dans la BDD
+
+### Preuve :
+
+[Mission 26/05](/Stage%20CD%2072/Mission/Mission%20du%2026.05/)
+
+
+
+## Le 30 juin 
+
+**Matin et Après Midi**
+
+Création d’un script bash qui récupère la taille de la partition “home”. Cette information sera stocker dans la BDD
+
+
+### Preuve :
+
+[Mission 26/05](/Stage%20CD%2072/Mission/Mission%20du%2026.05/)
+
+
+
+## Le 31 juin 
+
+**Matin et après midi**
+
+Utilisation et installation MkDocs
+
+Hébergement Mkdocs sous un docker. Sur le docker tournée le service web Nginx
+
+### Preuve 
+
+[Mission 31/05](/Stage%20CD%2072/Mission/Mission%20du%2031.05/)
+
+
+## Le 1 juin
+
+Customisation page Mdocks 
+
+### Preuve 
+
+[Lien vers mon site](http://51.79.83.150:19223/antonin.lucas/)
+
+
+## Le 2 juin
+
+Visite des serveurs 
+
+
+## Le 5/06 
+
+Installation SRV LINUX DOCKER 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

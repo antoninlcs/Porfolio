@@ -1,0 +1,20 @@
+
+site_name: Portfolio
+theme: 
+  name: material
+  highlightjs: true
+plugins:
+  - search
+  - mermaid2:
+      arguments:
+        securityLevel: 'loose'
+        theme: 'neutral'
+markdown_extensions:
+  - toc:
+      toc_depth: 2
+extra_javascript:
+    - https://unpkg.com/mermaid/dist/mermaid.min.js
+    - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
+    - javascripts/config.js
+extra_css:
+    - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css
