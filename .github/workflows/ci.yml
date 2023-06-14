@@ -24,7 +24,7 @@ jobs:
         run: mkdocs build --verbose --clean
 
       - name: Deploy to GitHub Pages
-        uses: actions/checkout@a81bbbf8298c0fa03ea29cdc473d45769f953675
+        uses: actions/deploy-pages@v2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
