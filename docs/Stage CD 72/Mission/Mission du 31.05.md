@@ -61,7 +61,7 @@ Ensuite aller dans ce dossier et faite :
 
 #### Créer un dépôt sur git et le cloner
 
-Pour ce faire aller voir [La mission du 24.05](https://docs.google.com/document/d/14tMhcMASoQPYrmPUGnfUJUFraNKdQ1lJ/edit?usp=share_link&ouid=108552385396745786417&rtpof=true&sd=true) !
+Pour ce faire aller voir [La mission du 24.05](https://antoninlcs.github.io/cd72/Stage%20CD%2072/Mission/Mission%20du%2024.05/) !
 
 #### Mettre le contenu de MkDocs dans le dépôt
 

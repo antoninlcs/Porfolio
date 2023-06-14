@@ -10,9 +10,7 @@
 
 Tout d’abord, il faudra cloner votre dépôt git sur votre VM :
 
-[Revoir mission 24/05](https://docs.google.com/document/d/14tMhcMASoQPYrmPUGnfUJUFraNKdQ1lJ/edit?usp=share_link&ouid=108552385396745786417&rtpof=true&sd=true) : Lien pour lycée.
-
-[Revoir mission 24/05](https://cg72-my.sharepoint.com/:f:/g/personal/antonin_lucas_sarthe_fr/ErZt_PX6RF1HmJBi8xTGi9cB5rHN1ZptEeBhp8jLycaumA)
+[Revoir mission 24/05](https://antoninlcs.github.io/cd72/Stage%20CD%2072/Mission/Mission%20du%2024.05/)
 : lien pour le département.
 
 Allez dans le titre **“Configuration pour “cloner” et “push” sur Ubuntu : ”**
