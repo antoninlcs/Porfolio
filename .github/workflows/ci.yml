@@ -1,4 +1,4 @@
-name: build
+name: build and deploy
 on:
   push:
     branches:
@@ -11,7 +11,11 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - uses: cloudflare/pages-action@1
-      - run: pip install mkdocs
-      - run: pip install mkdocs-material
-      - run: pip install mkdocs-mermaid2-plugin 
+      - run: pip install mkdocs mkdocs-material mkdocs-mermaid2-plugin
+      - run: mkdocs build --verbose --clean
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+
