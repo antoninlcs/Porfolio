@@ -1,17 +1,22 @@
-name: build
-on:
-  push:
-    branches:
-      - main
+on: [push]
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    name: Deploy to Cloudflare Pages
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - name: Checkout
+        uses: actions/checkout@v3
+      # Run your project's build step
+      # - name: Build
+      #   run: npm install && npm run build
+      - name: Publish
+        uses: cloudflare/pages-action@1
         with:
-          python-version: 3.x
-      - run: pip install mkdocs
-      - run: pip install mkdocs-material
-      - run: pip install mkdocs-mermaid2-plugin 
-      - run: mkdocs gh-deploy --force --clean --verbose
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: YOUR_PROJECT_NAME # e.g. 'my-project'
+          directory: YOUR_DIRECTORY_OF_STATIC_ASSETS # e.g. 'dist'
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
