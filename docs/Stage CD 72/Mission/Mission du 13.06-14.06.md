@@ -116,5 +116,5 @@ Cocher les mêmes choses que moi !
 
 **Pensez à "save"**
 
-<span style="color:red">Voilà dépôt prêt à être utiliser !!! </span>
+**<span style="color:red">Voilà dépôt prêt à être utiliser !!! </span>**
 
