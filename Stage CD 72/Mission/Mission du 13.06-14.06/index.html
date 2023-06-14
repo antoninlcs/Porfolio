@@ -372,6 +372,58 @@
 mkdir workflows
 vim ci.yml
 </code></pre>
+<p>Ensuite il faudra inscrire ceci dans le fichier :</p>
+<pre><code class="language-bash">name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: |
+          pip install mkdocs mkdocs-material mkdocs-mermaid2-plugin
+
+      - name: Build site
+        run: mkdocs build --verbose --clean
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: site
+</code></pre>
+<h1 id="attention"><strong><span style="color:red"> Attention </span></strong></h1>
+<p><strong>Il faudra penser à mettre le deploy dans la bonne branche</strong></p>
+<p>Pour ce faire aller dans <strong>"settings"</strong></p>
+<p>Puis aller sur l'onget <strong>"pages"</strong> :</p>
+<p><img alt="Onglet page" src="../../../images/page.jpg"/></p>
+<p>Ensuite sélectionner github action</p>
+<p><img alt="page" src="../../../images/page_2.0.jpg"/></p>
+<p>et vous allez mettre <strong>"Deploy from a branch"</strong> :</p>
+<p><img alt="deploy" src="../../../images/deploy_ghpage.jpg"/></p>
+<h1 id="attention_1"><strong><span style="color:red"> Attention </span></strong></h1>
+<p><strong>Il faudra penser à mettre les bons droits pour le workflows</strong></p>
+<p>Pour ce faire aller dans <strong>"settings"</strong></p>
+<p>Ensuite aller dans l'onglet <strong>"actions"</strong> :</p>
+<p><img alt="actions" src="../../../images/actions.jpg"/></p>
+<p>Ensuite il faudra descendre jusqu'à trouver ceci : </p>
+<p><img alt="Droit Workflows" src="../../../images/droit.jpg"/></p>
+<p>Cocher les mêmes choses que moi !</p>
+<p><strong>Pensez à "save"</strong></p>
 <p><span style="color:red">Voilà dépôt prêt à être utiliser !!! </span></p>
 </article>
 </div>
