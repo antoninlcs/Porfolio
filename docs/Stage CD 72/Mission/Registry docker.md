@@ -1,6 +1,4 @@
-# Mission Semaine 6/06 au 8/06
-
-#### Installation SRV-DOCK et Registry Docker 
+# Installation SRV-DOCK et Registry Docker 
 
 
 ## Registry Docker c’est quoi ?

@@ -1,11 +1,4 @@
 
-# Mission 31/05
-
-## Présentation
-
-Aujourd'hui j'ai appris ce que c'était Mkdocs. Ensuite je l'ai héberger sur un docker qui à son tour était héberger sur un docker.
-
-
 ## Intallation MkDocs
 Tout d'abord, il faudra installer le paquet "pip"
 

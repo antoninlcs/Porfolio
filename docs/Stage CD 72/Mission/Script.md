@@ -1,6 +1,4 @@
-# Mission du 26/05
-
-#### <span style="color:green">Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB</span> 
+# <span style="color:green">Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB</span> 
 
 ## Exposer le port MariaDB :
 

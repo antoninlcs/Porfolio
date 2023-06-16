@@ -1,6 +1,4 @@
-# Mission du 25/05
-
-#### Docker-compose, apache, php, mariadb
+# Docker-compose, apache, php, mariadb
 
 ## C’est quoi Docker-compose :
 

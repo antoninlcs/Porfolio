@@ -1,6 +1,4 @@
-# Mission 24/05
-
-## SSH : Clé privée, clé publique, gitlab
+# SSH : Clé privée, clé publique, gitlab
 
 ### Générer clé privée, clé publique (Windows) : 
 
