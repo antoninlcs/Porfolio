@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../Mission%20du%2023.05/" rel="prev"/>
-<link href="../Mission%20du%2025.05/" rel="next"/>
+<link href="../Mkdocs/" rel="prev"/>
+<link href="../Registry%20docker/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.3, mkdocs-material-9.1.15" name="generator"/>
-<title>Mission 24/05 - Portfolio</title>
+<meta content="mkdocs-1.4.3, mkdocs-material-9.1.16" name="generator"/>
+<title>Mission du 23/05 - Portfolio</title>
 <link href="../../../assets/stylesheets/main.26e3688c.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#mission-2405">
+<a class="md-skip" href="#mission-du-2305">
           Skip to content
         </a>
 </div>
@@ -47,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Mission 24/05
+              Mission du 23/05
             
           </span>
 </div>
@@ -194,23 +194,33 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Mission%20du%2013.06-14.06/">
+<a class="md-nav__link" href="../Docker-compose/">
+        Mission du 25/05
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../GITHUB/">
         Mission du 13/06
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Mission%20du%2023.05/">
-        Mission du 23/05
+<a class="md-nav__link" href="../GITLAB/">
+        Mission 24/05
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Mkdocs/">
+        Mission 31/05
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          Mission 24/05
+          Mission du 23/05
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        Mission 24/05
+        Mission du 23/05
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -219,31 +229,56 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ssh-cle-privee-cle-publique-gitlab">
-    SSH : Clé privée, clé publique, gitlab
+<a class="md-nav__link" href="#installer-multipass">
+    Installer multipass :
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hyper-g">
+    Hyper G :
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configurer-une-nouvelle-vm">
+    Configurer une nouvelle VM :
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installation-docker">
+    Installation Docker :
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-docker">
+    Configuration docker :
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installer-une-image-docker">
+    Installer une image Docker :
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#heberger-une-page">
+    Héberger une page :
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+    Conclusion :
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Mission%20du%2025.05/">
-        Mission du 25/05
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Mission%20du%2026.05/">
-        Mission du 26/05
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Mission%20du%2031.05/">
-        Mission 31/05
-      </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../Registry%20docker/">
         Mission Semaine 6/06 au 8/06
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Script/">
+        Mission du 26/05
       </a>
 </li>
 </ul>
@@ -307,8 +342,43 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ssh-cle-privee-cle-publique-gitlab">
-    SSH : Clé privée, clé publique, gitlab
+<a class="md-nav__link" href="#installer-multipass">
+    Installer multipass :
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hyper-g">
+    Hyper G :
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configurer-une-nouvelle-vm">
+    Configurer une nouvelle VM :
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installation-docker">
+    Installation Docker :
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-docker">
+    Configuration docker :
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installer-une-image-docker">
+    Installer une image Docker :
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#heberger-une-page">
+    Héberger une page :
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+    Conclusion :
   </a>
 </li>
 </ul>
@@ -318,74 +388,93 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="mission-2405">Mission 24/05</h1>
-<h2 id="ssh-cle-privee-cle-publique-gitlab">SSH : Clé privée, clé publique, gitlab</h2>
-<h3 id="generer-cle-privee-cle-publique-windows">Générer clé privée, clé publique (Windows) :</h3>
-<p>Pour se faire il faudra ouvrir un powershell, puis taper la commande : </p>
-<pre><code class="language-bash">ssh-keygen
+<h1 id="mission-du-2305">Mission du 23/05</h1>
+<h2 id="installer-multipass">Installer multipass :</h2>
+<p>Multipass c’est un outil comme VirtualBox cela permet d'ouvrir un shell avec la distribution souhaiter. <a href="https://multipass.run/install">Lien pour installer Multipass</a></p>
+<h2 id="hyper-g">Hyper G :</h2>
+<p>C’est un logiciel qui permet de gérer les VM. C’est un gestionnaire 
+Voici le chemin pour s’y rendre : </p>
+<pre><code class="language-bash">C:\Windows\System32\virtmgmt.msc
 </code></pre>
-<p>Ensuite, il va vous générer une clé privée et publique dans cet emplacement :</p>
-<pre><code class="language-bash">“C:\Users\&lt;votre User&gt;/.ssh/id_rsa”
+<h2 id="configurer-une-nouvelle-vm">Configurer une nouvelle VM :</h2>
+<p>Ceci affiche le shell :</p>
+<pre><code class="language-bash">multipass shell
 </code></pre>
-<p><strong><span style="color:red">Voilà vos clées créent</span></strong></p>
-<h3 id="generer-cle-privee-cle-publique-ubuntu">Générer clé privée, clé publique (Ubuntu) :</h3>
-<p>Pour se faire, il faudra taper la même commande que celle de windows :</p>
-<pre><code class="language-bash">ssh-keygen
+<pre><code class="language-bash">multipass stop primary
+
+Il faudra penser tout d’abord supprimer la machine par défaut “Primary” 
 </code></pre>
-<p>Ensuite, il va vous générer une clé privée et publique dans cet emplacement :</p>
-<pre><code class="language-bash">“/home/ubuntu/.ssh/id_rsa”
+<pre><code class="language-bash">multipass launch -c 4 -m 8G -d 20G -n servernew 20.04
+
+Ensuite il faudra lancer la VM avec “Launch”, le “-c” c’est pour les cœurs de la VM, “–m” c’est pour la mémoire, “-d” pour le stockage du disque dur, “-n” le nom de la VM et “20.04” la version de la distribution et à la fin rajouter “--cloud-init &lt;Chemin de ce fichier&gt;”
 </code></pre>
-<h3 id="utiliser-la-vm-sur-le-powershell-de-windows">Utiliser la VM sur le Powershell de Windows :</h3>
-<p>Il vous suffira de copier la clé publique de Windows sur le fichier <strong>“authorized_keys”</strong> qui se trouve dans <strong>“/home/ubuntu/.ssh”</strong> et de sauvegarder le fichier.</p>
-<p>Pour utiliser la VM sur le powershell de Windows, il faudra taper la commande :</p>
-<pre><code class="language-bash">“ssh &lt;user&gt;@&lt;adresse Ip de la VM&gt; ou &lt;le nom de domaine&gt;”
+<p>Pour lancer notre VM il suffira de faire la commande :</p>
+<pre><code class="language-bash">“multipass start &lt; nom de la machine &gt;” 
 </code></pre>
-<p>Ensuite, il vous posera une question : Il faudra répondre <strong>“yes”</strong></p>
-<p><strong><span style="color:red">Enfin vous serez connecté en ssh à la VM</span></strong> </p>
-<h3 id="connecter-la-vm-sur-visual-code">Connecter la VM sur Visual Code :</h3>
-<p>Pour connecter sa VM, il faut commencer par installer une extension sur Visual Code. Pour cela il faut aller dans extension.</p>
-<p>Ensuite il faudra rechercher “remote“ et installer le premier qui apparaît.</p>
-<p>Une fois installer, il y aura une <strong><span style="color:blue">icône bleue en bas</span></strong> à gauche de l’application.</p>
-<p>Il faudra cliquer dessus, ensuite </p>
-<pre><code class="language-bash">Cliquer sur “Connect to Host...”
-Ensuite cliquer sur “+ Add New SSH Host...”
+<h2 id="installation-docker">Installation Docker :</h2>
+<p>Tout d’abord, il faut mettre à jour les paquets : </p>
+<pre><code class="language-bash">sudo apt update
 </code></pre>
-<p>Ensuite il faudra renseigner :</p>
-<pre><code class="language-bash">“ssh &lt;user&gt;@&lt;adresse Ip de la VM&gt; ou &lt;le nom de domaine&gt;”
+<p>Ensuite, il faudra installer des paquets prérequis pour HTTPS :</p>
+<pre><code class="language-bash">sudo apt install apt-transport-https ca-certificates curl software-properties-common
 </code></pre>
-<p>Ensuite au même endroit il vous demandera la distribution utiliser : <strong>(Linux, Windows, Mac)</strong>, choisissez ce dont vous avez besoin. </p>
-<p><strong><span style="color:red">Vous voilà connectez à la VM sur Visual Code !!</span></strong></p>
-<h3 id="creer-un-depot-sur-git-lab-et-le-pouvoir-cloner-et-push-grace-a-git-sur-ubuntu">Créer un dépôt sur Git-lab et le pouvoir “Cloner” et “push” grâce à “GIT” sur UBUNTU :</h3>
-<p>Il vous suffira de vous connecter au git-lab du conseil départemental : <a href="https://git.sarthe.fr/users/sign_in">Lien GitLab</a></p>
-<p>Avec vos codes fournit au préalable.</p>
-<h4 id="creation-du-depot">Création du dépôt :</h4>
-<p>Cliquez sur <strong>“Create blank project”</strong>.</p>
-<p>Ensuite donner un nom au projet et appuyer sur <strong>“Create project”</strong>.</p>
-<h4 id="configuration-pour-cloner-et-push-sur-ubuntu">Configuration pour “cloner” et “push” sur Ubuntu :</h4>
-<p>Une fois le dépôt créer, il faudra ajouter vos clés publiques (Ubuntu et Windows) sur Git-Lab.</p>
-<p>Pour ce faire, il faut se rendre sur votre profil (Icone en haut à droite) et cliquer sur <strong>préférences</strong>.</p>
-<p>En cliquant sur préférences, sur la gauche de l’écran il y aura <strong>“SSH keys”</strong> cliquez dessus. </p>
-<p>Ensuite, copier-coller une des deux clés publiques <strong>“dans Key”</strong>, donnez-lui un titre et ajoutez-la.</p>
-<p>Faites la même manipulation pour la deuxième clé publique.</p>
-<p>Ensuite retournez sur votre dépôt et copier le lien ssh.  </p>
-<p>Puis retournez sur votre VM coller ce que vous venez copier en rajoutant au début <strong>"git clone"</strong>.</p>
-<p>Suite à cette commande, votre dépôt sera dans votre VM.</p>
-<p><strong><span style="color:red">Maintenant depuis votre dépôt vous pourrez travailler sur votre VM et mettre vos travaux sur ce dépôt.</span></strong></p>
-<h4 id="maintenant-nous-allons-voir-comment-push-nos-dossier-de-travail-qui-sont-present-dans-notre-depot-sur-la-vm-directement-dans-git-lab">Maintenant, nous allons voir comment “push” nos dossier de travail qui sont présent dans notre dépôt sur la VM directement dans Git-lab.</h4>
-<p>Après avoir mis un fichier dans le dépôt il vous suffira de faire 3 commandes à la suite :</p>
-<pre><code class="language-bash">git add -A
-( Il va ajouter le nouveau fichier créer dans le dépôt)
+<p>Ensuite il faudra ajouter la clé GPG du dépôt de docker sur votre système :</p>
+<pre><code class="language-bash">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - 
 </code></pre>
-<pre><code class="language-bash">git commit -m rapport
-(C’est pour indiquer un message pour le fichier push) moi par exemple c’est ”rapport”
+<p>Ajoutez le référenciel Docker aux sources APT :</p>
+<pre><code class="language-bash">sudo add-apt-repository "deb [arch-amd64] https://download.docker.com/linux/ubuntu focal stable
 </code></pre>
-<pre><code class="language-bash">git push
-(La dernière commande permet d’envoyer ce fichier dans le git-lab)
+<p>Grâce à cela, il faudra mettre à jour la base de données : </p>
+<pre><code class="language-bash">sudo apt update
 </code></pre>
-<p><strong><span style="color:red">Voilà comment créer un dépôt dans Git-lab et de pouvoir le cloner et le push sur git-lab sous Ubuntu.</span></strong></p>
-<h4 id="configuration-pour-cloner-et-push-sur-windows">Configuration pour “cloner” et “push” sur Windows :</h4>
-<p>Sur Windows, il vous suffira d’installer Git pour Windows : <a href="https://git-scm.com/download/win">Lien téléchargement Git</a></p>
-<p>Une fois installer, les commandes seront les mêmes que celles de Linux </p>
+<p>Il faudra config l’installation sur le dépôt de docker et non sur celui d’ubuntu : </p>
+<pre><code class="language-bash">apt-cache policy docker-ce
+</code></pre>
+<p>Enfin, vous pourrez installer docker : </p>
+<pre><code class="language-bash">sudo apt install docker-ce
+</code></pre>
+<p>Ensuite, vous devrez activer docker :  </p>
+<pre><code class="language-bash">sudo systemctl status docker
+</code></pre>
+<h2 id="configuration-docker">Configuration docker :</h2>
+<p>Il vous suffira de vous connecter au git-lab du conseil départemental : <a href="https://git.sarthe.fr/users/sign_in">GitLab département</a> 
+Avec vos codes fournit au préalable.</p>
+<p>Ensuite dans la barre de recherche :  taper <strong>”localhost”</strong></p>
+<p>Ensuite cliquer sur clone et copier le lien https. </p>
+<p>Ensuite, une fois le lien copier, il faudra le coller sur la VM :</p>
+<pre><code class="language-bash">git clone &lt;lien ssh&gt;
+</code></pre>
+<p>Une fois cela fait il faudra vous rendre dans le dossier <strong>“ansible_localhost”</strong> : <strong>“cd ansible_localhost”</strong></p>
+<p>Ensuite, faite la commande <strong>“cat README.md”</strong> cela vous amènera à l’intérieur du script :</p>
+<pre><code class="language-bash">sudo ansible-galaxy install -f -r requirements.yml
+
+sudo ansible-playbook pb_install_docker.yml
+</code></pre>
+<p><strong>Puis copier la ligne juste en-dessous de bash en rajoutant sudo avant.</strong></p>
+<p>Même chose pour le 2ème Bash.</p>
+<h2 id="installer-une-image-docker">Installer une image Docker :</h2>
+<p>Il vous suffira de faire un <strong>“sudo docker run <nom de="" l’image="" souhaité="">”</nom></strong></p>
+<h2 id="heberger-une-page">Héberger une page :</h2>
+<p>Tout d’abord créer un dossier “Docker”, ensuite dans ce dossier créer en fichier dockerfile et un fichier .html.</p>
+<p>Dans le fichier “dockerfile” il faut inscrire du code :</p>
+<pre><code class="language-bash">FROM nginx
+
+COPY . /usr/share/nginx/html
+</code></pre>
+<p>Cela permet que à chaque fois qu’on lance le docker nginx le fichier html se lance et cela permet que à chaque fois que on quitte le docker on ne perd ce qu’on a fait.</p>
+<p>Et inscrivez dans le fichier html votre code html</p>
+<p>Ensuite placer vous dans le dossier Docker et taper cette commande : </p>
+<pre><code class="language-bash">docker build -t nginx-myapplication
+</code></pre>
+<p>Pour finir, taper la commande :</p>
+<pre><code class="language-bash">docker run --name &lt;nom conteneur&gt; -p &lt;port&gt; -d &lt;nom image&gt;
+</code></pre>
+<p>Pour vérifier que cela fonctionne, allez sur un navigateur et taper : <strong><votre adresse="" ip=""> : <numéro de="" port="">/<fichier html="">.</fichier></numéro></votre></strong></p>
+<p>Vous devriez voir votre page html.</p>
+<h2 id="conclusion"><strong><span style="color:red">Conclusion :</span></strong></h2>
+<p><strong>Cette mission m’a permis de découvrir deux logiciels qui sont : Multipass et Hyper V</strong></p>
+<p><strong>Elle m’a aussi permis de configurer une VM sur cette plateforme.</strong></p>
+<p><strong>Elle m’a permis de voir différentes possibilités avec docker. Comment le configurer ? Comment l’installer ?</strong> </p>
 </article>
 </div>
 </div>
@@ -409,7 +498,7 @@ Ensuite cliquer sur “+ Add New SSH Host...”
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+<script src="../../../assets/javascripts/bundle.a51614de.min.js"></script>
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
 <script src="../../../javascripts/config.js"></script>

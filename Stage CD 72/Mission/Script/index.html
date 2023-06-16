@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../Mission%20du%2024.05/" rel="prev"/>
-<link href="../Mission%20du%2026.05/" rel="next"/>
+<link href="../Registry%20docker/" rel="prev"/>
+<link href="../../Rapport%20quotidien/Tableau%20rapport%20quotidien/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.3, mkdocs-material-9.1.15" name="generator"/>
-<title>Mission du 25/05 - Portfolio</title>
+<meta content="mkdocs-1.4.3, mkdocs-material-9.1.16" name="generator"/>
+<title>Mission du 26/05 - Portfolio</title>
 <link href="../../../assets/stylesheets/main.26e3688c.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#mission-du-2505">
+<a class="md-skip" href="#mission-du-2605">
           Skip to content
         </a>
 </div>
@@ -47,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Mission du 25/05
+              Mission du 26/05
             
           </span>
 </div>
@@ -194,28 +194,43 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Mission%20du%2013.06-14.06/">
+<a class="md-nav__link" href="../Docker-compose/">
+        Mission du 25/05
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../GITHUB/">
         Mission du 13/06
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Mission%20du%2023.05/">
+<a class="md-nav__link" href="../GITLAB/">
+        Mission 24/05
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Mkdocs/">
+        Mission 31/05
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Multipass%26docker/">
         Mission du 23/05
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Mission%20du%2024.05/">
-        Mission 24/05
+<a class="md-nav__link" href="../Registry%20docker/">
+        Mission Semaine 6/06 au 8/06
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          Mission du 25/05
+          Mission du 26/05
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        Mission du 25/05
+        Mission du 26/05
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -224,87 +239,32 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#cest-quoi-docker-compose">
-    C’est quoi Docker-compose :
+<a class="md-nav__link" href="#exposer-le-port-mariadb">
+    Exposer le port MariaDB :
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configurer-docker-compose">
-    Configurer Docker-compose :
+<a class="md-nav__link" href="#script-sh">
+    Script “sh” :
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#docker-composeyml">
-    Docker-compose.yml :
+<a class="md-nav__link" href="#crontab">
+    Crontab :
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#backups-db_data-www">
-    Backups, db_data, www :
+<a class="md-nav__link" href="#creation-de-la-table-dans-la-base-de-donnees">
+    Création de la table dans la base de données :
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#installer-wordpress-sur-le-dossier-www">
-    Installer WordPress sur le dossier “www” :
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#attention">
-    Attention
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#dockerfiles">
-    DockerFiles  :
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#attention_1">
-    Attention
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#lancement-docker-compose">
-    Lancement docker-compose :
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#push-le-depot-sans-avoir-acces-au-id-de-connexion-et-au-mot-de-passe">
-    Push le dépôt sans avoir accès au ID de connexion et au mot de passe :
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gitignore">
-    .gitignore :
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#env">
-    .env :
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#env_sample">
-    .env_sample :
+<a class="md-nav__link" href="#voir-si-le-script-fonctionne">
+    Voir si le script fonctionne
   </a>
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Mission%20du%2026.05/">
-        Mission du 26/05
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Mission%20du%2031.05/">
-        Mission 31/05
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Registry%20docker/">
-        Mission Semaine 6/06 au 8/06
-      </a>
 </li>
 </ul>
 </nav>
@@ -367,68 +327,28 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#cest-quoi-docker-compose">
-    C’est quoi Docker-compose :
+<a class="md-nav__link" href="#exposer-le-port-mariadb">
+    Exposer le port MariaDB :
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configurer-docker-compose">
-    Configurer Docker-compose :
+<a class="md-nav__link" href="#script-sh">
+    Script “sh” :
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#docker-composeyml">
-    Docker-compose.yml :
+<a class="md-nav__link" href="#crontab">
+    Crontab :
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#backups-db_data-www">
-    Backups, db_data, www :
+<a class="md-nav__link" href="#creation-de-la-table-dans-la-base-de-donnees">
+    Création de la table dans la base de données :
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#installer-wordpress-sur-le-dossier-www">
-    Installer WordPress sur le dossier “www” :
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#attention">
-    Attention
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#dockerfiles">
-    DockerFiles  :
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#attention_1">
-    Attention
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#lancement-docker-compose">
-    Lancement docker-compose :
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#push-le-depot-sans-avoir-acces-au-id-de-connexion-et-au-mot-de-passe">
-    Push le dépôt sans avoir accès au ID de connexion et au mot de passe :
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gitignore">
-    .gitignore :
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#env">
-    .env :
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#env_sample">
-    .env_sample :
+<a class="md-nav__link" href="#voir-si-le-script-fonctionne">
+    Voir si le script fonctionne
   </a>
 </li>
 </ul>
@@ -438,121 +358,83 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="mission-du-2505">Mission du 25/05</h1>
-<h4 id="docker-compose-apache-php-mariadb">Docker-compose, apache, php, mariadb</h4>
-<h2 id="cest-quoi-docker-compose">C’est quoi Docker-compose :</h2>
-<p><strong><span style="color:red">C’est un outil qui permet de définir et gérer des applications multi-conteneurs. Ce docker utilise un fichier YAML (Représentation des informations lisible par l’Homme).</span></strong></p>
-<h2 id="configurer-docker-compose">Configurer Docker-compose :</h2>
-<p>Tout d’abord, il faudra cloner votre dépôt git sur votre VM :</p>
-<p><a href="https://antoninlcs.github.io/cd72/Stage%20CD%2072/Mission/Mission%20du%2024.05/">Revoir mission 24/05</a>
-: lien pour le département.</p>
-<p>Allez dans le titre <strong>“Configuration pour “cloner” et “push” sur Ubuntu : ”</strong></p>
-<p>Ensuite, il faudra aller à la racine du dépôt et créer différent dossier :</p>
-<h2 id="docker-composeyml">Docker-compose.yml :</h2>
-<pre><code class="language-bash">version: '3.7'
-
-services: 
-  db:
-    image: mariadb:10   #Service du container 
-    container_name: mariadb  #Son nom
-    restart: always    #Il reste toujours allumer
-    ports: ['3306:3306']
-    volumes:          #Endroit stock les information et données du container
-      - ./db_data:/var/lib/mysql
-      - ./backups:/backups
-    environment:
-      MYSQL_DATABASE: $MYSQL_DATABASE
-      MYSQL_USER: $MYSQL_USER
-      MYSQL_PASSWORD: $MYSQL_PASSWORD
-      MYSQL_ALLOW_EMPTY_PASSWORD: 'no'
-      MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
-    env_file:
-      - .env  #Il va chercher les information de ce fichier la
-
-  web:
-    build: .  #Il contruit le containeur à la racine du dépôt
-    container_name: apache2
-    restart: always
-    depends_on: ['db']
-    ports: ['80:80'] #numéros de port de sortie du containeur
-    links: ['db:db']
-    volumes:
-      - './www:/var/www/html' #Endroit où il va chercher le contenu et stocker 
-    environment: #Il va récuper les données de la base de données
-      MYSQL_DB_HOST: db
-      MYSQL_DATABASE: $MYSQL_DATABASE
-      MYSQL_USER: $MYSQL_USER
-      MYSQL_PASSWORD: $MYSQL_PASSWORD
-
-    env_file:
-      - .env  #Il va chercher les information de ce fichier la
+<h1 id="mission-du-2605">Mission du 26/05</h1>
+<h4 id="creation-script-pour-recuperer-le-volume-de-la-partitions-home-et-mettre-cette-information-dans-la-base-de-donnees-mariadb"><span style="color:green">Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB</span></h4>
+<h2 id="exposer-le-port-mariadb">Exposer le port MariaDB :</h2>
+<h3 id="cest-quoi-un-port">C’est quoi un port ?</h3>
+<p><strong><span style="color:red">Un port est un point virtuel où les connexions réseau commencent et se terminent.</span></strong></p>
+<p>Tout d’abord, il vous faudra vous rendre sur votre dossier <strong>“docker-compose.yml”</strong>. 
+Il faudra exposer le port <strong>“3306”</strong> du conteneur MariaDB pour qu’il puisse être accessible depuis l’extérieur.</p>
+<h2 id="script-sh">Script “sh” :</h2>
+<h3 id="cest-quoi-sh">C’est quoi sh ?</h3>
+<p><strong><span style="color:red">Sh est l'extension utilisé pour les scripts shell qui peuvent être écrit en bash, fish, zsh etc.</span></strong></p>
+<p>Pour pouvoir connaitre le volume de la partition il vous faut un script exécutable. Il faudra pour cela utiliser l’extension en sh.</p>
+<p>Tout d’abord, dans votre dépôt local créer un fichier en sh :</p>
+<pre><code class="language-bash">vim &lt;nom fichier&gt;.sh
 </code></pre>
-<h2 id="backups-db_data-www">Backups, db_data, www :</h2>
-<p>Il faudra créer ces fichiers dans le dépôt pour les <strong>“Volumes”</strong>.</p>
-<h2 id="installer-wordpress-sur-le-dossier-www">Installer WordPress sur le dossier “www” :</h2>
-<p><strong><span style="color:red">WordPress est un système de gestion de contenu gratuit, libre et open source. Ce logiciel écrit en php repose sur une base de données MySQL.</span></strong></p>
-<p>Pour installer WordPress sur <strong>“www”</strong>, il vous suffira de vous placer dedans :</p>
-<pre><code class="language-bash"> “cd www/”
-</code></pre>
-<p>Et de faire la commande :</p>
-<pre><code class="language-bash"> ” wget https://wordpress.org/latest.zip “
-</code></pre>
-<h2 id="attention"><strong><span style="color:red">Attention</span></strong></h2>
-<p>Il faut penser à <strong>“unzip“</strong> le fichier <strong>“latest.zip“</strong> </p>
-<p>Pour cela il faudra installer le paquet unzip :</p>
-<pre><code class="language-bash">“sudo apt install unzip”
-</code></pre>
-<p>Enfin faite la commande dans <strong>“www”</strong> :</p>
-<pre><code class="language-bash">“unzip latest.zip”        
-</code></pre>
-<p><strong>Pour que le WordPress fonctionne il faut installer une extension php</strong> </p>
-<h2 id="dockerfiles">DockerFiles  :</h2>
-<p><strong><span style="color:red">Les Dockerfile vous permettent de configurer et de créer rapidement une image pour la rendre plus partageable facilement.</span></strong></p>
-<p>Il vous suffira de créer un fichier Dockerfile  toujours à l’intérieur de votre dépôt : </p>
-<pre><code class="language-bash">FROM    php:7.4-apache 
-#Il va chercher le php apache 
-RUN     docker-php-ext-install mysqli
-#Et il va installer l'extension 
-</code></pre>
-<h2 id="attention_1"><strong><span style="color:red">Attention</span></strong></h2>
-<p>Il faudra modifier les droits de ”www” : ”chmod -R 777.”</p>
-<h2 id="lancement-docker-compose">Lancement docker-compose :</h2>
-<p>Une fois tout cela configurer vous pourrez lancer la commande : </p>
-<pre><code class="language-bash">“sudo docker-compose up”
-</code></pre>
-<p>Cela va lancer votre docker-compose. Il vous suffira d'ouvrir un navigateur et taper le nom de votre machine et vous verrez wordpress
-Il faudra renseigner le nom de votre site et les informations de votre BDD précédemment définis dans le fichier <strong>“docker-compose”</strong></p>
-<p><strong><span style="color:red">Voilà votre site sur le serveur Apache sur un docker. Maintenant laisser les devs travailler !</span></strong></p>
-<h2 id="push-le-depot-sans-avoir-acces-au-id-de-connexion-et-au-mot-de-passe">Push le dépôt sans avoir accès au ID de connexion et au mot de passe :</h2>
-<p><strong><span style="color:red">Il est important de savoir faire cela car si vous mettez tous vos dossiers dans votre dépôt public et que dans ces dossiers tout le monde peut accéder à vos de mot de passe. Votre site sera en aucun cas sécurisé.</span></strong></p>
-<h2 id="gitignore">.gitignore :</h2>
-<p>Ce fichier sert à indiquer quels fichiers il va ignorer pendant le push, pour cela il faudra créer ce fichier toujours dans votre dépôt.
-Il faudra inscrire dans ce fichier les fichiers sensibles envers votre site :</p>
-<pre><code class="language-bash">www/
-backups/
-db_data/
-.env
-</code></pre>
-<p>Quand vous allez faire un push dans votre git-lab c’est fichier n’y seront pas.</p>
-<h2 id="env">.env :</h2>
-<p>Le fichier .env est un fichier caché sur votre vm qui permet de déclarer des variables pour les informations importantes, par exemple : </p>
-<p><strong>“MYSQL_PASSWORD = Votre password”</strong></p>
-<p>Votre fichier doit ressembler à sa :</p>
-<pre><code class="language-bash">#Declaration Variable 
+<p>Et mettre ceci dans le fichier :</p>
+<pre><code class="language-bash">#!/bin/bash
 
 
-MYSQL_USER : NOMUTILISATEUR 
+# Vérifier si le client MYSQL est installé
+if ! type mysql &gt;/dev/null 2&gt;&amp;1; then
+  #Installer le client MySQL
+  sudo apt update
+  sudo apt-get install -y mysql-client
 
-MYSQL_PASSWORD : MOTPASSEUSER  
+fi
 
-MYSQL_ROOT_PASSWORD : MOTDEPASSEROOT
+# Récupérer la taille de la partition
+partition_size=$(du -s /home | awk '{print $1}')
+timestamp=$(date +%Y-%m-%d\ %H:%M:%S)
 
-MYSQL_DATABASE : NOMBASE 
+
+
+# Insérer les données dans la bdd
+mysql -h 127.0.0.1 -P 3306 -u $MYSQL_USER -p$MYSQL_PASSWORD -D $MYSQL_DATABASE -e "INSERT INTO partition_home (size, timestamp) VALUES ($partition_size,'$timestamp');"
+
+
+#Charger les variables d'environnement à partir du fichier .env
+
+source .env 
 </code></pre>
-<h2 id="env_sample">.env_sample :</h2>
-<p>Pour aider les gens à créer leur “.env” sans mettre vos informations, il est possible de faire un exemple et ce fichier contrairement au “.env” sera push dans le dépôt.</p>
-<p><strong><span style="color:red">Une fois tout cela configurer, il vous suffira de push votre dépôt sur la VM et vos fichiers seront sur le git-lab en ligne.</span></strong></p>
-<p><strong><span style="color:green">Rappel pour push : Faite un “git add – A”, puis un “git commit –m <message>”, enfin le “git push”</message></span></strong></p>
+<h3 id="attention"><strong><span style="color:red">Attention</span></strong></h3>
+<p>Assurer vous que votre script a les permissions d’exécution :</p>
+<pre><code class="language-bash">”chmod +x &lt;Chemin du script&gt;”
+</code></pre>
+<h2 id="crontab">Crontab :</h2>
+<h3 id="cest-quoi-crontab">C’est quoi “crontab” ?</h3>
+<p><strong><span style="color:red">Crontab est le nom du programme sous Unix (et Linux) qui permet d'éditer des tables de configuration du programme cron. Ces tables spécifient les tâches à exécuter et leur horaire d'exécution.</span></strong></p>
+<p>Tout d’abord, il faudra taper la commande crontab –e cela vous ouvrira un fichier.</p>
+<p>Ensuite en bas il vous faudra indiquer tout les combien de temps un fichier doit s’exécuter : </p>
+<pre><code class="language-bash">&lt;période&gt;  &lt;Chemin du fichier&gt;
+</code></pre>
+<h2 id="creation-de-la-table-dans-la-base-de-donnees">Création de la table dans la base de données :</h2>
+<p>Tout d’abord, il faudra vous connecter à votre docker :</p>
+<pre><code class="language-bash">“docker exec –it &lt;nom du conteneur&gt; /bin/bash”
+</code></pre>
+<p>Pour cela connecter vous en tant qu'Administrateur de la Base de Données :</p>
+<pre><code class="language-bash">“mysql -u root –p”
+</code></pre>
+<p>Une fois connecté à la base de données MariaDB il va falloir indiquer sur quelle base de données créer la table :</p>
+<pre><code class="language-bash">“USE &lt;nom de la base de données&gt;”
+</code></pre>
+<p>Une fois la base de données sélectionne vous pouvez créer votre table. Voici un exemple :</p>
+<pre><code class="language-bash">“CREATE TABLE partitions_home (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  size VARCHAR(20),
+  timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);”
+</code></pre>
+<p>Ensuite pour voir si votre table est créée, il vous suffira de faire un :</p>
+<pre><code class="language-bash">“SHOW TABLES”
+</code></pre>
+<p><strong>Vous verrez votre table normalement.</strong> </p>
+<h2 id="voir-si-le-script-fonctionne">Voir si le script fonctionne</h2>
+<p>Pour voir si le script fonctionne, il vous suffira de faire :</p>
+<pre><code class="language-bash">“SELECT * FROM &lt;nom de la table crée&gt;”
+</code></pre>
+<p><strong><span style="color:red"> Voilà vos informations de votre script seront sur votre Base De Données MariaDB !!</span></strong></p>
 </article>
 </div>
 </div>
@@ -576,7 +458,7 @@ MYSQL_DATABASE : NOMBASE
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+<script src="../../../assets/javascripts/bundle.a51614de.min.js"></script>
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
 <script src="../../../javascripts/config.js"></script>
