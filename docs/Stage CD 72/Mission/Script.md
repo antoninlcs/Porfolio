@@ -1,4 +1,4 @@
-# <span style="color:green">Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB</span> 
+# Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB
 
 ## Exposer le port MariaDB :
 
