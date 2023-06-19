@@ -138,6 +138,37 @@ Push une image sur le registry depuis une VM extérieur
 
 Problème : Proxy
 
+##  Le 13/06
+
+Héberger et déployer automatiquement mon portfolio sur GITHUB 
+
+Problème : Proxy
+
+[Mission GITHUB](https://antoninlcs.github.io/cd72/Stage%20CD%2072/Mission/Mission%20du%2013.06-14.06/)
+
+
+## Le 14/06 
+
+Héberger et déployer automatiquement mon portfolio sur GITHUB 
+
+Problème : Proxy
+
+[Mission GITHUB](https://antoninlcs.github.io/cd72/Stage%20CD%2072/Mission/Mission%20du%2013.06-14.06/)
+
+
+## Le 15/06
+
+Push image vers registry GITLAB 
+
+Problème : Proxy
+
+[Mission push registry GITLAB](https://antoninlcs.github.io/cd72/Stage%20CD%2072/Mission/gitlab-ci.yml/)
+
+## Le 16/06
+
+Début de rédaction de la note de synthèse 
+
+
 
 
 
