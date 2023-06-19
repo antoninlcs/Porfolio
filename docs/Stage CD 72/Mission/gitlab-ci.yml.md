@@ -1,4 +1,4 @@
-# Push image docker sur votre registry dans GitLab 
+# test
 
 **Cela va vous permettre en faisant un "push" d'une image docker sur votre dépôt elle va se stocker dans votre registry.**
 
