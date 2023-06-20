@@ -1,4 +1,4 @@
-# test
+# Pipelines, CI, CD
 
 **Cela va vous permettre en faisant un "push" d'une image docker sur votre dépôt elle va se stocker dans votre registry.**
 
@@ -85,3 +85,91 @@ Ensuite cliquer sur **"ADD VARIABLE"**
 
 
 
+## Ajout de Mkdocs 
+
+**<span style="color:red">Cela va permettre d'automatiser en partie le déployment de votre site mkdocs</span>**
+
+Pour ce faire, il faudra vous rendre sur le fichier **".gitlab-ci.yml"** créer au préalable.
+
+### Fichier .gitlab-ci.yml
+
+~~~bash 
+
+
+# Définition des étapes
+stages:
+  - build_mkdocs
+  - build_image
+  
+# Étape 1: Génération du site MkDocs
+build_mkdocs:
+  stage: build_mkdocs
+  image: python:3.9
+  before_script:
+    - pip install mkdocs
+    - pip install mkdocs-material
+    - pip install mkdocs-mermaid2-plugin
+  script:
+    - mkdocs build --clean 
+  artifacts:
+    paths:
+      - site
+
+ 
+
+
+# Étape 2: Compilation de l'image Docker
+build_image:
+  stage: build_image
+  image: docker:20.10.16
+  variables:
+    DOCKER_TLS_CERTDIR: "/certs"
+  services:
+    - docker:20.10.16-dind
+  before_script:
+    - docker info
+  script:
+    - docker login -u $user -p $mdp https://registry.sarthe.fr:5000
+    - docker build -t registry.sarthe.fr:5000/nginx-mkdocs .
+    - docker push registry.sarthe.fr:5000/nginx-mkdocs
+  
+  tags:
+    - docker
+
+~~~
+
+Ensuite sur votre vm, il faudra faire les manipulations suivantes :
+
+~~~bash 
+
+git add -A
+git commit -m <un message>
+git push
+
+~~~
+
+En faisant ceci, sur le gitlab sa va lancer votre script. Une fois votre script effectuer il faudra vous rendre sur votre vm
+
+Une fois sur votre vm il faudra arreter votre docker :
+
+~~~bash
+
+control + c
+
+~~~
+
+Ensuite il faudra faire :
+
+~~~bash
+
+sudo docker pull registry.sarthe.fr:5000/<votre image>
+
+~~~
+
+Enfin faite :
+
+~~~bash
+
+sudo docker run -p 8080:80 registry.sarthe.fr:5000/<votre image>
+
+~~~

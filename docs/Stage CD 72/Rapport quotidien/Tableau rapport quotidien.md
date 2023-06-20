@@ -168,7 +168,11 @@ Problème : Proxy
 
 Début de rédaction de la note de synthèse 
 
+## Le 19/06 
 
+Héberger et déployer automatiquement mon portfolio sur GITLAB 
+
+[Mission push registry GITLAB](https://antoninlcs.github.io/cd72/Stage%20CD%2072/Mission/gitlab-ci.yml/)
 
 
 
