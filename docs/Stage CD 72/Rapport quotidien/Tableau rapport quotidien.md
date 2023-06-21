@@ -176,6 +176,13 @@ Héberger et déployer automatiquement mon portfolio sur GITLAB
 
 
 
+## Le 20/06 
+
+Visite de mon professeur référent 
+
+## Le 21/06
+
+Finalisation du projet avec tout qui est automatisé
 
 
 
