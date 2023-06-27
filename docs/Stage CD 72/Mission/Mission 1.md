@@ -18,6 +18,7 @@ Et aussi j'ai réaliser ce schéma pour essayer de mieux comprendre le processus
 
 ![Schema mission](../../images/Schéma mission.jpg)
 
+
 ## Compétences acquises
 
 **1.4 : Travailler en mode projet**
