@@ -16,3 +16,4 @@ Vous pouvez allez voir ma documentation dans l'onglet **"Stage CD72 / Documentat
 
 ## Compétences acquises 
 
+**1.5 Mettre à disposition des utilisateurs un service informatique**
