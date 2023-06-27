@@ -21,5 +21,7 @@ Et aussi j'ai réaliser ce schéma pour essayer de mieux comprendre le processus
 ## Compétences acquises
 
 **1.4 : Travailler en mode projet**
+
 **1.6 Organiser son développement professionnel**
+
 **1.5 Mettre à disposition des utilisateurs un service informatique**
