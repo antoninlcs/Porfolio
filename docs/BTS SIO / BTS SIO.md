@@ -1,4 +1,4 @@
-## Présentation BTS SIO 
+## Présentation BTS SIO test
 
 **BTS SIO ( Service Informatique aux organisation ).** C'est une formation qui se déroule sur **2 ans.**
 
