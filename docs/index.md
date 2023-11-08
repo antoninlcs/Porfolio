@@ -14,3 +14,5 @@
 
 * Mon CV
 
+* Ma veille technologique 
+
