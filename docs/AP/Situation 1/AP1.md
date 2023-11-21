@@ -27,4 +27,8 @@ Dans les OU, on a aussi crée les groupes nécessaires qui était :
 
 ### La création de GPO 
 
+- On a crée une gpo pour la gestion des critères de mots de passe 
+- On a crée une gpo pour crée des lecteurs réseaux pour chaque utilisateurs et groupes 
+
+
 
