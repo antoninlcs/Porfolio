@@ -34,7 +34,13 @@ Dans les OU, on a aussi crée les groupes nécessaires qui était :
 
 ## Pourquoi l'installer 
 
-On 
+On a installer un 2ème serveur AD pour répondre aux exigences de la **Tolèrance aux pannes**. Ce qui permet aux client de pouvoir se connecter a leur session même si le DC1 est tomber en panne. 
 
+## Etape à faire 
+
+- Lui mettre des paramètres IP 
+- Le joindre aux domaines 
+- Mettre les DNS 
+- Mettre en place un clusteur DHCP 
 
 
