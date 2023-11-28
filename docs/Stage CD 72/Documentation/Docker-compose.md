@@ -8,7 +8,7 @@
 
 Tout d’abord, il faudra cloner votre dépôt git sur votre VM :
 
-[Revoir mission 24/05](https://antoninlcs.github.io/cd72/Stage%20CD%2072/Mission/Mission%20du%2024.05/)
+[Revoir mission 24/05](https://antoninlcs.github.io/Porfolio/Stage%20CD%2072/Documentation/GITLAB/)
 : lien pour le département.
 
 Allez dans le titre **“Configuration pour “cloner” et “push” sur Ubuntu : ”**

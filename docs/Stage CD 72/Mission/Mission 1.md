@@ -12,7 +12,7 @@ L'objectif de cette mission était d'explorer et de tester une intégration cont
 
 Vous pouvez voir comment j'ai réaliser ceci grâce à ma documentation :
 
-[Lien vers réalisation](https://antoninlcs.github.io/cd72/Stage%20CD%2072/Documentation/gitlab-ci.yml/)
+**Voir dans /StageCD72/Documentation**
 
 Et aussi j'ai réaliser ce schéma pour essayer de mieux comprendre le processus.
 

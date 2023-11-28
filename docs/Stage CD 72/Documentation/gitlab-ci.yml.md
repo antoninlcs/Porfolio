@@ -4,7 +4,7 @@
 
 ## Création du .gitlab-ci.yml
 
-Dans votre dépot créer en amont ([Revoir GITLAB](https://antoninlcs.github.io/cd72/Stage%20CD%2072/Mission/GITLAB/))
+Dans votre dépot créer en amont ([Revoir GITLAB](https://antoninlcs.github.io/Porfolio/Stage%20CD%2072/Documentation/GITLAB/))
 
 Il faudra faire un :
 

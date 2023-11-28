@@ -54,7 +54,7 @@ Ensuite aller dans ce dossier et faite :
 
 #### Créer un dépôt sur git et le cloner
 
-Pour ce faire aller voir [La mission du 24.05](https://antoninlcs.github.io/cd72/Stage%20CD%2072/Mission/Mission%20du%2024.05/) !
+Pour ce faire aller voir [La mission du 24.05](https://antoninlcs.github.io/Porfolio/Stage%20CD%2072/Documentation/GITLAB/) !
 
 #### Mettre le contenu de MkDocs dans le dépôt
 
