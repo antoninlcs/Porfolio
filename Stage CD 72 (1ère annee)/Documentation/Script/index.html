@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../Mkdocs/" rel="prev"/>
-<link href="../Registry%20docker/" rel="next"/>
+<link href="../Registry%20docker/" rel="prev"/>
+<link href="../gitlab-ci.yml/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.4.14" name="generator"/>
-<title>Multipass, docker - Portfolio</title>
+<title>Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB - Portfolio</title>
 <link href="../../../assets/stylesheets/main.fad675c6.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#multipass-docker">
+<a class="md-skip" href="#creation-script-pour-recuperer-le-volume-de-la-partitions-home-et-mettre-cette-information-dans-la-base-de-donnees-mariadb">
           Skip to content
         </a>
 </div>
@@ -47,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Multipass, docker
+              Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB
             
           </span>
 </div>
@@ -223,14 +223,14 @@
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
 <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
 <span class="md-ellipsis">
-    Stage CD 72
+    Stage CD 72 (1ère annee)
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
-            Stage CD 72
+            Stage CD 72 (1ère annee)
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -306,17 +306,31 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Multipass%26docker/">
+<span class="md-ellipsis">
+    Multipass, docker
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Registry%20docker/">
+<span class="md-ellipsis">
+    Installation SRV-DOCK et Registry Docker
+  </span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    Multipass, docker
+    Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Multipass, docker
+    Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB
   </span>
 </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
@@ -326,77 +340,42 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#installer-multipass">
+<a class="md-nav__link" href="#exposer-le-port-mariadb">
 <span class="md-ellipsis">
-      Installer multipass :
+      Exposer le port MariaDB :
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#hyper-g">
+<a class="md-nav__link" href="#script-sh">
 <span class="md-ellipsis">
-      Hyper G :
+      Script “sh” :
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configurer-une-nouvelle-vm">
+<a class="md-nav__link" href="#crontab">
 <span class="md-ellipsis">
-      Configurer une nouvelle VM :
+      Crontab :
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#installation-docker">
+<a class="md-nav__link" href="#creation-de-la-table-dans-la-base-de-donnees">
 <span class="md-ellipsis">
-      Installation Docker :
+      Création de la table dans la base de données :
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configuration-docker">
+<a class="md-nav__link" href="#voir-si-le-script-fonctionne">
 <span class="md-ellipsis">
-      Configuration docker :
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#installer-une-image-docker">
-<span class="md-ellipsis">
-      Installer une image Docker :
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#heberger-une-page">
-<span class="md-ellipsis">
-      Héberger une page :
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#conclusion">
-<span class="md-ellipsis">
-      Conclusion :
+      Voir si le script fonctionne
     </span>
 </a>
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Registry%20docker/">
-<span class="md-ellipsis">
-    Installation SRV-DOCK et Registry Docker
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Script/">
-<span class="md-ellipsis">
-    Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB
-  </span>
-</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../gitlab-ci.yml/">
@@ -505,58 +484,37 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#installer-multipass">
+<a class="md-nav__link" href="#exposer-le-port-mariadb">
 <span class="md-ellipsis">
-      Installer multipass :
+      Exposer le port MariaDB :
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#hyper-g">
+<a class="md-nav__link" href="#script-sh">
 <span class="md-ellipsis">
-      Hyper G :
+      Script “sh” :
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configurer-une-nouvelle-vm">
+<a class="md-nav__link" href="#crontab">
 <span class="md-ellipsis">
-      Configurer une nouvelle VM :
+      Crontab :
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#installation-docker">
+<a class="md-nav__link" href="#creation-de-la-table-dans-la-base-de-donnees">
 <span class="md-ellipsis">
-      Installation Docker :
+      Création de la table dans la base de données :
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configuration-docker">
+<a class="md-nav__link" href="#voir-si-le-script-fonctionne">
 <span class="md-ellipsis">
-      Configuration docker :
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#installer-une-image-docker">
-<span class="md-ellipsis">
-      Installer une image Docker :
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#heberger-une-page">
-<span class="md-ellipsis">
-      Héberger une page :
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#conclusion">
-<span class="md-ellipsis">
-      Conclusion :
+      Voir si le script fonctionne
     </span>
 </a>
 </li>
@@ -567,93 +525,82 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="multipass-docker">Multipass, docker</h1>
-<h2 id="installer-multipass">Installer multipass :</h2>
-<p>Multipass c’est un outil comme VirtualBox cela permet d'ouvrir un shell avec la distribution souhaiter. <a href="https://multipass.run/install">Lien pour installer Multipass</a></p>
-<h2 id="hyper-g">Hyper G :</h2>
-<p>C’est un logiciel qui permet de gérer les VM. C’est un gestionnaire 
-Voici le chemin pour s’y rendre : </p>
-<pre><code class="language-bash">C:\Windows\System32\virtmgmt.msc
+<h1 id="creation-script-pour-recuperer-le-volume-de-la-partitions-home-et-mettre-cette-information-dans-la-base-de-donnees-mariadb">Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB</h1>
+<h2 id="exposer-le-port-mariadb">Exposer le port MariaDB :</h2>
+<h3 id="cest-quoi-un-port">C’est quoi un port ?</h3>
+<p><strong><span style="color:red">Un port est un point virtuel où les connexions réseau commencent et se terminent.</span></strong></p>
+<p>Tout d’abord, il vous faudra vous rendre sur votre dossier <strong>“docker-compose.yml”</strong>. 
+Il faudra exposer le port <strong>“3306”</strong> du conteneur MariaDB pour qu’il puisse être accessible depuis l’extérieur.</p>
+<h2 id="script-sh">Script “sh” :</h2>
+<h3 id="cest-quoi-sh">C’est quoi sh ?</h3>
+<p><strong><span style="color:red">Sh est l'extension utilisé pour les scripts shell qui peuvent être écrit en bash, fish, zsh etc.</span></strong></p>
+<p>Pour pouvoir connaitre le volume de la partition il vous faut un script exécutable. Il faudra pour cela utiliser l’extension en sh.</p>
+<p>Tout d’abord, dans votre dépôt local créer un fichier en sh :</p>
+<pre><code class="language-bash">vim &lt;nom fichier&gt;.sh
 </code></pre>
-<h2 id="configurer-une-nouvelle-vm">Configurer une nouvelle VM :</h2>
-<p>Ceci affiche le shell :</p>
-<pre><code class="language-bash">multipass shell
-</code></pre>
-<pre><code class="language-bash">multipass stop primary
+<p>Et mettre ceci dans le fichier :</p>
+<pre><code class="language-bash">#!/bin/bash
 
-Il faudra penser tout d’abord supprimer la machine par défaut “Primary” 
-</code></pre>
-<pre><code class="language-bash">multipass launch -c 4 -m 8G -d 20G -n servernew 20.04
 
-Ensuite il faudra lancer la VM avec “Launch”, le “-c” c’est pour les cœurs de la VM, “–m” c’est pour la mémoire, “-d” pour le stockage du disque dur, “-n” le nom de la VM et “20.04” la version de la distribution et à la fin rajouter “--cloud-init &lt;Chemin de ce fichier&gt;”
-</code></pre>
-<p>Pour lancer notre VM il suffira de faire la commande :</p>
-<pre><code class="language-bash">“multipass start &lt; nom de la machine &gt;” 
-</code></pre>
-<h2 id="installation-docker">Installation Docker :</h2>
-<p>Tout d’abord, il faut mettre à jour les paquets : </p>
-<pre><code class="language-bash">sudo apt update
-</code></pre>
-<p>Ensuite, il faudra installer des paquets prérequis pour HTTPS :</p>
-<pre><code class="language-bash">sudo apt install apt-transport-https ca-certificates curl software-properties-common
-</code></pre>
-<p>Ensuite il faudra ajouter la clé GPG du dépôt de docker sur votre système :</p>
-<pre><code class="language-bash">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - 
-</code></pre>
-<p>Ajoutez le référenciel Docker aux sources APT :</p>
-<pre><code class="language-bash">sudo add-apt-repository "deb [arch-amd64] https://download.docker.com/linux/ubuntu focal stable
-</code></pre>
-<p>Grâce à cela, il faudra mettre à jour la base de données : </p>
-<pre><code class="language-bash">sudo apt update
-</code></pre>
-<p>Il faudra config l’installation sur le dépôt de docker et non sur celui d’ubuntu : </p>
-<pre><code class="language-bash">apt-cache policy docker-ce
-</code></pre>
-<p>Enfin, vous pourrez installer docker : </p>
-<pre><code class="language-bash">sudo apt install docker-ce
-</code></pre>
-<p>Ensuite, vous devrez activer docker :  </p>
-<pre><code class="language-bash">sudo systemctl status docker
-</code></pre>
-<h2 id="configuration-docker">Configuration docker :</h2>
-<p>Il vous suffira de vous connecter au git-lab du conseil départemental : <a href="https://git.sarthe.fr/users/sign_in">GitLab département</a> 
-Avec vos codes fournit au préalable.</p>
-<p>Ensuite dans la barre de recherche :  taper <strong>”localhost”</strong></p>
-<p>Ensuite cliquer sur clone et copier le lien https. </p>
-<p>Ensuite, une fois le lien copier, il faudra le coller sur la VM :</p>
-<pre><code class="language-bash">git clone &lt;lien ssh&gt;
-</code></pre>
-<p>Une fois cela fait il faudra vous rendre dans le dossier <strong>“ansible_localhost”</strong> : <strong>“cd ansible_localhost”</strong></p>
-<p>Ensuite, faite la commande <strong>“cat README.md”</strong> cela vous amènera à l’intérieur du script :</p>
-<pre><code class="language-bash">sudo ansible-galaxy install -f -r requirements.yml
+# Vérifier si le client MYSQL est installé
+if ! type mysql &gt;/dev/null 2&gt;&amp;1; then
+  #Installer le client MySQL
+  sudo apt update
+  sudo apt-get install -y mysql-client
 
-sudo ansible-playbook pb_install_docker.yml
-</code></pre>
-<p><strong>Puis copier la ligne juste en-dessous de bash en rajoutant sudo avant.</strong></p>
-<p>Même chose pour le 2ème Bash.</p>
-<h2 id="installer-une-image-docker">Installer une image Docker :</h2>
-<p>Il vous suffira de faire un <strong>“sudo docker run <nom de="" l’image="" souhaité="">”</nom></strong></p>
-<h2 id="heberger-une-page">Héberger une page :</h2>
-<p>Tout d’abord créer un dossier “Docker”, ensuite dans ce dossier créer en fichier dockerfile et un fichier .html.</p>
-<p>Dans le fichier “dockerfile” il faut inscrire du code :</p>
-<pre><code class="language-bash">FROM nginx
+fi
 
-COPY . /usr/share/nginx/html
+# Récupérer la taille de la partition
+partition_size=$(du -s /home | awk '{print $1}')
+timestamp=$(date +%Y-%m-%d\ %H:%M:%S)
+
+
+
+# Insérer les données dans la bdd
+mysql -h 127.0.0.1 -P 3306 -u $MYSQL_USER -p$MYSQL_PASSWORD -D $MYSQL_DATABASE -e "INSERT INTO partition_home (size, timestamp) VALUES ($partition_size,'$timestamp');"
+
+
+#Charger les variables d'environnement à partir du fichier .env
+
+source .env 
 </code></pre>
-<p>Cela permet que à chaque fois qu’on lance le docker nginx le fichier html se lance et cela permet que à chaque fois que on quitte le docker on ne perd ce qu’on a fait.</p>
-<p>Et inscrivez dans le fichier html votre code html</p>
-<p>Ensuite placer vous dans le dossier Docker et taper cette commande : </p>
-<pre><code class="language-bash">docker build -t nginx-myapplication
+<h3 id="attention"><strong><span style="color:red">Attention</span></strong></h3>
+<p>Assurer vous que votre script a les permissions d’exécution :</p>
+<pre><code class="language-bash">”chmod +x &lt;Chemin du script&gt;”
 </code></pre>
-<p>Pour finir, taper la commande :</p>
-<pre><code class="language-bash">docker run --name &lt;nom conteneur&gt; -p &lt;port&gt; -d &lt;nom image&gt;
+<h2 id="crontab">Crontab :</h2>
+<h3 id="cest-quoi-crontab">C’est quoi “crontab” ?</h3>
+<p><strong><span style="color:red">Crontab est le nom du programme sous Unix (et Linux) qui permet d'éditer des tables de configuration du programme cron. Ces tables spécifient les tâches à exécuter et leur horaire d'exécution.</span></strong></p>
+<p>Tout d’abord, il faudra taper la commande crontab –e cela vous ouvrira un fichier.</p>
+<p>Ensuite en bas il vous faudra indiquer tout les combien de temps un fichier doit s’exécuter : </p>
+<pre><code class="language-bash">&lt;période&gt;  &lt;Chemin du fichier&gt;
 </code></pre>
-<p>Pour vérifier que cela fonctionne, allez sur un navigateur et taper : <strong><votre adresse="" ip=""> : <numéro de="" port="">/<fichier html="">.</fichier></numéro></votre></strong></p>
-<p>Vous devriez voir votre page html.</p>
-<h2 id="conclusion"><strong><span style="color:red">Conclusion :</span></strong></h2>
-<p><strong>Cette mission m’a permis de découvrir deux logiciels qui sont : Multipass et Hyper V</strong></p>
-<p><strong>Elle m’a aussi permis de configurer une VM sur cette plateforme.</strong></p>
-<p><strong>Elle m’a permis de voir différentes possibilités avec docker. Comment le configurer ? Comment l’installer ?</strong> </p>
+<h2 id="creation-de-la-table-dans-la-base-de-donnees">Création de la table dans la base de données :</h2>
+<p>Tout d’abord, il faudra vous connecter à votre docker :</p>
+<pre><code class="language-bash">“docker exec –it &lt;nom du conteneur&gt; /bin/bash”
+</code></pre>
+<p>Pour cela connecter vous en tant qu'Administrateur de la Base de Données :</p>
+<pre><code class="language-bash">“mysql -u root –p”
+</code></pre>
+<p>Une fois connecté à la base de données MariaDB il va falloir indiquer sur quelle base de données créer la table :</p>
+<pre><code class="language-bash">“USE &lt;nom de la base de données&gt;”
+</code></pre>
+<p>Une fois la base de données sélectionne vous pouvez créer votre table. Voici un exemple :</p>
+<pre><code class="language-bash">“CREATE TABLE partitions_home (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  size VARCHAR(20),
+  timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);”
+</code></pre>
+<p>Ensuite pour voir si votre table est créée, il vous suffira de faire un :</p>
+<pre><code class="language-bash">“SHOW TABLES”
+</code></pre>
+<p><strong>Vous verrez votre table normalement.</strong> </p>
+<h2 id="voir-si-le-script-fonctionne">Voir si le script fonctionne</h2>
+<p>Pour voir si le script fonctionne, il vous suffira de faire :</p>
+<pre><code class="language-bash">“SELECT * FROM &lt;nom de la table crée&gt;”
+</code></pre>
+<p><strong><span style="color:red"> Voilà vos informations de votre script seront sur votre Base De Données MariaDB !!</span></strong></p>
 </article>
 </div>
 </div>

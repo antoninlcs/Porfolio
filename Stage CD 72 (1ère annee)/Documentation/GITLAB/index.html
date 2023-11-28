@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../Script/" rel="prev"/>
-<link href="../../Mission/Mission%201/" rel="next"/>
+<link href="../GITHUB/" rel="prev"/>
+<link href="../Mkdocs/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.4.14" name="generator"/>
-<title>Pipelines, CI, CD - Portfolio</title>
+<title>SSH : Clé privée, clé publique, gitlab - Portfolio</title>
 <link href="../../../assets/stylesheets/main.fad675c6.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#pipelines-ci-cd">
+<a class="md-skip" href="#ssh-cle-privee-cle-publique-gitlab">
           Skip to content
         </a>
 </div>
@@ -47,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Pipelines, CI, CD
+              SSH : Clé privée, clé publique, gitlab
             
           </span>
 </div>
@@ -223,14 +223,14 @@
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
 <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
 <span class="md-ellipsis">
-    Stage CD 72
+    Stage CD 72 (1ère annee)
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
-            Stage CD 72
+            Stage CD 72 (1ère annee)
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -292,8 +292,9 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../GITLAB/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     SSH : Clé privée, clé publique, gitlab
   </span>
@@ -327,48 +328,12 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Pipelines, CI, CD
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gitlab-ci.yml/">
 <span class="md-ellipsis">
     Pipelines, CI, CD
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#creation-du-gitlab-ciyml">
-<span class="md-ellipsis">
-      Création du .gitlab-ci.yml
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#creation-des-variable">
-<span class="md-ellipsis">
-      Création des variable
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ajout-de-mkdocs">
-<span class="md-ellipsis">
-      Ajout de Mkdocs
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -464,171 +429,79 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#creation-du-gitlab-ciyml">
-<span class="md-ellipsis">
-      Création du .gitlab-ci.yml
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#creation-des-variable">
-<span class="md-ellipsis">
-      Création des variable
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ajout-de-mkdocs">
-<span class="md-ellipsis">
-      Ajout de Mkdocs
-    </span>
-</a>
-</li>
-</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="pipelines-ci-cd">Pipelines, CI, CD</h1>
-<p><strong>Cela va vous permettre en faisant un "push" d'une image docker sur votre dépôt elle va se stocker dans votre registry.</strong></p>
-<h2 id="creation-du-gitlab-ciyml">Création du .gitlab-ci.yml</h2>
-<p>Dans votre dépot créer en amont (<a href="https://antoninlcs.github.io/Porfolio/Stage%20CD%2072/Documentation/GITLAB/">Revoir GITLAB</a>)</p>
-<p>Il faudra faire un :</p>
-<pre><code class="language-bash">
-vim .gitlab-ci.yml
-
+<h1 id="ssh-cle-privee-cle-publique-gitlab">SSH : Clé privée, clé publique, gitlab</h1>
+<h3 id="generer-cle-privee-cle-publique-windows">Générer clé privée, clé publique (Windows) :</h3>
+<p>Pour se faire il faudra ouvrir un powershell, puis taper la commande : </p>
+<pre><code class="language-bash">ssh-keygen
 </code></pre>
-<p>Ensuite il faudra mettre ceci ( Pour l'instant c'est en période de test ) : </p>
-<pre><code class="language-bash">
-
-image: docker:20.10.16
-
-variables:
-  # When you use the dind service, you must instruct Docker to talk with
-  # the daemon started inside of the service. The daemon is available
-  # with a network connection instead of the default
-  # /var/run/docker.sock socket. Docker 19.03 does this automatically
-  # by setting the DOCKER_HOST in
-  # https://github.com/docker-library/docker/blob/d45051476babc297257df490d22cbd806f1b11e4/19.03/docker-entrypoint.sh#L23-L29
-  #
-  # The 'docker' hostname is the alias of the service container as described at
-  # https://docs.gitlab.com/ee/ci/services/#accessing-the-services.
-  #
-  # Specify to Docker where to create the certificates. Docker
-  # creates them automatically on boot, and creates
-  # `/certs/client` to share between the service and job
-  # container, thanks to volume mount from config.toml
-  DOCKER_TLS_CERTDIR: "/certs"
-
-services:
-  - docker:20.10.16-dind
-
-before_script:
-  - docker info
-
-build:
-  stage: build
-  tags:
-    - docker
-  before_script:
-    - docker login -u $user -p $mdp https://registry.sarthe.fr:5000
-  script:
-    - docker build -t registry.sarthe.fr:5000/mynginx .
-    #- docker tag mynginx registry.sarthe.fr:5000/mynginx
-    - docker push registry.sarthe.fr:5000/mynginx
-
+<p>Ensuite, il va vous générer une clé privée et publique dans cet emplacement :</p>
+<pre><code class="language-bash">“C:\Users\&lt;votre User&gt;/.ssh/id_rsa”
 </code></pre>
-<p><span style="color:red">Voilà votre image sera directement push dans votre registry lors que vous allez push dans votre dépôt</span></p>
-<h2 id="creation-des-variable">Création des variable</h2>
-<p>Pour ce faire il faudra vous rendre dans les <strong>settings</strong> de votre dépôt :</p>
-<p>Ensuite selectionnez <strong>"CI/CD"</strong> :</p>
-<p><img alt="CI/CD" src="../../../images/cicd.jpg"/></p>
-<p>Ensuite descendez jusqu'à <strong>"Variables"</strong> et cliquez dessus  :</p>
-<p><img alt="Variables" src="../../../images/varia.jpg"/></p>
-<p>Ensuite il faudra remplir les champs suivant :</p>
-<p><img alt="Champ variable" src="../../../images/champ_varia.jpg"/></p>
-<p><strong>KEY</strong>: Mettre le nom de la variable souhaiter</p>
-<p><strong>VALUE</strong>: Mettre la valeur correspond a la variable créer avant</p>
-<p>Ensuite cliquer sur <strong>"ADD VARIABLE"</strong></p>
-<p><span style="color:red">Voilà vos variable créer pour que les gens ne voient pas vos mots de passe ou nom d'utilisateur</span></p>
-<h2 id="ajout-de-mkdocs">Ajout de Mkdocs</h2>
-<p><strong><span style="color:red">Cela va permettre d'automatiser en partie le déployment de votre site mkdocs</span></strong></p>
-<p>Pour ce faire, il faudra vous rendre sur le fichier <strong>".gitlab-ci.yml"</strong> créer au préalable.</p>
-<h3 id="fichier-gitlab-ciyml">Fichier .gitlab-ci.yml</h3>
-<pre><code class="language-bash">
-
-# Définition des étapes
-stages:
-  - build_mkdocs
-  - build_image
-
-# Étape 1: Génération du site MkDocs
-build_mkdocs:
-  stage: build_mkdocs
-  image: python:3.9
-  before_script:
-    - pip install mkdocs
-    - pip install mkdocs-material
-    - pip install mkdocs-mermaid2-plugin
-  script:
-    - mkdocs build --clean 
-  artifacts:
-    paths:
-      - site
-
-
-
-
-# Étape 2: Compilation de l'image Docker
-build_image:
-  stage: build_image
-  image: docker:20.10.16
-  variables:
-    DOCKER_TLS_CERTDIR: "/certs"
-  services:
-    - docker:20.10.16-dind
-  before_script:
-    - docker info
-  script:
-    - docker login -u $user -p $mdp https://registry.sarthe.fr:5000
-    - docker build -t registry.sarthe.fr:5000/nginx-mkdocs .
-    - docker push registry.sarthe.fr:5000/nginx-mkdocs
-
-  tags:
-    - docker
-
+<p><strong><span style="color:red">Voilà vos clées créent</span></strong></p>
+<h3 id="generer-cle-privee-cle-publique-ubuntu">Générer clé privée, clé publique (Ubuntu) :</h3>
+<p>Pour se faire, il faudra taper la même commande que celle de windows :</p>
+<pre><code class="language-bash">ssh-keygen
 </code></pre>
-<p>Ensuite sur votre vm, il faudra faire les manipulations suivantes :</p>
-<pre><code class="language-bash">
-git add -A
-git commit -m &lt;un message&gt;
-git push
-
+<p>Ensuite, il va vous générer une clé privée et publique dans cet emplacement :</p>
+<pre><code class="language-bash">“/home/ubuntu/.ssh/id_rsa”
 </code></pre>
-<p>En faisant ceci, sur le gitlab sa va lancer votre script. Une fois votre script effectuer il faudra vous rendre sur votre vm</p>
-<p>Une fois sur votre vm il faudra arreter votre docker :</p>
-<pre><code class="language-bash">
-control + c
-
+<h3 id="utiliser-la-vm-sur-le-powershell-de-windows">Utiliser la VM sur le Powershell de Windows :</h3>
+<p>Il vous suffira de copier la clé publique de Windows sur le fichier <strong>“authorized_keys”</strong> qui se trouve dans <strong>“/home/ubuntu/.ssh”</strong> et de sauvegarder le fichier.</p>
+<p>Pour utiliser la VM sur le powershell de Windows, il faudra taper la commande :</p>
+<pre><code class="language-bash">“ssh &lt;user&gt;@&lt;adresse Ip de la VM&gt; ou &lt;le nom de domaine&gt;”
 </code></pre>
-<p>Ensuite il faudra faire :</p>
-<pre><code class="language-bash">
-sudo docker pull registry.sarthe.fr:5000/&lt;votre image&gt;
-
+<p>Ensuite, il vous posera une question : Il faudra répondre <strong>“yes”</strong></p>
+<p><strong><span style="color:red">Enfin vous serez connecté en ssh à la VM</span></strong> </p>
+<h3 id="connecter-la-vm-sur-visual-code">Connecter la VM sur Visual Code :</h3>
+<p>Pour connecter sa VM, il faut commencer par installer une extension sur Visual Code. Pour cela il faut aller dans extension.</p>
+<p>Ensuite il faudra rechercher “remote“ et installer le premier qui apparaît.</p>
+<p>Une fois installer, il y aura une <strong><span style="color:blue">icône bleue en bas</span></strong> à gauche de l’application.</p>
+<p>Il faudra cliquer dessus, ensuite </p>
+<pre><code class="language-bash">Cliquer sur “Connect to Host...”
+Ensuite cliquer sur “+ Add New SSH Host...”
 </code></pre>
-<p>Enfin faite :</p>
-<pre><code class="language-bash">
-sudo docker run -p 8080:80 registry.sarthe.fr:5000/&lt;votre image&gt;
-
+<p>Ensuite il faudra renseigner :</p>
+<pre><code class="language-bash">“ssh &lt;user&gt;@&lt;adresse Ip de la VM&gt; ou &lt;le nom de domaine&gt;”
 </code></pre>
+<p>Ensuite au même endroit il vous demandera la distribution utiliser : <strong>(Linux, Windows, Mac)</strong>, choisissez ce dont vous avez besoin. </p>
+<p><strong><span style="color:red">Vous voilà connectez à la VM sur Visual Code !!</span></strong></p>
+<h3 id="creer-un-depot-sur-git-lab-et-le-pouvoir-cloner-et-push-grace-a-git-sur-ubuntu">Créer un dépôt sur Git-lab et le pouvoir “Cloner” et “push” grâce à “GIT” sur UBUNTU :</h3>
+<p>Il vous suffira de vous connecter au git-lab du conseil départemental : <a href="https://git.sarthe.fr/users/sign_in">Lien GitLab</a></p>
+<p>Avec vos codes fournit au préalable.</p>
+<h4 id="creation-du-depot">Création du dépôt :</h4>
+<p>Cliquez sur <strong>“Create blank project”</strong>.</p>
+<p>Ensuite donner un nom au projet et appuyer sur <strong>“Create project”</strong>.</p>
+<h4 id="configuration-pour-cloner-et-push-sur-ubuntu">Configuration pour “cloner” et “push” sur Ubuntu :</h4>
+<p>Une fois le dépôt créer, il faudra ajouter vos clés publiques (Ubuntu et Windows) sur Git-Lab.</p>
+<p>Pour ce faire, il faut se rendre sur votre profil (Icone en haut à droite) et cliquer sur <strong>préférences</strong>.</p>
+<p>En cliquant sur préférences, sur la gauche de l’écran il y aura <strong>“SSH keys”</strong> cliquez dessus. </p>
+<p>Ensuite, copier-coller une des deux clés publiques <strong>“dans Key”</strong>, donnez-lui un titre et ajoutez-la.</p>
+<p>Faites la même manipulation pour la deuxième clé publique.</p>
+<p>Ensuite retournez sur votre dépôt et copier le lien ssh.  </p>
+<p>Puis retournez sur votre VM coller ce que vous venez copier en rajoutant au début <strong>"git clone"</strong>.</p>
+<p>Suite à cette commande, votre dépôt sera dans votre VM.</p>
+<p><strong><span style="color:red">Maintenant depuis votre dépôt vous pourrez travailler sur votre VM et mettre vos travaux sur ce dépôt.</span></strong></p>
+<h4 id="maintenant-nous-allons-voir-comment-push-nos-dossier-de-travail-qui-sont-present-dans-notre-depot-sur-la-vm-directement-dans-git-lab">Maintenant, nous allons voir comment “push” nos dossier de travail qui sont présent dans notre dépôt sur la VM directement dans Git-lab.</h4>
+<p>Après avoir mis un fichier dans le dépôt il vous suffira de faire 3 commandes à la suite :</p>
+<pre><code class="language-bash">git add -A
+( Il va ajouter le nouveau fichier créer dans le dépôt)
+</code></pre>
+<pre><code class="language-bash">git commit -m rapport
+(C’est pour indiquer un message pour le fichier push) moi par exemple c’est ”rapport”
+</code></pre>
+<pre><code class="language-bash">git push
+(La dernière commande permet d’envoyer ce fichier dans le git-lab)
+</code></pre>
+<p><strong><span style="color:red">Voilà comment créer un dépôt dans Git-lab et de pouvoir le cloner et le push sur git-lab sous Ubuntu.</span></strong></p>
+<h4 id="configuration-pour-cloner-et-push-sur-windows">Configuration pour “cloner” et “push” sur Windows :</h4>
+<p>Sur Windows, il vous suffira d’installer Git pour Windows : <a href="https://git-scm.com/download/win">Lien téléchargement Git</a></p>
+<p>Une fois installer, les commandes seront les mêmes que celles de Linux </p>
 </article>
 </div>
 </div>

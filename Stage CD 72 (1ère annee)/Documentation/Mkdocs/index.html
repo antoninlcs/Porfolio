@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../../Mission/Mission%202/" rel="prev"/>
-<link href="../../../Veille%20techno/Ma%20veille/" rel="next"/>
+<link href="../GITLAB/" rel="prev"/>
+<link href="../Multipass%26docker/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.4.14" name="generator"/>
-<title>Tableau rapport quotidien - Portfolio</title>
+<title>Mkdocs - Portfolio</title>
 <link href="../../../assets/stylesheets/main.fad675c6.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#le-22-mai">
+<a class="md-skip" href="#intallation-mkdocs">
           Skip to content
         </a>
 </div>
@@ -47,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Tableau rapport quotidien
+              Mkdocs
             
           </span>
 </div>
@@ -223,14 +223,14 @@
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
 <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
 <span class="md-ellipsis">
-    Stage CD 72
+    Stage CD 72 (1ère annee)
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
-            Stage CD 72
+            Stage CD 72 (1ère annee)
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -264,71 +264,121 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_6_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_6_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
 <span class="md-ellipsis">
     Documentation
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_6_3_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_6_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_6_3">
 <span class="md-nav__icon md-icon"></span>
             Documentation
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Documentation/Docker-compose/">
+<a class="md-nav__link" href="../Docker-compose/">
 <span class="md-ellipsis">
     Docker-compose, apache, php, mariadb
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Documentation/GITHUB/">
+<a class="md-nav__link" href="../GITHUB/">
 <span class="md-ellipsis">
     Création d'un dépôt GITHUB pour héberger mon Portfolio
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Documentation/GITLAB/">
+<a class="md-nav__link" href="../GITLAB/">
 <span class="md-ellipsis">
     SSH : Clé privée, clé publique, gitlab
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Documentation/Mkdocs/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Mkdocs
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Mkdocs
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#intallation-mkdocs">
+<span class="md-ellipsis">
+      Intallation MkDocs
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Documentation/Multipass%26docker/">
+<a class="md-nav__link" href="#installation-docker-par-script">
+<span class="md-ellipsis">
+      Installation Docker par script
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#heberger-le-site-avec-nginx-avec-un-dockerfile">
+<span class="md-ellipsis">
+      Héberger le site avec Nginx avec un dockerfile
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#heberger-le-site-avec-nginx-avec-docker-compose">
+<span class="md-ellipsis">
+      Héberger le site avec Nginx avec docker-compose
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bonus">
+<span class="md-ellipsis">
+      Bonus
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Multipass%26docker/">
 <span class="md-ellipsis">
     Multipass, docker
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Documentation/Registry%20docker/">
+<a class="md-nav__link" href="../Registry%20docker/">
 <span class="md-ellipsis">
     Installation SRV-DOCK et Registry Docker
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Documentation/Script/">
+<a class="md-nav__link" href="../Script/">
 <span class="md-ellipsis">
     Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Documentation/gitlab-ci.yml/">
+<a class="md-nav__link" href="../gitlab-ci.yml/">
 <span class="md-ellipsis">
     Pipelines, CI, CD
   </span>
@@ -368,188 +418,26 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_6_5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_5" type="checkbox"/>
 <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
 <span class="md-ellipsis">
     Rapport quotidien
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_6_5_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_6_5_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
             Rapport quotidien
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Tableau rapport quotidien
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Rapport%20quotidien/Tableau%20rapport%20quotidien/">
 <span class="md-ellipsis">
     Tableau rapport quotidien
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-22-mai">
-<span class="md-ellipsis">
-      Le 22 mai :
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-23-mai">
-<span class="md-ellipsis">
-      Le 23 mai
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-24-mai">
-<span class="md-ellipsis">
-      Le 24 mai
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-25-mai">
-<span class="md-ellipsis">
-      Le 25 mai
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-26-mai">
-<span class="md-ellipsis">
-      Le 26 mai
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-30-mai">
-<span class="md-ellipsis">
-      Le 30 mai
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-31-mai">
-<span class="md-ellipsis">
-      Le 31 mai
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-1-juin">
-<span class="md-ellipsis">
-      Le 1 juin
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-2-juin">
-<span class="md-ellipsis">
-      Le 2 juin
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-506">
-<span class="md-ellipsis">
-      Le 5/06
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-606">
-<span class="md-ellipsis">
-      Le 6/06
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-706">
-<span class="md-ellipsis">
-      Le 7/06
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-806">
-<span class="md-ellipsis">
-      Le 8/06
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-1206">
-<span class="md-ellipsis">
-      Le 12/06
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-1306">
-<span class="md-ellipsis">
-      Le 13/06
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-1406">
-<span class="md-ellipsis">
-      Le 14/06
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-1506">
-<span class="md-ellipsis">
-      Le 15/06
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-1606">
-<span class="md-ellipsis">
-      Le 16/06
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-1906">
-<span class="md-ellipsis">
-      Le 19/06
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-2006">
-<span class="md-ellipsis">
-      Le 20/06
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-2106">
-<span class="md-ellipsis">
-      Le 21/06
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -596,149 +484,37 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#le-22-mai">
+<a class="md-nav__link" href="#intallation-mkdocs">
 <span class="md-ellipsis">
-      Le 22 mai :
+      Intallation MkDocs
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#le-23-mai">
+<a class="md-nav__link" href="#installation-docker-par-script">
 <span class="md-ellipsis">
-      Le 23 mai
+      Installation Docker par script
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#le-24-mai">
+<a class="md-nav__link" href="#heberger-le-site-avec-nginx-avec-un-dockerfile">
 <span class="md-ellipsis">
-      Le 24 mai
+      Héberger le site avec Nginx avec un dockerfile
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#le-25-mai">
+<a class="md-nav__link" href="#heberger-le-site-avec-nginx-avec-docker-compose">
 <span class="md-ellipsis">
-      Le 25 mai
+      Héberger le site avec Nginx avec docker-compose
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#le-26-mai">
+<a class="md-nav__link" href="#bonus">
 <span class="md-ellipsis">
-      Le 26 mai
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-30-mai">
-<span class="md-ellipsis">
-      Le 30 mai
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-31-mai">
-<span class="md-ellipsis">
-      Le 31 mai
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-1-juin">
-<span class="md-ellipsis">
-      Le 1 juin
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-2-juin">
-<span class="md-ellipsis">
-      Le 2 juin
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-506">
-<span class="md-ellipsis">
-      Le 5/06
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-606">
-<span class="md-ellipsis">
-      Le 6/06
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-706">
-<span class="md-ellipsis">
-      Le 7/06
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-806">
-<span class="md-ellipsis">
-      Le 8/06
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-1206">
-<span class="md-ellipsis">
-      Le 12/06
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-1306">
-<span class="md-ellipsis">
-      Le 13/06
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-1406">
-<span class="md-ellipsis">
-      Le 14/06
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-1506">
-<span class="md-ellipsis">
-      Le 15/06
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-1606">
-<span class="md-ellipsis">
-      Le 16/06
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-1906">
-<span class="md-ellipsis">
-      Le 19/06
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-2006">
-<span class="md-ellipsis">
-      Le 20/06
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-2106">
-<span class="md-ellipsis">
-      Le 21/06
+      Bonus
     </span>
 </a>
 </li>
@@ -749,87 +525,103 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Tableau rapport quotidien</h1>
-<p>RAPPORT QUOTIDIEN</p>
-<h2 id="le-22-mai">Le 22 mai :</h2>
-<p><strong>Matin</strong> : Réunion avec les différents responsable de chaque services</p>
-<p>Après-midi :
-Recherche sur le docker </p>
-<h2 id="le-23-mai">Le 23 mai</h2>
-<p><strong>Matin</strong> : Installation multipass</p>
-<p>manipulation VM</p>
-<p>Install et conf docker </p>
-<p><strong>Après-midi</strong> : J’ai héberger un site web sur un docker qui fait office de serveur web</p>
-<h3 id="preuve">Preuve :</h3>
-<p><a href="https://antoninlcs.github.io/Porfolio/Stage%20CD%2072/Documentation/Multipass%26docker/">Mission 23/05</a></p>
-<h2 id="le-24-mai">Le 24 mai</h2>
-<p><strong>Matin et Après Midi:</strong> </p>
-<p>Prise en main SSH 
-Clé prv et pub
-Git-lab ( Clone et push un dépôt ) </p>
-<h3 id="preuve_1">Preuve :</h3>
-<p><a href="https://antoninlcs.github.io/Porfolio/Stage%20CD%2072/Documentation/GITLAB/">Mission 24/05</a></p>
-<h2 id="le-25-mai">Le 25 mai</h2>
-<p><strong>Matin et Après Midi:</strong> </p>
-<p>Création docker-compose
-Apache MariaDB
-avec Wordpress</p>
-<h3 id="preuve_2">Preuve :</h3>
-<p><a href="https://antoninlcs.github.io/Porfolio/Stage%20CD%2072/Documentation/Docker-compose/">Mission 25/05</a></p>
-<h2 id="le-26-mai">Le 26 mai</h2>
-<p><strong>Matin et Après Midi:</strong> </p>
-<p>Création d’un script bash qui récupère la taille de la partition “home”. Cette information sera stocker dans la BDD</p>
-<h3 id="preuve_3">Preuve :</h3>
-<p><a href="https://antoninlcs.github.io/Porfolio/Stage%20CD%2072/Documentation/Script/">Mission 26/05</a></p>
-<h2 id="le-30-mai">Le 30 mai</h2>
-<p><strong>Matin et Après Midi</strong></p>
-<p>Création d’un script bash qui récupère la taille de la partition “home”. Cette information sera stocker dans la BDD</p>
-<h3 id="preuve_4">Preuve :</h3>
-<p><a href="https://antoninlcs.github.io/Porfolio/Stage%20CD%2072/Documentation/Script/">Mission 26/05</a></p>
-<h2 id="le-31-mai">Le 31 mai</h2>
-<p><strong>Matin et après midi</strong></p>
-<p>Utilisation et installation MkDocs</p>
-<p>Hébergement Mkdocs sous un docker. Sur le docker tournée le service web Nginx</p>
-<h3 id="preuve_5">Preuve</h3>
-<p><a href="https://antoninlcs.github.io/Porfolio/Stage%20CD%2072/Documentation/Mkdocs/">Mission 31/05</a></p>
-<h2 id="le-1-juin">Le 1 juin</h2>
-<p>Customisation page Mdocks </p>
-<h2 id="le-2-juin">Le 2 juin</h2>
-<p>Visite des serveurs </p>
-<h2 id="le-506">Le 5/06</h2>
-<p>Installation SRV LINUX DOCKER </p>
-<h2 id="le-606">Le 6/06</h2>
-<p>Visite d'un collège + manipulation registry docker </p>
-<h3 id="preuve_6">Preuve</h3>
-<p><a href="https://antoninlcs.github.io/Porfolio/Stage%20CD%2072/Documentation/Registry%20docker/#installation-registry-docker">Mission registry</a></p>
-<h2 id="le-706">Le 7/06</h2>
-<p>Réunion avec Chef de projet </p>
-<h2 id="le-806">Le 8/06</h2>
-<p>Journée teletravail</p>
-<h2 id="le-1206">Le 12/06</h2>
-<p>Push une image sur le registry depuis une VM extérieur </p>
-<p>Problème : Proxy</p>
-<h2 id="le-1306">Le 13/06</h2>
-<p>Héberger et déployer automatiquement mon portfolio sur GITHUB </p>
-<p>Problème : Proxy</p>
-<p><a href="https://antoninlcs.github.io/Porfolio/Stage%20CD%2072/Documentation/GITHUB/">Mission GITHUB</a></p>
-<h2 id="le-1406">Le 14/06</h2>
-<p>Héberger et déployer automatiquement mon portfolio sur GITHUB </p>
-<p>Problème : Proxy</p>
-<p><a href="https://antoninlcs.github.io/Porfolio/Stage%20CD%2072/Documentation/GITHUB/">Mission GITHUB</a></p>
-<h2 id="le-1506">Le 15/06</h2>
-<p>Push image vers registry GITLAB </p>
-<p>Problème : Proxy</p>
-<p><a href="https://antoninlcs.github.io/Porfolio/Stage%20CD%2072/Documentation/gitlab-ci.yml/">Mission push registry GITLAB</a></p>
-<h2 id="le-1606">Le 16/06</h2>
-<p>Début de rédaction de la note de synthèse </p>
-<h2 id="le-1906">Le 19/06</h2>
-<p>Héberger et déployer automatiquement mon portfolio sur GITLAB </p>
-<p><a href="https://antoninlcs.github.io/Porfolio/Stage%20CD%2072/Documentation/gitlab-ci.yml/">Mission push registry GITLAB</a></p>
-<h2 id="le-2006">Le 20/06</h2>
-<p>Visite de mon professeur référent </p>
-<h2 id="le-2106">Le 21/06</h2>
-<p>Finalisation du projet avec tout qui est automatisé</p>
+<h1>Mkdocs</h1>
+<h2 id="intallation-mkdocs">Intallation MkDocs</h2>
+<p>Tout d'abord, il faudra installer le paquet "pip"</p>
+<pre><code class="language-bash">sudo apt install pip
+</code></pre>
+<p>Ensuite installer MkDocs</p>
+<pre><code class="language-bash"> pip install MkDocs
+</code></pre>
+<p>Après l'installation, dans votre répertoire de travail, exécutez la commande suivante pour initialiser un site :</p>
+<pre><code class="language-bash">mkdocs new mkdocspro
+</code></pre>
+<p>Ensuite placer vous dans le dossier :</p>
+<pre><code class="language-bash">cd mkdocspro
+</code></pre>
+<p>Ensuite faite cette commande pour savoir l'url du site :</p>
+<pre><code class="language-bash">mkdocs serve
+</code></pre>
+<p><span style="color:red"><strong>Si tous est fait correctement vous devriez arriver sur une page comme celle ci !</strong></span></p>
+<h2 id="installation-docker-par-script">Installation Docker par script</h2>
+<p>Sur le <strong>GitLab</strong> du département : <a href="https://git.sarthe.fr/users/sign_in">Lien GitLab</a></p>
+<p>Dans la barre de recherche taper <strong>"ansible localhost"</strong> </p>
+<p><strong>Cloner</strong> sur votre Vm le dépôt.</p>
+<p>Ensuite aller dans ce dossier et faite :</p>
+<pre><code class="language-bash"> sudo ansible-galaxy install -f -r requirements.yml
+</code></pre>
+<pre><code class="language-bash">  sudo sudo ansible-playbook  pb_install_docker.yml
+</code></pre>
+<h2 id="heberger-le-site-avec-nginx-avec-un-dockerfile">Héberger le site avec Nginx avec un dockerfile</h2>
+<h4 id="creer-un-depot-sur-git-et-le-cloner">Créer un dépôt sur git et le cloner</h4>
+<p>Pour ce faire aller voir <a href="https://antoninlcs.github.io/Porfolio/Stage%20CD%2072/Documentation/GITLAB/">La mission du 24.05</a> !</p>
+<h4 id="mettre-le-contenu-de-mkdocs-dans-le-depot">Mettre le contenu de MkDocs dans le dépôt</h4>
+<p>Il faudra faire :</p>
+<pre><code class="language-bash">mv &lt;nom du fichier&gt; &lt;la destination&gt;
+</code></pre>
+<h4 id="creation-du-dockerfile">Création du Dockerfile</h4>
+<p>Il faudra créer un <strong>"Dockerfile"</strong> dans le dépôt précedemment crée </p>
+<pre><code class="language-bash">vim Dockerfile
+</code></pre>
+<p>Une fois créer il faudra insérer ceci :</p>
+<pre><code class="language-bash">FROM nginx:latest
+
+# Copiez les fichiers générés de MkDocs dans le répertoire du serveur Nginx
+COPY site /usr/share/nginx/html
+
+# Copiez la configuration Nginx personnalisée
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+</code></pre>
+<h4 id="creation-du-fichier-conf-nginx">Création du fichier conf Nginx</h4>
+<p>Il faudra crée ce fichier toujours dans le dépôt </p>
+<pre><code class="language-bash">vim nginx.conf
+</code></pre>
+<p>Une fois créer il faudra insérer ceci :</p>
+<pre><code class="language-bash">server {
+    listen 80;
+    server_name localhost;
+
+    location / {
+        root /usr/share/nginx/html;
+        index index.html;
+    }
+}
+</code></pre>
+<h4 id="creation-de-limage-docker">Création de l'image Docker</h4>
+<p>Pour construire l'image il faudra taper cette commande : </p>
+<pre><code class="language-bash">docker build -t monsite-mkdocs .
+</code></pre>
+<p>Il vous suffira d'éxécuter le conteneur :</p>
+<pre><code class="language-bash">docker run -d -p 8080:0 monsite-mkdocs
+</code></pre>
+<p><span style="color:red"><strong>Si tous est fait correctement vous devriez arriver sur une page comme celle ci ! Et votre site est héberger sur un docker nginx</strong></span></p>
+<h2 id="heberger-le-site-avec-nginx-avec-docker-compose">Héberger le site avec Nginx avec docker-compose</h2>
+<p>Tout d'abord supprimer le fichier <strong>"Dockerfiles"</strong></p>
+<p>Ensuite dans le dépôt, il faudra créer le fichier <strong>"docker-compose.yml"</strong> et mettre ceci :</p>
+<pre><code class="language-bash">version: '3'
+
+services:
+  nginx-server:
+    container_name: nginx  #Son nom
+    #restart: always    #Il reste toujours allumer
+    image: nginx:latest
+    ports:
+      - 8080:80
+    volumes:
+     ## - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./site:/usr/share/nginx/html
+</code></pre>
+<p><span style="color:red"><strong>Si tous est fait correctement vous devriez arriver sur une page comme celle ci ! Et votre site est héberger sur un docker nginx en permanance</strong></span></p>
+<h2 id="bonus">Bonus</h2>
+<h3 id="installer-un-navigateur-en-ligne-de-commande">Installer un navigateur en ligne de commande</h3>
+<p>Faite un : </p>
+<pre><code class="language-bash">sudo apt install lynx
+</code></pre>
+<p>Pour l'utiliser par exemple "Google ":</p>
+<pre><code class="language-bash">lynx https://google.com
+</code></pre>
+<p>Répondez "A" aux questions qu'il vous pose.</p>
+<p><span style="color:red"><strong>Et voilà vous avez un navigateur internet en ligne de commande</strong></span></p>
 </article>
 </div>
 </div>

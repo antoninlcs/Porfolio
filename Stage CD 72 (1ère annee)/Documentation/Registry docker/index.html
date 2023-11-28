@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../../Besoin%20du%20CD72/besoin/" rel="prev"/>
-<link href="../GITHUB/" rel="next"/>
+<link href="../Multipass%26docker/" rel="prev"/>
+<link href="../Script/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.4.14" name="generator"/>
-<title>Docker-compose, apache, php, mariadb - Portfolio</title>
+<title>Installation SRV-DOCK et Registry Docker - Portfolio</title>
 <link href="../../../assets/stylesheets/main.fad675c6.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#docker-compose-apache-php-mariadb">
+<a class="md-skip" href="#installation-srv-dock-et-registry-docker">
           Skip to content
         </a>
 </div>
@@ -47,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Docker-compose, apache, php, mariadb
+              Installation SRV-DOCK et Registry Docker
             
           </span>
 </div>
@@ -223,14 +223,14 @@
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
 <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
 <span class="md-ellipsis">
-    Stage CD 72
+    Stage CD 72 (1ère annee)
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
-            Stage CD 72
+            Stage CD 72 (1ère annee)
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -278,118 +278,12 @@
             Documentation
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Docker-compose, apache, php, mariadb
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Docker-compose/">
 <span class="md-ellipsis">
     Docker-compose, apache, php, mariadb
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cest-quoi-docker-compose">
-<span class="md-ellipsis">
-      C’est quoi Docker-compose :
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#configurer-docker-compose">
-<span class="md-ellipsis">
-      Configurer Docker-compose :
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#docker-composeyml">
-<span class="md-ellipsis">
-      Docker-compose.yml :
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#backups-db_data-www">
-<span class="md-ellipsis">
-      Backups, db_data, www :
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#installer-wordpress-sur-le-dossier-www">
-<span class="md-ellipsis">
-      Installer WordPress sur le dossier “www” :
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#attention">
-<span class="md-ellipsis">
-      Attention
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#dockerfiles">
-<span class="md-ellipsis">
-      DockerFiles  :
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#attention_1">
-<span class="md-ellipsis">
-      Attention
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#lancement-docker-compose">
-<span class="md-ellipsis">
-      Lancement docker-compose :
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#push-le-depot-sans-avoir-acces-au-id-de-connexion-et-au-mot-de-passe">
-<span class="md-ellipsis">
-      Push le dépôt sans avoir accès au ID de connexion et au mot de passe :
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gitignore">
-<span class="md-ellipsis">
-      .gitignore :
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#env">
-<span class="md-ellipsis">
-      .env :
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#env_sample">
-<span class="md-ellipsis">
-      .env_sample :
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../GITHUB/">
@@ -419,12 +313,83 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Registry%20docker/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Installation SRV-DOCK et Registry Docker
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Installation SRV-DOCK et Registry Docker
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#registry-docker-cest-quoi">
+<span class="md-ellipsis">
+      Registry Docker c’est quoi ?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installation-srv-tst-docker">
+<span class="md-ellipsis">
+      Installation SRV-TST-DOCKER :
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installation-registry-docker">
+<span class="md-ellipsis">
+      Installation Registry docker
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#visualiser-les-images-disponibles-dans-le-registry-prive">
+<span class="md-ellipsis">
+      Visualiser les images disponibles dans le Registry privé:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#visualiser-les-differents-tags-dune-image-dans-le-registry-prive">
+<span class="md-ellipsis">
+      Visualiser les différents tags d'une image dans le Registry privé :
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#le-stockage-dans-un-registry-docker">
+<span class="md-ellipsis">
+      Le stockage dans un Registry Docker :
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#le-chiffrement">
+<span class="md-ellipsis">
+      Le chiffrement :
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#restriction-dacces">
+<span class="md-ellipsis">
+      Restriction d'accès :
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Script/">
@@ -540,93 +505,58 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#cest-quoi-docker-compose">
+<a class="md-nav__link" href="#registry-docker-cest-quoi">
 <span class="md-ellipsis">
-      C’est quoi Docker-compose :
+      Registry Docker c’est quoi ?
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configurer-docker-compose">
+<a class="md-nav__link" href="#installation-srv-tst-docker">
 <span class="md-ellipsis">
-      Configurer Docker-compose :
+      Installation SRV-TST-DOCKER :
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#docker-composeyml">
+<a class="md-nav__link" href="#installation-registry-docker">
 <span class="md-ellipsis">
-      Docker-compose.yml :
+      Installation Registry docker
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#backups-db_data-www">
+<a class="md-nav__link" href="#visualiser-les-images-disponibles-dans-le-registry-prive">
 <span class="md-ellipsis">
-      Backups, db_data, www :
+      Visualiser les images disponibles dans le Registry privé:
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#installer-wordpress-sur-le-dossier-www">
+<a class="md-nav__link" href="#visualiser-les-differents-tags-dune-image-dans-le-registry-prive">
 <span class="md-ellipsis">
-      Installer WordPress sur le dossier “www” :
+      Visualiser les différents tags d'une image dans le Registry privé :
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#attention">
+<a class="md-nav__link" href="#le-stockage-dans-un-registry-docker">
 <span class="md-ellipsis">
-      Attention
+      Le stockage dans un Registry Docker :
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#dockerfiles">
+<a class="md-nav__link" href="#le-chiffrement">
 <span class="md-ellipsis">
-      DockerFiles  :
+      Le chiffrement :
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#attention_1">
+<a class="md-nav__link" href="#restriction-dacces">
 <span class="md-ellipsis">
-      Attention
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#lancement-docker-compose">
-<span class="md-ellipsis">
-      Lancement docker-compose :
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#push-le-depot-sans-avoir-acces-au-id-de-connexion-et-au-mot-de-passe">
-<span class="md-ellipsis">
-      Push le dépôt sans avoir accès au ID de connexion et au mot de passe :
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gitignore">
-<span class="md-ellipsis">
-      .gitignore :
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#env">
-<span class="md-ellipsis">
-      .env :
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#env_sample">
-<span class="md-ellipsis">
-      .env_sample :
+      Restriction d'accès :
     </span>
 </a>
 </li>
@@ -637,120 +567,62 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="docker-compose-apache-php-mariadb">Docker-compose, apache, php, mariadb</h1>
-<h2 id="cest-quoi-docker-compose">C’est quoi Docker-compose :</h2>
-<p><strong><span style="color:red">C’est un outil qui permet de définir et gérer des applications multi-conteneurs. Ce docker utilise un fichier YAML (Représentation des informations lisible par l’Homme).</span></strong></p>
-<h2 id="configurer-docker-compose">Configurer Docker-compose :</h2>
-<p>Tout d’abord, il faudra cloner votre dépôt git sur votre VM :</p>
-<p><a href="https://antoninlcs.github.io/Porfolio/Stage%20CD%2072/Documentation/GITLAB/">Revoir mission 24/05</a>
-: lien pour le département.</p>
-<p>Allez dans le titre <strong>“Configuration pour “cloner” et “push” sur Ubuntu : ”</strong></p>
-<p>Ensuite, il faudra aller à la racine du dépôt et créer différent dossier :</p>
-<h2 id="docker-composeyml">Docker-compose.yml :</h2>
-<pre><code class="language-bash">version: '3.7'
-
-services: 
-  db:
-    image: mariadb:10   #Service du container 
-    container_name: mariadb  #Son nom
-    restart: always    #Il reste toujours allumer
-    ports: ['3306:3306']
-    volumes:          #Endroit stock les information et données du container
-      - ./db_data:/var/lib/mysql
-      - ./backups:/backups
-    environment:
-      MYSQL_DATABASE: $MYSQL_DATABASE
-      MYSQL_USER: $MYSQL_USER
-      MYSQL_PASSWORD: $MYSQL_PASSWORD
-      MYSQL_ALLOW_EMPTY_PASSWORD: 'no'
-      MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
-    env_file:
-      - .env  #Il va chercher les information de ce fichier la
-
-  web:
-    build: .  #Il contruit le containeur à la racine du dépôt
-    container_name: apache2
-    restart: always
-    depends_on: ['db']
-    ports: ['80:80'] #numéros de port de sortie du containeur
-    links: ['db:db']
-    volumes:
-      - './www:/var/www/html' #Endroit où il va chercher le contenu et stocker 
-    environment: #Il va récuper les données de la base de données
-      MYSQL_DB_HOST: db
-      MYSQL_DATABASE: $MYSQL_DATABASE
-      MYSQL_USER: $MYSQL_USER
-      MYSQL_PASSWORD: $MYSQL_PASSWORD
-
-    env_file:
-      - .env  #Il va chercher les information de ce fichier la
+<h1 id="installation-srv-dock-et-registry-docker">Installation SRV-DOCK et Registry Docker</h1>
+<h2 id="registry-docker-cest-quoi">Registry Docker c’est quoi ?</h2>
+<p><strong><span style="color:red">Le registre Docker est une méthode standard de stockage et de distribution des images Docker. Le registre est un référentiel open source sous licence d'autorisation Apache. Le registre Docker permet également d'améliorer le contrôle d'accès et la sécurité des images Docker stockées dans son référentiel.</span></strong></p>
+<h2 id="installation-srv-tst-docker">Installation SRV-TST-DOCKER :</h2>
+<p>Pour installer le serveur, je l’ai fait sur l’outil de virtualisation VMWARE. L’installation c’est fait grâce à des scripts ansible ce qui permet une installation rapide et automatique. </p>
+<h2 id="installation-registry-docker">Installation Registry docker</h2>
+<p>Création du Registry privé :</p>
+<pre><code class="language-bash">“docker run -d -p 5000:5000 --restart=always --name mon-registry registry:2”
 </code></pre>
-<h2 id="backups-db_data-www">Backups, db_data, www :</h2>
-<p>Il faudra créer ces fichiers dans le dépôt pour les <strong>“Volumes”</strong>.</p>
-<h2 id="installer-wordpress-sur-le-dossier-www">Installer WordPress sur le dossier “www” :</h2>
-<p><strong><span style="color:red">WordPress est un système de gestion de contenu gratuit, libre et open source. Ce logiciel écrit en php repose sur une base de données MySQL.</span></strong></p>
-<p>Pour installer WordPress sur <strong>“www”</strong>, il vous suffira de vous placer dedans :</p>
-<pre><code class="language-bash"> “cd www/”
-</code></pre>
-<p>Et de faire la commande :</p>
-<pre><code class="language-bash"> ” wget https://wordpress.org/latest.zip “
-</code></pre>
-<h2 id="attention"><strong><span style="color:red">Attention</span></strong></h2>
-<p>Il faut penser à <strong>“unzip“</strong> le fichier <strong>“latest.zip“</strong> </p>
-<p>Pour cela il faudra installer le paquet unzip :</p>
-<pre><code class="language-bash">“sudo apt install unzip”
-</code></pre>
-<p>Enfin faite la commande dans <strong>“www”</strong> :</p>
-<pre><code class="language-bash">“unzip latest.zip”        
-</code></pre>
-<p><strong>Pour que le WordPress fonctionne il faut installer une extension php</strong> </p>
-<h2 id="dockerfiles">DockerFiles  :</h2>
-<p><strong><span style="color:red">Les Dockerfile vous permettent de configurer et de créer rapidement une image pour la rendre plus partageable facilement.</span></strong></p>
-<p>Il vous suffira de créer un fichier Dockerfile  toujours à l’intérieur de votre dépôt : </p>
-<pre><code class="language-bash">FROM    php:7.4-apache 
-#Il va chercher le php apache 
-RUN     docker-php-ext-install mysqli
-#Et il va installer l'extension 
-</code></pre>
-<h2 id="attention_1"><strong><span style="color:red">Attention</span></strong></h2>
-<p>Il faudra modifier les droits de ”www” : ”chmod -R 777.”</p>
-<h2 id="lancement-docker-compose">Lancement docker-compose :</h2>
-<p>Une fois tout cela configurer vous pourrez lancer la commande : </p>
-<pre><code class="language-bash">“sudo docker-compose up”
-</code></pre>
-<p>Cela va lancer votre docker-compose. Il vous suffira d'ouvrir un navigateur et taper le nom de votre machine et vous verrez wordpress
-Il faudra renseigner le nom de votre site et les informations de votre BDD précédemment définis dans le fichier <strong>“docker-compose”</strong></p>
-<p><strong><span style="color:red">Voilà votre site sur le serveur Apache sur un docker. Maintenant laisser les devs travailler !</span></strong></p>
-<h2 id="push-le-depot-sans-avoir-acces-au-id-de-connexion-et-au-mot-de-passe">Push le dépôt sans avoir accès au ID de connexion et au mot de passe :</h2>
-<p><strong><span style="color:red">Il est important de savoir faire cela car si vous mettez tous vos dossiers dans votre dépôt public et que dans ces dossiers tout le monde peut accéder à vos de mot de passe. Votre site sera en aucun cas sécurisé.</span></strong></p>
-<h2 id="gitignore">.gitignore :</h2>
-<p>Ce fichier sert à indiquer quels fichiers il va ignorer pendant le push, pour cela il faudra créer ce fichier toujours dans votre dépôt.
-Il faudra inscrire dans ce fichier les fichiers sensibles envers votre site :</p>
-<pre><code class="language-bash">www/
-backups/
-db_data/
-.env
-</code></pre>
-<p>Quand vous allez faire un push dans votre git-lab c’est fichier n’y seront pas.</p>
-<h2 id="env">.env :</h2>
-<p>Le fichier .env est un fichier caché sur votre vm qui permet de déclarer des variables pour les informations importantes, par exemple : </p>
-<p><strong>“MYSQL_PASSWORD = Votre password”</strong></p>
-<p>Votre fichier doit ressembler à sa :</p>
-<pre><code class="language-bash">#Declaration Variable 
-
-
-MYSQL_USER : NOMUTILISATEUR 
-
-MYSQL_PASSWORD : MOTPASSEUSER  
-
-MYSQL_ROOT_PASSWORD : MOTDEPASSEROOT
-
-MYSQL_DATABASE : NOMBASE 
-</code></pre>
-<h2 id="env_sample">.env_sample :</h2>
-<p>Pour aider les gens à créer leur “.env” sans mettre vos informations, il est possible de faire un exemple et ce fichier contrairement au “.env” sera push dans le dépôt.</p>
-<p><strong><span style="color:red">Une fois tout cela configurer, il vous suffira de push votre dépôt sur la VM et vos fichiers seront sur le git-lab en ligne.</span></strong></p>
-<p><strong><span style="color:green">Rappel pour push : Faite un “git add – A”, puis un “git commit –m <message>”, enfin le “git push”</message></span></strong></p>
+<h3 id="deposer-une-image-dans-le-registry-prive">Déposer une image dans le Registry privé :</h3>
+<p>Tout d’abord il faudra créer un DockerFile :</p>
+<p><img alt="code dockerfile" src="../../../images/Dockerfile.jpg"/></p>
+<p>Ensuite il faudra construire votre image : </p>
+<p><img alt="Création image" src="../../../images/cr%C3%A9ation_image.jpg"/></p>
+<p>Ensuite, il faudra tag votre image pour pouvoir push l’image sur le registry docker </p>
+<p><img alt="Tag image" src="../../../images/tag_image.jpg"/></p>
+<p>Enfin vous pourrez push votre image dans votre registry :</p>
+<p><img alt="Push image" src="../../../images/push_image.jpg"/></p>
+<h2 id="visualiser-les-images-disponibles-dans-le-registry-prive">Visualiser les images disponibles dans le Registry privé:</h2>
+<p>Voici l’url pour y accèder : </p>
+<p><a href="http://srv-tst-dock.cg72.fr:5000/v2/_catalog">Lien pour acceder au registry</a></p>
+<p>Voici ce que vous aurez comme résultat : </p>
+<p><img alt="résultat page registry" src="../../../images/resultat_page_registry.jpg"/></p>
+<h2 id="visualiser-les-differents-tags-dune-image-dans-le-registry-prive">Visualiser les différents tags d'une image dans le Registry privé :</h2>
+<p>Pour l’exemple, nous allons rajouter un tag “test” à notre image “alpinegit” :</p>
+<p><img alt="Ajouter un tag à une image" src="../../../images/tag_image_test.jpg"/></p>
+<p>Voici la commande donc pour visualiser les tags :</p>
+<p><a href="http://srv-tst-dock.cg72.fr:5000/v2/alpinegit/tags/list">Visualiser les tag</a></p>
+<p>Voici le résultat : </p>
+<p><img alt="Résultat page tag" src="../../../images/resultat_page_tags.jpg"/></p>
+<h2 id="le-stockage-dans-un-registry-docker">Le stockage dans un Registry Docker :</h2>
+<p>C’est important d’avoir un stockage car le problème est que si vous quitter votre docker tous seront supprimer, c’est pour cela qui faut créer des volumes.</p>
+<p>Tout d’abord, il faudra créer un dossier : </p>
+<p><img alt="Dossier stockage" src="../../../images/stock.jpg"/></p>
+<p>Ensuite lancer un docker avec le paramètre qui sera pris en compte :</p>
+<p><img alt="Docker Stockage" src="../../../images/docker_stock.jpg"/></p>
+<h3 id="attention"><span style="color:red">Attention</span></h3>
+<p><strong>Pensez à supprimer votre précèdent docker</strong></p>
+<h2 id="le-chiffrement">Le chiffrement :</h2>
+<p>Tout d’abord, il faudra créer un dossier pour stocker vos certificats :</p>
+<p><img alt="Dossier Certificat" src="../../../images/docker_certificat.jpg"/></p>
+<p>Ensuite, il faudra générer vos certificats auto-signée avec l’outil openssl :</p>
+<p><img alt="openssl" src="../../../images/openssl.jpg"/></p>
+<p>Ensuite créer un docker avec ces paramètres : </p>
+<p><img alt="Docker certif" src="../../../images/docker_certif.jpg"/></p>
+<p>Et vous pourrais refaire la manip du début c’est-à-dire tag et push vos images.</p>
+<p>Pour accéder à la page pour voir quoi contient votre registry : <a href="https://srv-tst-dock.cg72.fr/v2/_catalog">Lien pour voir ce que contient le registry</a></p>
+<h2 id="restriction-dacces">Restriction d'accès :</h2>
+<p>Il faudra tout d’abord, créer un dossier pour stocker vos fichiers :</p>
+<p>Ensuite il faudra générer le fichier htpasswd : </p>
+<p>Ensuite vous pourrez recréer un docker avec tous les paramètres vus depuis le début</p>
+<p>Ensuite vous vous connectez à votre registry avec cette commande : </p>
+<p>Une fois que vous êtes log vous pouvez push vos images :</p>
+<p>Docker Compose :</p>
+<p>Normalement, si vous avez tout bien fait vous devriez avoir cette arborescence :</p>
+<p>Vous pouvez inscrire toutes ces fonctionnalités dans un docker Compose : </p>
 </article>
 </div>
 </div>
