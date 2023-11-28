@@ -40,7 +40,7 @@ Git-lab ( Clone et push un dépôt )
 
 ### Preuve :
 
-[Mission 24/05]()
+[Mission 24/05](/Stage%20CD%2072/Documentation/GITLAB/)
 
 
 
@@ -54,7 +54,7 @@ avec Wordpress
 
 ### Preuve :
 
-[Mission 25/05](/Stage%20CD%2072/Mission/Mission%20du%2025.05/)
+[Mission 25/05](/Stage%20CD%2072/Documentation/Docker-compose/)
 
 
 
@@ -66,7 +66,7 @@ Création d’un script bash qui récupère la taille de la partition “home”
 
 ### Preuve :
 
-[Mission 26/05](/Stage%20CD%2072/Mission/Mission%20du%2026.05/)
+[Mission 26/05](/Stage%20CD%2072/Documentation/Script/)
 
 
 
@@ -79,7 +79,7 @@ Création d’un script bash qui récupère la taille de la partition “home”
 
 ### Preuve :
 
-[Mission 26/05](/Stage%20CD%2072/Mission/Mission%20du%2026.05/)
+[Mission 26/05](/Stage%20CD%2072/Documentation/Script/)
 
 
 
@@ -93,16 +93,13 @@ Hébergement Mkdocs sous un docker. Sur le docker tournée le service web Nginx
 
 ### Preuve 
 
-[Mission 31/05](/Stage%20CD%2072/Mission/Mission%20du%2031.05/)
+[Mission 31/05](/Stage%20CD%2072/Documentation/Mkdocs/)
 
 
 ## Le 1 juin
 
 Customisation page Mdocks 
 
-### Preuve 
-
-[Lien vers mon site](http://51.79.83.150:19223/antonin.lucas/)
 
 
 ## Le 2 juin
@@ -121,7 +118,7 @@ Visite d'un collège + manipulation registry docker
 
 ### Preuve 
 
-[Mission registry](https://antoninlcs.github.io/cd72/Stage%20CD%2072/Mission/Registry%20docker/)
+[Mission registry]()
 
 
 ## Le 7/06
