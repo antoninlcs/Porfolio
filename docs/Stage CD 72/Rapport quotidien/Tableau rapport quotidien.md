@@ -1,7 +1,7 @@
 RAPPORT QUOTIDIEN
 
 
-## Le 22 juin : 
+## Le 22 mai : 
 
 **Matin** : Réunion avec les différents responsable de chaque services
 
@@ -12,7 +12,7 @@ Recherche sur le docker
 
 
 
-## Le 23 juin 
+## Le 23 mai
 
 **Matin** : Installation multipass
  
@@ -29,7 +29,7 @@ Install et conf docker
 
 
 
-## Le 24 juin
+## Le 24 mai
 
 
 **Matin et Après Midi:** 
@@ -40,11 +40,11 @@ Git-lab ( Clone et push un dépôt )
 
 ### Preuve :
 
-[Mission 24/05](/Stage%20CD%2072/Documentation/GITLAB/)
+[Mission 24/05](https://antoninlcs.github.io/Porfolio/Stage%20CD%2072/Documentation/GITLAB/)
 
 
 
-## Le 25 juin 
+## Le 25 mai 
 
 **Matin et Après Midi:** 
 
@@ -54,11 +54,11 @@ avec Wordpress
 
 ### Preuve :
 
-[Mission 25/05](/Stage%20CD%2072/Documentation/Docker-compose/)
+[Mission 25/05](https://antoninlcs.github.io/Porfolio/Stage%20CD%2072/Documentation/Docker-compose/)
 
 
 
-## Le 26 juin 
+## Le 26 mai 
 
 **Matin et Après Midi:**  
 
@@ -66,11 +66,11 @@ Création d’un script bash qui récupère la taille de la partition “home”
 
 ### Preuve :
 
-[Mission 26/05](/Stage%20CD%2072/Documentation/Script/)
+[Mission 26/05](https://antoninlcs.github.io/Porfolio/Stage%20CD%2072/Documentation/Script/)
 
 
 
-## Le 30 juin 
+## Le 30 mai 
 
 **Matin et Après Midi**
 
@@ -79,11 +79,11 @@ Création d’un script bash qui récupère la taille de la partition “home”
 
 ### Preuve :
 
-[Mission 26/05](/Stage%20CD%2072/Documentation/Script/)
+[Mission 26/05](https://antoninlcs.github.io/Porfolio/Stage%20CD%2072/Documentation/Script/)
 
 
 
-## Le 31 juin 
+## Le 31 mai 
 
 **Matin et après midi**
 
@@ -93,7 +93,7 @@ Hébergement Mkdocs sous un docker. Sur le docker tournée le service web Nginx
 
 ### Preuve 
 
-[Mission 31/05](/Stage%20CD%2072/Documentation/Mkdocs/)
+[Mission 31/05](https://antoninlcs.github.io/Porfolio/Stage%20CD%2072/Documentation/Mkdocs/)
 
 
 ## Le 1 juin
