@@ -32,15 +32,44 @@ Dans les OU, on a aussi crée les groupes nécessaires qui était :
 
 ## Installation du serveur AD 2
 
-## Pourquoi l'installer 
+### Pourquoi l'installer 
 
 On a installer un 2ème serveur AD pour répondre aux exigences de la **Tolèrance aux pannes**. Ce qui permet aux client de pouvoir se connecter a leur session même si le DC1 est tomber en panne. 
 
-## Etape à faire 
+### Etape à faire 
 
 - Lui mettre des paramètres IP 
-- Le joindre aux domaines 
+- Le joindre au domaine 
 - Mettre les DNS 
 - Mettre en place un clusteur DHCP 
+
+## Serveur de Fichier 
+
+### Pourquoi l'installer 
+
+Ce serveur permet de partarger des fichiers, controler les accès et gèrer au mieux les ressources 
+
+
+### Etapes à faire 
+
+#### Le faire communiquer 
+
+- Il faudra mettre les bon paramètres IP
+- Il faudra le joindre le domaine correspondant 
+
+#### Création des dossiers 
+
+Il y a 2 dossier principal qui sont :
+
+- Perso 
+- Groupe 
+
+Dans le dossier Perso, il y a chaque dossier de chaques utilisateurs présent dans le domaine 
+Dans le dossier Groupe, il y chaque dossier correspondant aux noms des Groupes (**Rugby**, **Foot**,**Equitation** et **Basket**)
+
+#### Permissions de partage et dossier 
+ 
+
+
 
 
