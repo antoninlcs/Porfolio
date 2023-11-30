@@ -18,14 +18,14 @@ Dans les OU, on a aussi crée les groupes nécessaires qui était :
 - **Equitation**
 - **Basket**
 
-### Ajout des différents rôle 
+## Ajout des différents rôle 
  
  Notre serveur AD possèdent différent rôles comme : 
 
  - Le DHCP 
  - Le DNS 
 
-### La création de GPO 
+## La création de GPO 
 
 - On a crée une gpo pour la gestion des critères de mots de passe 
 - On a crée une gpo pour crée des lecteurs réseaux pour chaque utilisateurs et groupes 
@@ -47,7 +47,7 @@ On a installer un 2ème serveur AD pour répondre aux exigences de la **Tolèran
 
 ### Pourquoi l'installer 
 
-Ce serveur permet de partarger des fichiers, controler les accès et gèrer au mieux les ressources 
+Ce serveur permet de partarger des fichiers, controler les accès et gèrer au mieux les ressources et gèrer l'impression
 
 
 ### Etapes à faire 
@@ -69,6 +69,12 @@ Dans le dossier Groupe, il y chaque dossier correspondant aux noms des Groupes (
 
 #### Permissions de partage et dossier 
  
+- Il y a des droits ntfs qui servent d'avoir les accès en local 
+- Il y a des droit cifs qui servent a partager au sein du réseau 
+
+
+#### Service d'impression 
+
 
 
 
