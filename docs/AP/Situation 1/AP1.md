@@ -73,8 +73,6 @@ Dans le dossier Groupe, il y chaque dossier correspondant aux noms des Groupes (
 - Il y a des droit cifs qui servent a partager au sein du réseau 
 
 
-#### Service d'impression 
-
 
 
 
