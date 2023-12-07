@@ -2,8 +2,8 @@
 
  
 
-<span style="color:red">
-La société M2L gère les clubs sportifs et fournit toute la logistique informatique nécessaire aux différentes ligues. 
+
+<span style="color:red"> La société M2L gère les clubs sportifs et fournit toute la logistique informatique nécessaire aux différentes ligues. 
 
 L’organisation du système informatique est constituée du siège à BLOIS et de différentes agences réparties abritant les différentes ligues. 
 
