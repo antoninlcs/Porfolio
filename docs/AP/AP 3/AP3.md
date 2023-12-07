@@ -1,16 +1,15 @@
-# Présentation de l’organisation 
+# Mission agencement de Windows
 
- 
+## Présentation de l'organisation
 
+<span style="color:red"> La société M2L gère les clubs sportifs et fournit toute la logistique informatique nécessaire aux différentes ligues.</span>
 
-<span style="color:red"> La société M2L gère les clubs sportifs et fournit toute la logistique informatique nécessaire aux différentes ligues. 
+<span style="color:red">L’organisation du système informatique est constituée du siège à BLOIS et de différentes agences réparties abritant les différentes ligues.</span> 
 
-L’organisation du système informatique est constituée du siège à BLOIS et de différentes agences réparties abritant les différentes ligues. 
-
-La société M2L installe en fonction de l’agence, le système informatique de base qui est constitué en général des éléments suivants : 
+<span style="color:red">La société M2L installe en fonction de l’agence, le système informatique de base qui est constitué en général des éléments suivants :</span>
 
 	
-- Des postes client de l’agence (30 à 100 postes). Fonctionnement sous linux 
+- <span style="color:red">Des postes client de l’agence (30 à 100 postes). Fonctionnement sous linux </span>
 
 - Poste Administrateur 
 
@@ -39,8 +38,7 @@ Le siège fournit les services suivants aux agences :
  
  
 
-- Le siège lui-même est composé de poste de travail sous Windows 10 , de deux contrôleurs de domaine – M2L.loc -et d’un serveur de fichiers qui stocke les dossier utilisateurs et des groupes de travail du siège. </span>
-
+- Le siège lui-même est composé de poste de travail sous Windows 10 , de deux contrôleurs de domaine – M2L.loc -et d’un serveur de fichiers qui stocke les dossier utilisateurs et des groupes de travail du siège. 
  
 # Présentation du groupe :  
 
