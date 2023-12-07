@@ -35,10 +35,13 @@
 
 	Gestion de la sauvegarde – OpenMediaVault  
 
- 
- 
+
 
 - <span style="color:red">Le siège lui-même est composé de poste de travail sous Windows 10 , de deux contrôleurs de domaine – M2L.loc -et d’un serveur de fichiers qui stocke les dossier utilisateurs et des groupes de travail du siège.</span>
+
+## Schéma du SI 
+
+![Schema Si](../images/Schema SI.jpg)
  
 ## Présentation du groupe et le travaille en mode projet  :  
 
@@ -52,13 +55,13 @@
 
 ## Présentation de la situation 
 
-1. Organisation 
+### Organisation 
 
    - J'ai consulté des fiches PDF fournies par mon professeur et effectué des recherches sur des sujets tels que les navigateurs internet et les intelligences artificielles comme ChatGPT. 
 
  
 
-2. Création des nouveaux OU (Unités d'Organisation) : 
+### Création des nouveaux OU (Unités d'Organisation) : 
 
    - J'ai créé des unités d'organisation pour regrouper différents types d'utilisateurs tels que Admin, Internes, Externe et Invités. 
 
@@ -68,13 +71,13 @@
 
  
 
-3. Ajout des différents rôles : 
+### Ajout des différents rôles : 
 
    - Mon serveur AD a des rôles tels que DHCP et DNS. 
 
  
 
-3.1 La plage dhcp :  
+#### La plage dhcp :  
 
  
 
@@ -82,20 +85,20 @@
 
  
 
-3.2 Les dns :  
+#### Les dns :  
 
  
 
 192.168.10.17 et 192.168.10.19 
 
 
-4  Création de GPO (Objets de Stratégie de Groupe): 
+### Création de GPO (Objets de Stratégie de Groupe): 
 
    - J'ai mis en place des GPO pour gérer les critères de mots de passe et créer des lecteurs réseau pour les utilisateurs et les groupes 
 
  
 
-5 Installation du Serveur AD 2: 192.168.10.19 
+### Installation du Serveur AD 2: 192.168.10.19 
 
    - J'ai installé un deuxième serveur AD pour assurer la tolérance aux pannes. 
 
@@ -105,13 +108,13 @@
 
  
 
-6 Serveur de Fichiers: 
+### Serveur de Fichiers: 
 
    - Mon collègue a installé un serveur permettant de partager des fichiers, de contrôler les accès et de gérer les ressources, y compris l'impression. 
 
  
 
-6.1 Étapes pour le Serveur de Fichiers : 
+#### Étapes pour le Serveur de Fichiers : 
 
    - Mon collègue a configuré les paramètres IP (192.168.10.18) et ajouter le serveur au domaine. 
 
@@ -121,23 +124,26 @@
 
  
 
-7 Période de test :  
+### Période de test :  
 
-7.1 La réplication :   
+#### La réplication :   
 
 On a fait une modification par exemple sur les OU sur l’AD2 pour voir si l’AD1 le prenait en compte. 
 
 
-7.2. La tolérance aux pannes :  
+#### La tolérance aux pannes :  
 
 On a éteint l’AD principale pour voir si les utilisateurs peuvent toujours joindre le domaine grâce au AD2 et vérifier s'il ont bien une adresse IP grâce au cluster de DHCP qu’on a pu mettre en place  
 
 
-7.3 L’agent relais : 
+#### L’agent relais : 
 
 On a modifié le fichier de configuration en enlevant 1 des DNS pour savoir si les AD reprenait bien un des deux DNS 
 
 
-7.4 DNS :
+#### DNS :
 
 Effectuer un nslookup  pour vérifier les différents DNS 
+
+
+
