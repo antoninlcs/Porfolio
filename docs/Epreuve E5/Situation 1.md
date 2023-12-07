@@ -1,1 +1,1 @@
-[Lien de la situation](https://1drv.ms/w/s!AhkImv3h8uBikQUx54ZrXu9-3Nnt?e=f1xgcP)
+[Lien de la situation](https://1drv.ms/w/s!AhkImv3h8uBikQUx54ZrXu9-3Nnt)
