@@ -1,79 +1,183 @@
-# Etapes de réalisation
+# Présentation de l’organisation 
 
-## Recherches
-Concernant les recherches, notre professeur nous a fourni des fiches pdf. J'ai effectué des recherches sur des navigateurs internet ou des IA comme chatgpt.
-
-## Installation du Serveur AD1
-
-### Le domaine
-Nous avons installer Active Directory, pour pouvoir crée le domaine **M2L** pour que les utilisateurs se connecte depuis n'importe quelle postes du siège.
-
-## Les OU
-Ensuite on crée des OU (Unité d'organisation) pour pouvoir y intégrer plusieurs types d'utilisateurs comme **Admin**, **Internes**, **Externe** et **Invités**
-
-Dans les OU, on a aussi crée les groupes nécessaires qui était :
-
-- **Rugby**
-- **Foot**
-- **Equitation**
-- **Basket**
-
-## Ajout des différents rôle 
  
- Notre serveur AD possèdent différent rôles comme : 
 
- - Le DHCP 
- - Le DNS 
+<span style="color:red">
+La société M2L gère les clubs sportifs et fournit toute la logistique informatique nécessaire aux différentes ligues. 
 
-## La création de GPO 
+L’organisation du système informatique est constituée du siège à BLOIS et de différentes agences réparties abritant les différentes ligues. 
 
-- On a crée une gpo pour la gestion des critères de mots de passe 
-- On a crée une gpo pour crée des lecteurs réseaux pour chaque utilisateurs et groupes 
+La société M2L installe en fonction de l’agence, le système informatique de base qui est constitué en général des éléments suivants : 
 
-## Installation du serveur AD 2
+	
+- Des postes client de l’agence (30 à 100 postes). Fonctionnement sous linux 
 
-### Pourquoi l'installer 
+- Poste Administrateur 
 
-On a installer un 2ème serveur AD pour répondre aux exigences de la **Tolèrance aux pannes**. Ce qui permet aux client de pouvoir se connecter a leur session même si le DC1 est tomber en panne. 
+- Serveur WEB en DMZ qui héberge les informations de la ligue locale qui n’est pas implanté 
 
-### Etape à faire 
+- Serveur Proxy qui filtre et journalise les accès 
 
-- Lui mettre des paramètres IP 
-- Le joindre au domaine 
-- Mettre les DNS 
-- Mettre en place un clusteur DHCP 
+- Tous les serveurs sont accessibles en SSH depuis le LAN 
 
-## Serveur de Fichier 
-
-### Pourquoi l'installer 
-
-Ce serveur permet de partarger des fichiers, controler les accès et gèrer au mieux les ressources et gèrer l'impression
+- un pare feu sous pfsense pour le filrage périmétrique LAN INTERNET DMZ 
 
 
-### Etapes à faire 
+Un VPN relie les agences aux sièges. 
 
-#### Le faire communiquer 
+	 
+Le siège fournit les services suivants aux agences :
 
-- Il faudra mettre les bon paramètres IP
-- Il faudra le joindre le domaine correspondant 
+	- Gestion du parc et des tickets avec GLPI 
 
-#### Création des dossiers 
+	- Supervision avec Centreon 
 
-Il y a 2 dossier principal qui sont :
+	Gestion centralisé des logs avec GRAYlog 
 
-- Perso 
-- Groupe 
+	Gestion de la sauvegarde – OpenMediaVault  
 
-Dans le dossier Perso, il y a chaque dossier de chaques utilisateurs présent dans le domaine 
-Dans le dossier Groupe, il y chaque dossier correspondant aux noms des Groupes (**Rugby**, **Foot**,**Equitation** et **Basket**)
-
-#### Permissions de partage et dossier 
  
-- Il y a des droits ntfs qui servent d'avoir les accès en local 
-- Il y a des droit cifs qui servent a partager au sein du réseau 
+ 
 
+- Le siège lui-même est composé de poste de travail sous Windows 10 , de deux contrôleurs de domaine – M2L.loc -et d’un serveur de fichiers qui stocke les dossier utilisateurs et des groupes de travail du siège. </span>
 
+ 
+# Présentation du groupe :  
 
+Pour cette situation, on était 3, on s'est réparti les tâches en fonction des serveurs. Personnellement j’ai travaillé principalement sur l’AD1 et l’AD2. Pour s’organiser on a utilisé l’outil Trello pour se répartir les tâches. Après chaque tâche, nous avons réalisé une doc et suite à cela ont procédé à une étape de validation pour valider les tâches. 
 
+ 
 
+Objectif : 
 
+ 
+
+Sur le siège niveau sureté et sécurité il n’y avait aucun moyen mis en place pour cela. C’est pour cela qu’on nous a demandé d’installer un deuxième AD pour répondre aux tolérances aux pannes. Ensuite on devait réorganiser l’AD1 en créant des OU, des GPO. 
+
+ 
+
+ 
+
+Présentation de la situation 
+
+ 
+
+1. Organisation 
+
+   - J'ai consulté des fiches PDF fournies par mon professeur et effectué des recherches sur des sujets tels que les navigateurs internet et les intelligences artificielles comme ChatGPT. 
+
+ 
+
+2. Création des nouveaux OU (Unités d'Organisation) : 
+
+   - J'ai créé des unités d'organisation pour regrouper différents types d'utilisateurs tels que Admin, Internes, Externe et Invités. 
+
+   - J'ai également créé des groupes tels que Rugby, Foot, Équitation et Basket dans ces unités. 
+
+   - Dans ces OU j’ai pu intégrer mes utilisateurs  
+
+ 
+
+3. Ajout des différents rôles : 
+
+   - Mon serveur AD a des rôles tels que DHCP et DNS. 
+
+ 
+
+3.1 La plage dhcp :  
+
+ 
+
+192.168.10.34 à 192.168.10.40 
+
+ 
+
+3.2 Les dns :  
+
+ 
+
+192.168.10.17 et 192.168.10.19 
+
+ 
+
+3.3 L’agent relais :  
+
+ 
+
+ 
+
+ 
+
+4. Création de GPO (Objets de Stratégie de Groupe): 
+
+   - J'ai mis en place des GPO pour gérer les critères de mots de passe et créer des lecteurs réseau pour les utilisateurs et les groupes 
+
+ 
+
+4.1 La stratégie des mots de passe  
+
+ 
+
+ 
+
+5. Installation du Serveur AD 2: 192.168.10.19 
+
+   - J'ai installé un deuxième serveur AD pour assurer la tolérance aux pannes. 
+
+   - J'ai effectué des étapes telles que la configuration IP, la jonction au domaine, la configuration DNS et la mise en place d'un cluster DHCP. 
+
+    - Tous les rôles installer ce réplique sur l’AD1 en cas de modification  
+
+ 
+
+6. Serveur de Fichiers: 
+
+   - Mon collègue a installé un serveur permettant de partager des fichiers, de contrôler les accès et de gérer les ressources, y compris l'impression. 
+
+ 
+
+7.1 Étapes pour le Serveur de Fichiers : 
+
+   - Mon collègue a configuré les paramètres IP (192.168.10.18) et ajouter le serveur au domaine. 
+
+   - Mon collègue a créé les dossiers principaux "Perso" et "Groupe". 
+
+   - Mon collègue a attribué des permissions (NTFS et CIFS) pour gérer l'accès local et le partage réseau. 
+
+ 
+
+7. Période de test :  
+
+ 
+
+7.1 La réplication :  
+
+ 
+
+On a fait une modification par exemple sur les OU sur l’AD2 pour voir si l’AD1 le prenait en compte. 
+
+ 
+
+7.2. La tolérance aux pannes :  
+
+ 
+
+On a éteint l’AD principale pour voir si les utilisateurs peuvent toujours joindre le domaine grâce au AD2 et vérifier s'il ont bien une adresse IP grâce au cluster de DHCP qu’on a pu mettre en place  
+
+ 
+
+7.3 L’agent relais  
+
+ 
+
+On a modifié le fichier de configuration en enlevant 1 des DNS pour savoir si les AD reprenait bien un des deux DNS 
+
+ 
+
+ 
+
+7.4 DNS  
+
+ 
+
+Effectuer un nslookup  pour vérifier les différents DNS 
