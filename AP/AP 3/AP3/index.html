@@ -161,6 +161,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#schema-du-si">
+<span class="md-ellipsis">
+      Schéma du SI
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#presentation-du-groupe-et-le-travaille-en-mode-projet">
 <span class="md-ellipsis">
       Présentation du groupe et le travaille en mode projet  :
@@ -556,6 +563,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#schema-du-si">
+<span class="md-ellipsis">
+      Schéma du SI
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#presentation-du-groupe-et-le-travaille-en-mode-projet">
 <span class="md-ellipsis">
       Présentation du groupe et le travaille en mode projet  :
@@ -621,21 +635,19 @@ Gestion de la sauvegarde – OpenMediaVault
 <ul>
 <li><span style="color:red">Le siège lui-même est composé de poste de travail sous Windows 10 , de deux contrôleurs de domaine – M2L.loc -et d’un serveur de fichiers qui stocke les dossier utilisateurs et des groupes de travail du siège.</span></li>
 </ul>
+<h2 id="schema-du-si">Schéma du SI</h2>
+<p><img alt="Schema Si" src="../images/Schema SI.jpg"/></p>
 <h2 id="presentation-du-groupe-et-le-travaille-en-mode-projet">Présentation du groupe et le travaille en mode projet  :</h2>
 <p><span style="color:green">Pour cette situation, on était 3, on s'est réparti les tâches en fonction des serveurs. Personnellement j’ai travaillé principalement sur l’AD1 et l’AD2. Pour s’organiser on a utilisé l’outil Trello pour se répartir les tâches. Après chaque tâche, nous avons réalisé une doc et suite à cela ont procédé à une étape de validation pour valider les tâches.</span></p>
 <h2 id="objectif">Objectif :</h2>
 <p><span style="color:orange">Sur le siège niveau sureté et sécurité il n’y avait aucun moyen mis en place pour cela. C’est pour cela qu’on nous a demandé d’installer un deuxième AD pour répondre aux tolérances aux pannes. Ensuite on devait réorganiser l’AD1 en créant des OU, des GPO.</span></p>
 <h2 id="presentation-de-la-situation">Présentation de la situation</h2>
-<ol>
-<li>
-<p>Organisation </p>
-</li>
-<li>
-<p>J'ai consulté des fiches PDF fournies par mon professeur et effectué des recherches sur des sujets tels que les navigateurs internet et les intelligences artificielles comme ChatGPT. </p>
-</li>
-<li>
-<p>Création des nouveaux OU (Unités d'Organisation) : </p>
-</li>
+<h3 id="organisation">Organisation</h3>
+<ul>
+<li>J'ai consulté des fiches PDF fournies par mon professeur et effectué des recherches sur des sujets tels que les navigateurs internet et les intelligences artificielles comme ChatGPT. </li>
+</ul>
+<h3 id="creation-des-nouveaux-ou-unites-dorganisation">Création des nouveaux OU (Unités d'Organisation) :</h3>
+<ul>
 <li>
 <p>J'ai créé des unités d'organisation pour regrouper différents types d'utilisateurs tels que Admin, Internes, Externe et Invités. </p>
 </li>
@@ -645,22 +657,20 @@ Gestion de la sauvegarde – OpenMediaVault
 <li>
 <p>Dans ces OU j’ai pu intégrer mes utilisateurs  </p>
 </li>
-<li>
-<p>Ajout des différents rôles : </p>
-</li>
-<li>
-<p>Mon serveur AD a des rôles tels que DHCP et DNS. </p>
-</li>
-</ol>
-<p>3.1 La plage dhcp :  </p>
+</ul>
+<h3 id="ajout-des-differents-roles">Ajout des différents rôles :</h3>
+<ul>
+<li>Mon serveur AD a des rôles tels que DHCP et DNS. </li>
+</ul>
+<h4 id="la-plage-dhcp">La plage dhcp :</h4>
 <p>192.168.10.34 à 192.168.10.40 </p>
-<p>3.2 Les dns :  </p>
+<h4 id="les-dns">Les dns :</h4>
 <p>192.168.10.17 et 192.168.10.19 </p>
-<p>4  Création de GPO (Objets de Stratégie de Groupe): </p>
+<h3 id="creation-de-gpo-objets-de-strategie-de-groupe">Création de GPO (Objets de Stratégie de Groupe):</h3>
 <ul>
 <li>J'ai mis en place des GPO pour gérer les critères de mots de passe et créer des lecteurs réseau pour les utilisateurs et les groupes </li>
 </ul>
-<p>5 Installation du Serveur AD 2: 192.168.10.19 </p>
+<h3 id="installation-du-serveur-ad-2-1921681019">Installation du Serveur AD 2: 192.168.10.19</h3>
 <ul>
 <li>
 <p>J'ai installé un deuxième serveur AD pour assurer la tolérance aux pannes. </p>
@@ -672,11 +682,11 @@ Gestion de la sauvegarde – OpenMediaVault
 </ul>
 </li>
 </ul>
-<p>6 Serveur de Fichiers: </p>
+<h3 id="serveur-de-fichiers">Serveur de Fichiers:</h3>
 <ul>
 <li>Mon collègue a installé un serveur permettant de partager des fichiers, de contrôler les accès et de gérer les ressources, y compris l'impression. </li>
 </ul>
-<p>6.1 Étapes pour le Serveur de Fichiers : </p>
+<h4 id="etapes-pour-le-serveur-de-fichiers">Étapes pour le Serveur de Fichiers :</h4>
 <ul>
 <li>
 <p>Mon collègue a configuré les paramètres IP (192.168.10.18) et ajouter le serveur au domaine. </p>
@@ -688,14 +698,14 @@ Gestion de la sauvegarde – OpenMediaVault
 <p>Mon collègue a attribué des permissions (NTFS et CIFS) pour gérer l'accès local et le partage réseau. </p>
 </li>
 </ul>
-<p>7 Période de test :  </p>
-<p>7.1 La réplication :   </p>
+<h3 id="periode-de-test">Période de test :</h3>
+<h4 id="la-replication">La réplication :</h4>
 <p>On a fait une modification par exemple sur les OU sur l’AD2 pour voir si l’AD1 le prenait en compte. </p>
-<p>7.2. La tolérance aux pannes :  </p>
+<h4 id="la-tolerance-aux-pannes">La tolérance aux pannes :</h4>
 <p>On a éteint l’AD principale pour voir si les utilisateurs peuvent toujours joindre le domaine grâce au AD2 et vérifier s'il ont bien une adresse IP grâce au cluster de DHCP qu’on a pu mettre en place  </p>
-<p>7.3 L’agent relais : </p>
+<h4 id="lagent-relais">L’agent relais :</h4>
 <p>On a modifié le fichier de configuration en enlevant 1 des DNS pour savoir si les AD reprenait bien un des deux DNS </p>
-<p>7.4 DNS :</p>
+<h4 id="dns">DNS :</h4>
 <p>Effectuer un nslookup  pour vérifier les différents DNS </p>
 </article>
 </div>
