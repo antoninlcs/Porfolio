@@ -11,21 +11,21 @@
 	
 - <span style="color:red">Des postes client de l’agence (30 à 100 postes). Fonctionnement sous linux </span>
 
-- Poste Administrateur 
+- <span style="color:red">Poste Administrateur </span>
 
-- Serveur WEB en DMZ qui héberge les informations de la ligue locale qui n’est pas implanté 
+- <span style="color:red">Serveur WEB en DMZ qui héberge les informations de la ligue locale qui n’est pas implanté </span>
 
-- Serveur Proxy qui filtre et journalise les accès 
+- <span style="color:red">Serveur Proxy qui filtre et journalise les accès </span>
 
-- Tous les serveurs sont accessibles en SSH depuis le LAN 
+- <span style="color:red">Tous les serveurs sont accessibles en SSH depuis le LAN </span>
 
-- un pare feu sous pfsense pour le filrage périmétrique LAN INTERNET DMZ 
+- <span style="color:red">un pare feu sous pfsense pour le filrage périmétrique LAN INTERNET DMZ </span>
 
 
-Un VPN relie les agences aux sièges. 
+<span style="color:red">Un VPN relie les agences aux sièges.</span>
 
 	 
-Le siège fournit les services suivants aux agences :
+<span style="color:red">Le siège fournit les services suivants aux agences :</span>
 
 	- Gestion du parc et des tickets avec GLPI 
 
@@ -38,27 +38,19 @@ Le siège fournit les services suivants aux agences :
  
  
 
-- Le siège lui-même est composé de poste de travail sous Windows 10 , de deux contrôleurs de domaine – M2L.loc -et d’un serveur de fichiers qui stocke les dossier utilisateurs et des groupes de travail du siège. 
+- <span style="color:red">Le siège lui-même est composé de poste de travail sous Windows 10 , de deux contrôleurs de domaine – M2L.loc -et d’un serveur de fichiers qui stocke les dossier utilisateurs et des groupes de travail du siège.</span>
  
-# Présentation du groupe :  
+## Présentation du groupe et le travaille en mode projet  :  
 
-Pour cette situation, on était 3, on s'est réparti les tâches en fonction des serveurs. Personnellement j’ai travaillé principalement sur l’AD1 et l’AD2. Pour s’organiser on a utilisé l’outil Trello pour se répartir les tâches. Après chaque tâche, nous avons réalisé une doc et suite à cela ont procédé à une étape de validation pour valider les tâches. 
-
- 
-
-Objectif : 
+<span style="color:green">Pour cette situation, on était 3, on s'est réparti les tâches en fonction des serveurs. Personnellement j’ai travaillé principalement sur l’AD1 et l’AD2. Pour s’organiser on a utilisé l’outil Trello pour se répartir les tâches. Après chaque tâche, nous avons réalisé une doc et suite à cela ont procédé à une étape de validation pour valider les tâches.</span>
 
  
 
-Sur le siège niveau sureté et sécurité il n’y avait aucun moyen mis en place pour cela. C’est pour cela qu’on nous a demandé d’installer un deuxième AD pour répondre aux tolérances aux pannes. Ensuite on devait réorganiser l’AD1 en créant des OU, des GPO. 
+## Objectif : 
 
- 
+<span style="color:orange">Sur le siège niveau sureté et sécurité il n’y avait aucun moyen mis en place pour cela. C’est pour cela qu’on nous a demandé d’installer un deuxième AD pour répondre aux tolérances aux pannes. Ensuite on devait réorganiser l’AD1 en créant des OU, des GPO.</span>
 
- 
-
-Présentation de la situation 
-
- 
+## Présentation de la situation 
 
 1. Organisation 
 
@@ -134,7 +126,7 @@ Présentation de la situation
 
  
 
-7.1 Étapes pour le Serveur de Fichiers : 
+6.1 Étapes pour le Serveur de Fichiers : 
 
    - Mon collègue a configuré les paramètres IP (192.168.10.18) et ajouter le serveur au domaine. 
 
@@ -146,36 +138,18 @@ Présentation de la situation
 
 7. Période de test :  
 
- 
-
-7.1 La réplication :  
-
- 
+7.1 La réplication :   
 
 On a fait une modification par exemple sur les OU sur l’AD2 pour voir si l’AD1 le prenait en compte. 
 
- 
-
 7.2. La tolérance aux pannes :  
-
- 
 
 On a éteint l’AD principale pour voir si les utilisateurs peuvent toujours joindre le domaine grâce au AD2 et vérifier s'il ont bien une adresse IP grâce au cluster de DHCP qu’on a pu mettre en place  
 
- 
-
-7.3 L’agent relais  
-
- 
+7.3 L’agent relais : 
 
 On a modifié le fichier de configuration en enlevant 1 des DNS pour savoir si les AD reprenait bien un des deux DNS 
 
- 
-
- 
-
-7.4 DNS  
-
- 
+7.4 DNS :
 
 Effectuer un nslookup  pour vérifier les différents DNS 
