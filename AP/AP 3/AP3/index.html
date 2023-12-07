@@ -656,20 +656,12 @@ Gestion de la sauvegarde – OpenMediaVault
 <p>192.168.10.34 à 192.168.10.40 </p>
 <p>3.2 Les dns :  </p>
 <p>192.168.10.17 et 192.168.10.19 </p>
-<p>3.3 L’agent relais :  </p>
-<ol>
-<li>
-<p>Création de GPO (Objets de Stratégie de Groupe): </p>
-</li>
-<li>
-<p>J'ai mis en place des GPO pour gérer les critères de mots de passe et créer des lecteurs réseau pour les utilisateurs et les groupes </p>
-</li>
-</ol>
-<p>4.1 La stratégie des mots de passe  </p>
-<ol>
-<li>
-<p>Installation du Serveur AD 2: 192.168.10.19 </p>
-</li>
+<p>4  Création de GPO (Objets de Stratégie de Groupe): </p>
+<ul>
+<li>J'ai mis en place des GPO pour gérer les critères de mots de passe et créer des lecteurs réseau pour les utilisateurs et les groupes </li>
+</ul>
+<p>5 Installation du Serveur AD 2: 192.168.10.19 </p>
+<ul>
 <li>
 <p>J'ai installé un deuxième serveur AD pour assurer la tolérance aux pannes. </p>
 </li>
@@ -679,13 +671,11 @@ Gestion de la sauvegarde – OpenMediaVault
 <li>Tous les rôles installer ce réplique sur l’AD1 en cas de modification  </li>
 </ul>
 </li>
-<li>
-<p>Serveur de Fichiers: </p>
-</li>
-<li>
-<p>Mon collègue a installé un serveur permettant de partager des fichiers, de contrôler les accès et de gérer les ressources, y compris l'impression. </p>
-</li>
-</ol>
+</ul>
+<p>6 Serveur de Fichiers: </p>
+<ul>
+<li>Mon collègue a installé un serveur permettant de partager des fichiers, de contrôler les accès et de gérer les ressources, y compris l'impression. </li>
+</ul>
 <p>6.1 Étapes pour le Serveur de Fichiers : </p>
 <ul>
 <li>
@@ -697,10 +687,8 @@ Gestion de la sauvegarde – OpenMediaVault
 <li>
 <p>Mon collègue a attribué des permissions (NTFS et CIFS) pour gérer l'accès local et le partage réseau. </p>
 </li>
-<li>
-<p>Période de test :  </p>
-</li>
 </ul>
+<p>7 Période de test :  </p>
 <p>7.1 La réplication :   </p>
 <p>On a fait une modification par exemple sur les OU sur l’AD2 pour voir si l’AD1 le prenait en compte. </p>
 <p>7.2. La tolérance aux pannes :  </p>
