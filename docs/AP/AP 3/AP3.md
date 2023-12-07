@@ -88,29 +88,14 @@
 
 192.168.10.17 et 192.168.10.19 
 
- 
 
-3.3 L’agent relais :  
-
- 
-
- 
-
- 
-
-4. Création de GPO (Objets de Stratégie de Groupe): 
+4  Création de GPO (Objets de Stratégie de Groupe): 
 
    - J'ai mis en place des GPO pour gérer les critères de mots de passe et créer des lecteurs réseau pour les utilisateurs et les groupes 
 
  
 
-4.1 La stratégie des mots de passe  
-
- 
-
- 
-
-5. Installation du Serveur AD 2: 192.168.10.19 
+5 Installation du Serveur AD 2: 192.168.10.19 
 
    - J'ai installé un deuxième serveur AD pour assurer la tolérance aux pannes. 
 
@@ -120,7 +105,7 @@
 
  
 
-6. Serveur de Fichiers: 
+6 Serveur de Fichiers: 
 
    - Mon collègue a installé un serveur permettant de partager des fichiers, de contrôler les accès et de gérer les ressources, y compris l'impression. 
 
@@ -136,19 +121,22 @@
 
  
 
-7. Période de test :  
+7 Période de test :  
 
 7.1 La réplication :   
 
 On a fait une modification par exemple sur les OU sur l’AD2 pour voir si l’AD1 le prenait en compte. 
 
+
 7.2. La tolérance aux pannes :  
 
 On a éteint l’AD principale pour voir si les utilisateurs peuvent toujours joindre le domaine grâce au AD2 et vérifier s'il ont bien une adresse IP grâce au cluster de DHCP qu’on a pu mettre en place  
 
+
 7.3 L’agent relais : 
 
 On a modifié le fichier de configuration en enlevant 1 des DNS pour savoir si les AD reprenait bien un des deux DNS 
+
 
 7.4 DNS :
 
