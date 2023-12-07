@@ -41,7 +41,7 @@
 
 ## Schéma du SI 
 
-![Schema Si](../images/Schema SI.jpg)
+![Schema Si](../images/Schema_SI.jpg)
  
 ## Présentation du groupe et le travaille en mode projet  :  
 
