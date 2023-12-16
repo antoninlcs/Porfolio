@@ -4,7 +4,7 @@
 
 **Je suis un élève en BTS Système Informatique aux organisations. J'ai pris l'option Solutions d'infrastructure, systèmes et réseaux.**
 
-<span style="color:green">Sur ce Porfolio vous aurez accès à :</span>
+<span style="color:green">Sur ce Portfolio vous aurez accès à :</span>
 
 * Mes différentes missions d'AP dans **l'onglet AP** 
 
