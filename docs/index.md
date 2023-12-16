@@ -6,13 +6,20 @@
 
 <span style="color:green">Sur ce Porfolio vous aurez accès à :</span>
 
-* Mes 2 stages avec mes différentes mission
+* Mes différentes missions d'AP dans **l'onglet AP** 
 
-* Une présentation du BTS
+* Une présentation briève de mon bts dans **l'onglet BTS SIO**
 
-* Comment me contacter
+* Mon CV dans **l'onglet CV**
 
-* Mon CV
+* Ma fiche contact dans **l'onglet contact** 
 
-* Ma veille technologique 
+* Mon tableau de synthèse de compétences dans **l'onglet epreuve E4**
 
+* Mes 2 présentations de situations pour l'épreuve E5 dans **l'onglet epreuve E5**
+
+* Mon stage de 2ème année dans **l'onglet Stage CD 72 (2ème année)**
+
+* Mon stage de 1ère année dans **l'onglet Stage CD 72 (1ère année)** 
+
+* Ma veille techno dans **l'onglet Veille Techno**
