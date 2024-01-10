@@ -1,4 +1,4 @@
-Le fonctionnement de Vagrant 
+# Le fonctionnement de Vagrant 
 
 Vagrant est un logiciel anciennement libre et open-source pour la création et la configuration des environnements de développement virtuels. Il peut être considéré comme un wrapper autour de logiciels de virtualisation comme VirtualBox.
 Depuis la version 1.1, Vagrant n'impose plus VirtualBox, mais fonctionne également avec d'autres logiciels de virtualisation tels que VMware. Depuis la version 1.62 Vagrant prend nativement en charge les 
