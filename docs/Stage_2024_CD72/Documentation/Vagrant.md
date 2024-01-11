@@ -34,6 +34,12 @@ Pour utiliser vagrant, il faut avoir des moyens de virtualisations sur son PC te
 - VirtualBox
 - Docker
 
+## Activer HyperV en commande powershell 
+
+~~~bash
+nable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+~~~
+
 ## Installation de Vagrant 
 
 Tout d'abord, il faudra vous rendre sur le [site de vagrant](https://developer.hashicorp.com/vagrant/install?product_intent=vagrant)
