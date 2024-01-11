@@ -26,7 +26,15 @@ Un approvisionneur est un outil pour configurer l'environnement virtuel. Il peut
 
 Les approvisionneurs de Vagrant vous permettent d'installer automatiquement des logiciels, de modifier les configurations et plus encore sur la machine dans le processus de démarrage.
 
-# Installation de Vagrant 
+# Prérequis 
+
+Pour utiliser vagrant, il faut avoir des moyens de virtualisations sur son PC tel que : 
+
+- HyperV
+- VirtualBox
+- Docker
+
+## Installation de Vagrant 
 
 Tout d'abord, il faudra vous rendre sur le [site de vagrant](https://developer.hashicorp.com/vagrant/install?product_intent=vagrant)
 
@@ -34,21 +42,25 @@ Il faudra choisir le **packages** correspondant a votre système d'exploitation 
 
 ![exemple de packages](../images/packages_vagrant.jpg)
 
+
+
 Plus qu'a télécharger !! 
 
-Une fois télécharger, il faudra taper en ligne de commande la commande suivante : 
+# Crée son environemment
+
+Tout d'abord créé un dossier dans l'emplacement de votre choix 
+
+Ensuite il vous faudra ouvrir un invite de commande et se positionner sur le dossier crée 
+
+Une fois cela fait il faudra fait la commande suivante : 
 
 ~~~bash
 
 vagrant init 
 
-~~~
+~~~ 
 
-Cette commande va vous générer un fichier nommé **Vagrantfile**
-
-![générer fichier Vagrantfiles](../images/Fichier_Vagrantfile.jpg)
-
-Ce fichier va être la clé de votre projet 
+Cette commande va ainsi vous créer un fichier **VagrantFile** qui va vous permettre de génerer et gérer vos vm dans votre environnement 
 
 # Le fichier Vagrantfile 
 
@@ -66,26 +78,25 @@ require 'yaml'
 config_data = YAML.load_file('config.yml')
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "generic/ubuntu2204"
+  config.vm.box = "generic/ubuntu2204" #Nom de la box utilisé 
 
 
 
   config.vm.define 'srv-test' do |node|
-    node.vm.hostname = 'srv-test'
+    node.vm.hostname = 'srv-test' # Nom de la vm 
   end
   
   
     # Spécifie le fournisseur pour la machine virtuelle (Hyper-V)
     config.vm.provider "hyperv" do |h|
-      h.vmname = "srv-test"
-      h.enable_virtualization_extensions = true
-      h.linked_clone = true
+      h.vmname = "srv-test" #Nom de la vm
+     
       
     end
     
     # Configuration du proxy pour l'environnement
-    config.proxy.http     = "ADRESSE PROXY"
-    config.proxy.https    = "ADRESSE PROXY"
+    config.proxy.http     = "http://172.16.20.90:8080"
+    config.proxy.https    = "http://172.16.20.90:8080"
     config.proxy.no_proxy = "localhost,127.0.0.1"
    
     
@@ -97,15 +108,17 @@ Vagrant.configure("2") do |config|
 
     # Provisionnement en utilisant un script shell directement dans le Vagrantfile
     config.vm.provision "shell", inline: <<-SHELL
-      echo "nameserver DNS1" | sudo tee /etc/resolv.conf
-      echo "nameserver DNS2" | sudo tee -a /etc/resolv.conf
+      echo "nameserver 172.16.20.160" | sudo tee /etc/resolv.conf
+      echo "nameserver 172.16.20.18" | sudo tee -a /etc/resolv.conf
     SHELL
   
 end
 
 ~~~
 
-# Configuration Proxy 
+# Quelques manipulations avant de lancer votre fichier si besoin ! 
+
+## Configuration Proxy 
 
 Le proxy risque de vous pose problèmes pour aller chercher des box, ou faire des apt-update etc...
 
@@ -117,9 +130,9 @@ et ensuite faire c'est trois commandes :
 
 ~~~bash 
 
-set http_proxy= "ADRESSE PROXY"
+set http_proxy=ADRESSE PROXY
 
-set https_proxy= "ADRESSE PROXY"
+set https_proxy=ADRESSE PROXY
 
 vagrant plugin install vagrant-proxyconf
 
@@ -127,10 +140,10 @@ vagrant plugin install vagrant-proxyconf
 
 Si vous voyez ceci s'afficher c'est que c'est bon !!
 
-![Verif Proxy](../images/vérif-proxy.jpg)
 
 
-# Conf fichier.yml 
+
+## Conf fichier.yml 
 
 Comme vous le voyez il y a des variables pour le partage de fichier ceci permet a vagrant d'accèder a nos fichiers sauf qu'il faut mettre notre login P@ssword en clair ce qui n'est pas une bonne pratiques. C'est pour cela qui vous faudra crée des variables ainsi que ce fichier 
 
@@ -148,7 +161,130 @@ smb_password: "Votre P@ssword"
 
 Ainsi le fichier Vagrantfile ira chercher les valeurs des variables qu'on lui a mis pour la partage de fichier
 
-# Les commandes de bases 
+# Lancement de votre environnement 
+
+Quand tout cela est effectué vous pourrez lancer votre environnement
+
+Il faudra bien sur être encore positionner dans le dossier crée auparavant 
+
+Pour cela il vous faudra utlisé cette commande 
+
+~~~bash
+
+vagrant up 
+
+~~~
+
+Si vous avez des scripts dans votre **VagrantFile** utilisé plutôt cette commande : 
+
+~~~bash
+
+vagrant up --provision 
+
+~~~
+
+Une fois cette commande effectué vous devrez attendre que le fichier génére la vm.
+
+Ensuite aller dans votre outil de virtualisation utilisé et si tout ce passe bien vous devriez apercevoir votre machine.
+
+# Connecter la VM en ssh sur Vscode 
+
+Pour cela ouvrez un invite de commande et placer vous dans dossier d'environnement 
+
+Ensuite faite cette commande : 
+
+~~~bash 
+
+vagrant ssh-config 
+
+~~~
+
+Vous aurez ceci : ![ssh-config](../vagrant_starter/images/ssh-config.jpg)
+
+Ensuite allez sur **Vscode** et installer l'extension **Remote Development**
+
+![remote-connection](../vagrant_starter/images/remote-connexion.jpg)
+
+Une fois installer vous aurez cette petite icône apparaitre en bas a gauche de votre écran
+
+![icône-ssh](../vagrant_starter/images/icone-ssh.jpg)
+
+Cliquez dessus et selectionner **Connect To Host**
+
+Ensuite cliquez sur **Configure SSH Hosts**
+
+Ensuite cliquer sur votre fichier **ssh-config**
+
+Puis copier toutes les informations que vous avez récolté en faisant la commande sur le fichier 
+
+~~~bash 
+
+vagrant ssh-config 
+
+~~~
+
+Sa devrait vous donner ceci : 
+
+![config-ssh](../vagrant_starter/images/config-ssh.jpg)
+
+**Important** sur la ligne **Hostname** remplacer l'ip par le nom de votre machine !!!!
+
+Une fois fini Cliquez sur l'icône remote et selectionner **Connect To Host**
+
+Ensuite vous verrez le nom de votre machine, cliquez dessus et vous serrez connecté en ssh sur votre vm.
+
+# Installer des paquets automatiquement
+
+Prenons l'exemple du paquet ansible 
+
+Il faudra rajouter ceci dans votre **VagrantFile** :
+
+~~~bash 
+
+ # Script d'installation d'Ansible
+    config.vm.provision "shell", inline: <<-SHELL
+
+      # Mise à jour de la liste des dépôts APT
+      sudo apt update
+
+      # Installation de software-properties-common pour gérer les dépôts
+      sudo apt install -y software-properties-common
+
+      # Ajout du repository Ansible
+      sudo apt-add-repository --yes --update ppa:ansible/ansible
+
+      # Installation d'Ansible
+      sudo apt install -y ansible
+    SHELL
+
+~~~
+
+Si vous avez déja une vm faites la commande : 
+
+~~~bash 
+
+vagrant reload --provision 
+
+~~~
+
+Si c'est votre premier lancement faites : 
+
+~~~bash 
+
+vagrant up --provision 
+
+~~~
+
+Pour vérifier que le script fonctionne connecter sur votre vm et faites :
+
+~~~bash
+
+ansible --version 
+
+~~~
+
+
+# Les commandes utiles 
 
 **vagrant init** : crée un fichier Vagrantfile dans le répertoire courant. Ce fichier contient la configuration de la Vagrant Box à utiliser. Tu peux utiliser cette commande pour créer un nouveau projet Vagrant.
 
