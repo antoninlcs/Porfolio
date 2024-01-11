@@ -663,19 +663,20 @@ require 'yaml'
 config_data = YAML.load_file('config.yml')
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "generic/ubuntu2204" #Nom de la box utilisé 
+  config.vm.box = "generic/ubuntu2204"
 
 
 
   config.vm.define 'srv-test' do |node|
-    node.vm.hostname = 'srv-test' # Nom de la vm 
+    node.vm.hostname = 'srv-test'
   end
 
 
     # Spécifie le fournisseur pour la machine virtuelle (Hyper-V)
     config.vm.provider "hyperv" do |h|
-      h.vmname = "srv-test" #Nom de la vm
-
+      h.vmname = "srv-test"
+      h.enable_virtualization_extensions = true
+      h.linked_clone = true
 
     end
 
@@ -684,20 +685,30 @@ Vagrant.configure("2") do |config|
     config.proxy.https    = "http://172.16.20.90:8080"
     config.proxy.no_proxy = "localhost,127.0.0.1"
 
-
-    # Configuration du dossier partagé pour Nginx en utilisant SMB
-    config.vm.synced_folder "D:/nginx-mkdocs", "/home/vagrant/test_partage",
-      type: "smb",
-      smb_username: config_data['smb_username'],
-      smb_password: config_data['smb_password']
-
     # Provisionnement en utilisant un script shell directement dans le Vagrantfile
     config.vm.provision "shell", inline: &lt;&lt;-SHELL
       echo "nameserver 172.16.20.160" | sudo tee /etc/resolv.conf
       echo "nameserver 172.16.20.18" | sudo tee -a /etc/resolv.conf
     SHELL
 
+    # Script d'installation d'Ansible
+    config.vm.provision "shell", inline: &lt;&lt;-SHELL
+
+      # Mise à jour de la liste des dépôts APT
+      sudo apt update
+
+      # Installation de software-properties-common pour gérer les dépôts
+      sudo apt install -y software-properties-common
+
+      # Ajout du repository Ansible
+      sudo apt-add-repository --yes --update ppa:ansible/ansible
+
+      # Installation d'Ansible
+      sudo apt install -y ansible
+    SHELL
+
 end
+
 
 </code></pre>
 <h1 id="quelques-manipulations-avant-de-lancer-votre-fichier-si-besoin">Quelques manipulations avant de lancer votre fichier si besoin !</h1>
