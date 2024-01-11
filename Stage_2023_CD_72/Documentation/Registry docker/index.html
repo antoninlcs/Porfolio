@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../Registry%20docker/" rel="prev"/>
-<link href="../gitlab-ci.yml/" rel="next"/>
+<link href="../Multipass%26docker/" rel="prev"/>
+<link href="../Script/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.3" name="generator"/>
-<title>Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB - Portfolio</title>
+<title>Installation SRV-DOCK et Registry Docker - Portfolio</title>
 <link href="../../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#creation-script-pour-recuperer-le-volume-de-la-partitions-home-et-mettre-cette-information-dans-la-base-de-donnees-mariadb">
+<a class="md-skip" href="#installation-srv-dock-et-registry-docker">
           Skip to content
         </a>
 </div>
@@ -46,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB
+              Installation SRV-DOCK et Registry Docker
             
           </span>
 </div>
@@ -271,14 +271,14 @@
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
 <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
 <span class="md-ellipsis">
-    Stage CD 72 (1ère annee)
+    Stage 2023 CD 72
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-expanded="true" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_8">
 <span class="md-nav__icon md-icon"></span>
-            Stage CD 72 (1ère annee)
+            Stage 2023 CD 72
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -361,24 +361,17 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Registry%20docker/">
-<span class="md-ellipsis">
-    Installation SRV-DOCK et Registry Docker
-  </span>
-</a>
-</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB
+    Installation SRV-DOCK et Registry Docker
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB
+    Installation SRV-DOCK et Registry Docker
   </span>
 </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
@@ -388,42 +381,70 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#exposer-le-port-mariadb">
+<a class="md-nav__link" href="#registry-docker-cest-quoi">
 <span class="md-ellipsis">
-      Exposer le port MariaDB :
+      Registry Docker c’est quoi ?
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#script-sh">
+<a class="md-nav__link" href="#installation-srv-tst-docker">
 <span class="md-ellipsis">
-      Script “sh” :
+      Installation SRV-TST-DOCKER :
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#crontab">
+<a class="md-nav__link" href="#installation-registry-docker">
 <span class="md-ellipsis">
-      Crontab :
+      Installation Registry docker
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#creation-de-la-table-dans-la-base-de-donnees">
+<a class="md-nav__link" href="#visualiser-les-images-disponibles-dans-le-registry-prive">
 <span class="md-ellipsis">
-      Création de la table dans la base de données :
+      Visualiser les images disponibles dans le Registry privé:
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#voir-si-le-script-fonctionne">
+<a class="md-nav__link" href="#visualiser-les-differents-tags-dune-image-dans-le-registry-prive">
 <span class="md-ellipsis">
-      Voir si le script fonctionne
+      Visualiser les différents tags d'une image dans le Registry privé :
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#le-stockage-dans-un-registry-docker">
+<span class="md-ellipsis">
+      Le stockage dans un Registry Docker :
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#le-chiffrement">
+<span class="md-ellipsis">
+      Le chiffrement :
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#restriction-dacces">
+<span class="md-ellipsis">
+      Restriction d'accès :
     </span>
 </a>
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Script/">
+<span class="md-ellipsis">
+    Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../gitlab-ci.yml/">
@@ -587,37 +608,58 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#exposer-le-port-mariadb">
+<a class="md-nav__link" href="#registry-docker-cest-quoi">
 <span class="md-ellipsis">
-      Exposer le port MariaDB :
+      Registry Docker c’est quoi ?
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#script-sh">
+<a class="md-nav__link" href="#installation-srv-tst-docker">
 <span class="md-ellipsis">
-      Script “sh” :
+      Installation SRV-TST-DOCKER :
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#crontab">
+<a class="md-nav__link" href="#installation-registry-docker">
 <span class="md-ellipsis">
-      Crontab :
+      Installation Registry docker
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#creation-de-la-table-dans-la-base-de-donnees">
+<a class="md-nav__link" href="#visualiser-les-images-disponibles-dans-le-registry-prive">
 <span class="md-ellipsis">
-      Création de la table dans la base de données :
+      Visualiser les images disponibles dans le Registry privé:
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#voir-si-le-script-fonctionne">
+<a class="md-nav__link" href="#visualiser-les-differents-tags-dune-image-dans-le-registry-prive">
 <span class="md-ellipsis">
-      Voir si le script fonctionne
+      Visualiser les différents tags d'une image dans le Registry privé :
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#le-stockage-dans-un-registry-docker">
+<span class="md-ellipsis">
+      Le stockage dans un Registry Docker :
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#le-chiffrement">
+<span class="md-ellipsis">
+      Le chiffrement :
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#restriction-dacces">
+<span class="md-ellipsis">
+      Restriction d'accès :
     </span>
 </a>
 </li>
@@ -628,82 +670,62 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="creation-script-pour-recuperer-le-volume-de-la-partitions-home-et-mettre-cette-information-dans-la-base-de-donnees-mariadb">Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB</h1>
-<h2 id="exposer-le-port-mariadb">Exposer le port MariaDB :</h2>
-<h3 id="cest-quoi-un-port">C’est quoi un port ?</h3>
-<p><strong><span style="color:red">Un port est un point virtuel où les connexions réseau commencent et se terminent.</span></strong></p>
-<p>Tout d’abord, il vous faudra vous rendre sur votre dossier <strong>“docker-compose.yml”</strong>. 
-Il faudra exposer le port <strong>“3306”</strong> du conteneur MariaDB pour qu’il puisse être accessible depuis l’extérieur.</p>
-<h2 id="script-sh">Script “sh” :</h2>
-<h3 id="cest-quoi-sh">C’est quoi sh ?</h3>
-<p><strong><span style="color:red">Sh est l'extension utilisé pour les scripts shell qui peuvent être écrit en bash, fish, zsh etc.</span></strong></p>
-<p>Pour pouvoir connaitre le volume de la partition il vous faut un script exécutable. Il faudra pour cela utiliser l’extension en sh.</p>
-<p>Tout d’abord, dans votre dépôt local créer un fichier en sh :</p>
-<pre><code class="language-bash">vim &lt;nom fichier&gt;.sh
+<h1 id="installation-srv-dock-et-registry-docker">Installation SRV-DOCK et Registry Docker</h1>
+<h2 id="registry-docker-cest-quoi">Registry Docker c’est quoi ?</h2>
+<p><strong><span style="color:red">Le registre Docker est une méthode standard de stockage et de distribution des images Docker. Le registre est un référentiel open source sous licence d'autorisation Apache. Le registre Docker permet également d'améliorer le contrôle d'accès et la sécurité des images Docker stockées dans son référentiel.</span></strong></p>
+<h2 id="installation-srv-tst-docker">Installation SRV-TST-DOCKER :</h2>
+<p>Pour installer le serveur, je l’ai fait sur l’outil de virtualisation VMWARE. L’installation c’est fait grâce à des scripts ansible ce qui permet une installation rapide et automatique. </p>
+<h2 id="installation-registry-docker">Installation Registry docker</h2>
+<p>Création du Registry privé :</p>
+<pre><code class="language-bash">“docker run -d -p 5000:5000 --restart=always --name mon-registry registry:2”
 </code></pre>
-<p>Et mettre ceci dans le fichier :</p>
-<pre><code class="language-bash">#!/bin/bash
-
-
-# Vérifier si le client MYSQL est installé
-if ! type mysql &gt;/dev/null 2&gt;&amp;1; then
-  #Installer le client MySQL
-  sudo apt update
-  sudo apt-get install -y mysql-client
-
-fi
-
-# Récupérer la taille de la partition
-partition_size=$(du -s /home | awk '{print $1}')
-timestamp=$(date +%Y-%m-%d\ %H:%M:%S)
-
-
-
-# Insérer les données dans la bdd
-mysql -h 127.0.0.1 -P 3306 -u $MYSQL_USER -p$MYSQL_PASSWORD -D $MYSQL_DATABASE -e "INSERT INTO partition_home (size, timestamp) VALUES ($partition_size,'$timestamp');"
-
-
-#Charger les variables d'environnement à partir du fichier .env
-
-source .env 
-</code></pre>
-<h3 id="attention"><strong><span style="color:red">Attention</span></strong></h3>
-<p>Assurer vous que votre script a les permissions d’exécution :</p>
-<pre><code class="language-bash">”chmod +x &lt;Chemin du script&gt;”
-</code></pre>
-<h2 id="crontab">Crontab :</h2>
-<h3 id="cest-quoi-crontab">C’est quoi “crontab” ?</h3>
-<p><strong><span style="color:red">Crontab est le nom du programme sous Unix (et Linux) qui permet d'éditer des tables de configuration du programme cron. Ces tables spécifient les tâches à exécuter et leur horaire d'exécution.</span></strong></p>
-<p>Tout d’abord, il faudra taper la commande crontab –e cela vous ouvrira un fichier.</p>
-<p>Ensuite en bas il vous faudra indiquer tout les combien de temps un fichier doit s’exécuter : </p>
-<pre><code class="language-bash">&lt;période&gt;  &lt;Chemin du fichier&gt;
-</code></pre>
-<h2 id="creation-de-la-table-dans-la-base-de-donnees">Création de la table dans la base de données :</h2>
-<p>Tout d’abord, il faudra vous connecter à votre docker :</p>
-<pre><code class="language-bash">“docker exec –it &lt;nom du conteneur&gt; /bin/bash”
-</code></pre>
-<p>Pour cela connecter vous en tant qu'Administrateur de la Base de Données :</p>
-<pre><code class="language-bash">“mysql -u root –p”
-</code></pre>
-<p>Une fois connecté à la base de données MariaDB il va falloir indiquer sur quelle base de données créer la table :</p>
-<pre><code class="language-bash">“USE &lt;nom de la base de données&gt;”
-</code></pre>
-<p>Une fois la base de données sélectionne vous pouvez créer votre table. Voici un exemple :</p>
-<pre><code class="language-bash">“CREATE TABLE partitions_home (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  size VARCHAR(20),
-  timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);”
-</code></pre>
-<p>Ensuite pour voir si votre table est créée, il vous suffira de faire un :</p>
-<pre><code class="language-bash">“SHOW TABLES”
-</code></pre>
-<p><strong>Vous verrez votre table normalement.</strong> </p>
-<h2 id="voir-si-le-script-fonctionne">Voir si le script fonctionne</h2>
-<p>Pour voir si le script fonctionne, il vous suffira de faire :</p>
-<pre><code class="language-bash">“SELECT * FROM &lt;nom de la table crée&gt;”
-</code></pre>
-<p><strong><span style="color:red"> Voilà vos informations de votre script seront sur votre Base De Données MariaDB !!</span></strong></p>
+<h3 id="deposer-une-image-dans-le-registry-prive">Déposer une image dans le Registry privé :</h3>
+<p>Tout d’abord il faudra créer un DockerFile :</p>
+<p><img alt="code dockerfile" src="../../../images/Dockerfile.jpg"/></p>
+<p>Ensuite il faudra construire votre image : </p>
+<p><img alt="Création image" src="../../../images/cr%C3%A9ation_image.jpg"/></p>
+<p>Ensuite, il faudra tag votre image pour pouvoir push l’image sur le registry docker </p>
+<p><img alt="Tag image" src="../../../images/tag_image.jpg"/></p>
+<p>Enfin vous pourrez push votre image dans votre registry :</p>
+<p><img alt="Push image" src="../../../images/push_image.jpg"/></p>
+<h2 id="visualiser-les-images-disponibles-dans-le-registry-prive">Visualiser les images disponibles dans le Registry privé:</h2>
+<p>Voici l’url pour y accèder : </p>
+<p><a href="http://srv-tst-dock.cg72.fr:5000/v2/_catalog">Lien pour acceder au registry</a></p>
+<p>Voici ce que vous aurez comme résultat : </p>
+<p><img alt="résultat page registry" src="../../../images/resultat_page_registry.jpg"/></p>
+<h2 id="visualiser-les-differents-tags-dune-image-dans-le-registry-prive">Visualiser les différents tags d'une image dans le Registry privé :</h2>
+<p>Pour l’exemple, nous allons rajouter un tag “test” à notre image “alpinegit” :</p>
+<p><img alt="Ajouter un tag à une image" src="../../../images/tag_image_test.jpg"/></p>
+<p>Voici la commande donc pour visualiser les tags :</p>
+<p><a href="http://srv-tst-dock.cg72.fr:5000/v2/alpinegit/tags/list">Visualiser les tag</a></p>
+<p>Voici le résultat : </p>
+<p><img alt="Résultat page tag" src="../../../images/resultat_page_tags.jpg"/></p>
+<h2 id="le-stockage-dans-un-registry-docker">Le stockage dans un Registry Docker :</h2>
+<p>C’est important d’avoir un stockage car le problème est que si vous quitter votre docker tous seront supprimer, c’est pour cela qui faut créer des volumes.</p>
+<p>Tout d’abord, il faudra créer un dossier : </p>
+<p><img alt="Dossier stockage" src="../../../images/stock.jpg"/></p>
+<p>Ensuite lancer un docker avec le paramètre qui sera pris en compte :</p>
+<p><img alt="Docker Stockage" src="../../../images/docker_stock.jpg"/></p>
+<h3 id="attention"><span style="color:red">Attention</span></h3>
+<p><strong>Pensez à supprimer votre précèdent docker</strong></p>
+<h2 id="le-chiffrement">Le chiffrement :</h2>
+<p>Tout d’abord, il faudra créer un dossier pour stocker vos certificats :</p>
+<p><img alt="Dossier Certificat" src="../../../images/docker_certificat.jpg"/></p>
+<p>Ensuite, il faudra générer vos certificats auto-signée avec l’outil openssl :</p>
+<p><img alt="openssl" src="../../../images/openssl.jpg"/></p>
+<p>Ensuite créer un docker avec ces paramètres : </p>
+<p><img alt="Docker certif" src="../../../images/docker_certif.jpg"/></p>
+<p>Et vous pourrais refaire la manip du début c’est-à-dire tag et push vos images.</p>
+<p>Pour accéder à la page pour voir quoi contient votre registry : <a href="https://srv-tst-dock.cg72.fr/v2/_catalog">Lien pour voir ce que contient le registry</a></p>
+<h2 id="restriction-dacces">Restriction d'accès :</h2>
+<p>Il faudra tout d’abord, créer un dossier pour stocker vos fichiers :</p>
+<p>Ensuite il faudra générer le fichier htpasswd : </p>
+<p>Ensuite vous pourrez recréer un docker avec tous les paramètres vus depuis le début</p>
+<p>Ensuite vous vous connectez à votre registry avec cette commande : </p>
+<p>Une fois que vous êtes log vous pouvez push vos images :</p>
+<p>Docker Compose :</p>
+<p>Normalement, si vous avez tout bien fait vous devriez avoir cette arborescence :</p>
+<p>Vous pouvez inscrire toutes ces fonctionnalités dans un docker Compose : </p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

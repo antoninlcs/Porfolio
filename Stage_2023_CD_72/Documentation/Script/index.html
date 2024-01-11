@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../Docker-compose/" rel="prev"/>
-<link href="../GITLAB/" rel="next"/>
+<link href="../Registry%20docker/" rel="prev"/>
+<link href="../gitlab-ci.yml/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.3" name="generator"/>
-<title>Création d'un dépôt GITHUB pour héberger mon Portfolio - Portfolio</title>
+<title>Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB - Portfolio</title>
 <link href="../../../assets/stylesheets/main.50c56a3b.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#creation-dun-depot-github-pour-heberger-mon-portfolio">
+<a class="md-skip" href="#creation-script-pour-recuperer-le-volume-de-la-partitions-home-et-mettre-cette-information-dans-la-base-de-donnees-mariadb">
           Skip to content
         </a>
 </div>
@@ -46,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Création d'un dépôt GITHUB pour héberger mon Portfolio
+              Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB
             
           </span>
 </div>
@@ -271,14 +271,14 @@
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
 <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
 <span class="md-ellipsis">
-    Stage CD 72 (1ère annee)
+    Stage 2023 CD 72
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-expanded="true" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_8">
 <span class="md-nav__icon md-icon"></span>
-            Stage CD 72 (1ère annee)
+            Stage 2023 CD 72
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -333,48 +333,12 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Création d'un dépôt GITHUB pour héberger mon Portfolio
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../GITHUB/">
 <span class="md-ellipsis">
     Création d'un dépôt GITHUB pour héberger mon Portfolio
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#comment-cree-un-depot-github">
-<span class="md-ellipsis">
-      Comment crée un dépot GITHUB
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#activer-la-page-web">
-<span class="md-ellipsis">
-      Activer la page web
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#creation-fichier-ciyml">
-<span class="md-ellipsis">
-      Création fichier "ci.yml"
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../GITLAB/">
@@ -404,12 +368,62 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Script/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exposer-le-port-mariadb">
+<span class="md-ellipsis">
+      Exposer le port MariaDB :
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#script-sh">
+<span class="md-ellipsis">
+      Script “sh” :
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#crontab">
+<span class="md-ellipsis">
+      Crontab :
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creation-de-la-table-dans-la-base-de-donnees">
+<span class="md-ellipsis">
+      Création de la table dans la base de données :
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#voir-si-le-script-fonctionne">
+<span class="md-ellipsis">
+      Voir si le script fonctionne
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../gitlab-ci.yml/">
@@ -573,23 +587,37 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#comment-cree-un-depot-github">
+<a class="md-nav__link" href="#exposer-le-port-mariadb">
 <span class="md-ellipsis">
-      Comment crée un dépot GITHUB
+      Exposer le port MariaDB :
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#activer-la-page-web">
+<a class="md-nav__link" href="#script-sh">
 <span class="md-ellipsis">
-      Activer la page web
+      Script “sh” :
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#creation-fichier-ciyml">
+<a class="md-nav__link" href="#crontab">
 <span class="md-ellipsis">
-      Création fichier "ci.yml"
+      Crontab :
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creation-de-la-table-dans-la-base-de-donnees">
+<span class="md-ellipsis">
+      Création de la table dans la base de données :
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#voir-si-le-script-fonctionne">
+<span class="md-ellipsis">
+      Voir si le script fonctionne
     </span>
 </a>
 </li>
@@ -600,82 +628,82 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="creation-dun-depot-github-pour-heberger-mon-portfolio">Création d'un dépôt GITHUB pour héberger mon Portfolio</h1>
-<h2 id="comment-cree-un-depot-github">Comment crée un dépot GITHUB</h2>
-<p>Tout d'abord il faudra vous rendre sur ce site : <a href="https://github.com/">GITHUB</a></p>
-<p>Il faudra vous connectez avec vos codes fourni aux préalables :</p>
-<p><img alt="Image connexion GITHUB" src="../../../images/conexiongit.jpg"/></p>
-<p>Une fois connecté il faudra <strong>Cliquer sur "new" en haut à droite de la page</strong></p>
-<p><img alt="new dépôt" src="../../../images/new.jpg"/></p>
-<p>Ensuite renseigner les informations suivante :</p>
-<p><img alt="dépôt" src="../../../images/d%C3%A9p%C3%B4t.jpg"/></p>
-<p><strong><span style="color:red">Voilà votre dépôt GITHUB créer !!</span></strong></p>
-<h2 id="activer-la-page-web">Activer la page web</h2>
-<p>Aller dans l'onglet <strong>"settings"</strong> </p>
-<p>Puis aller dans l'onglet pages :</p>
-<p><img alt="Page" src="../../../images/page.jpg"/></p>
-<p>Vous devriez arriver sur cet onglet : </p>
-<p><img alt="Page_2.0" src="../../../images/page_2.0.jpg"/></p>
-<h2 id="creation-fichier-ciyml">Création fichier "ci.yml"</h2>
-<p><span style="color:red">Ce fichier est un script qui permet de construire et de déployer son site automatiquement</span></p>
-<p>Pour ce faire :</p>
-<pre><code class="language-bash">mkdir .github
-mkdir workflows
-vim ci.yml
+<h1 id="creation-script-pour-recuperer-le-volume-de-la-partitions-home-et-mettre-cette-information-dans-la-base-de-donnees-mariadb">Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB</h1>
+<h2 id="exposer-le-port-mariadb">Exposer le port MariaDB :</h2>
+<h3 id="cest-quoi-un-port">C’est quoi un port ?</h3>
+<p><strong><span style="color:red">Un port est un point virtuel où les connexions réseau commencent et se terminent.</span></strong></p>
+<p>Tout d’abord, il vous faudra vous rendre sur votre dossier <strong>“docker-compose.yml”</strong>. 
+Il faudra exposer le port <strong>“3306”</strong> du conteneur MariaDB pour qu’il puisse être accessible depuis l’extérieur.</p>
+<h2 id="script-sh">Script “sh” :</h2>
+<h3 id="cest-quoi-sh">C’est quoi sh ?</h3>
+<p><strong><span style="color:red">Sh est l'extension utilisé pour les scripts shell qui peuvent être écrit en bash, fish, zsh etc.</span></strong></p>
+<p>Pour pouvoir connaitre le volume de la partition il vous faut un script exécutable. Il faudra pour cela utiliser l’extension en sh.</p>
+<p>Tout d’abord, dans votre dépôt local créer un fichier en sh :</p>
+<pre><code class="language-bash">vim &lt;nom fichier&gt;.sh
 </code></pre>
-<p>Ensuite il faudra inscrire ceci dans le fichier :</p>
-<pre><code class="language-bash">name: Deploy to GitHub Pages
+<p>Et mettre ceci dans le fichier :</p>
+<pre><code class="language-bash">#!/bin/bash
 
-on:
-  push:
-    branches:
-      - main
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+# Vérifier si le client MYSQL est installé
+if ! type mysql &gt;/dev/null 2&gt;&amp;1; then
+  #Installer le client MySQL
+  sudo apt update
+  sudo apt-get install -y mysql-client
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+fi
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
+# Récupérer la taille de la partition
+partition_size=$(du -s /home | awk '{print $1}')
+timestamp=$(date +%Y-%m-%d\ %H:%M:%S)
 
-      - name: Install dependencies
-        run: |
-          pip install mkdocs mkdocs-material mkdocs-mermaid2-plugin
 
-      - name: Build site
-        run: mkdocs build --verbose --clean
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: site
+# Insérer les données dans la bdd
+mysql -h 127.0.0.1 -P 3306 -u $MYSQL_USER -p$MYSQL_PASSWORD -D $MYSQL_DATABASE -e "INSERT INTO partition_home (size, timestamp) VALUES ($partition_size,'$timestamp');"
+
+
+#Charger les variables d'environnement à partir du fichier .env
+
+source .env 
 </code></pre>
-<h1 id="attention"><strong><span style="color:red"> Attention </span></strong></h1>
-<p><strong>Il faudra penser à mettre le deploy dans la bonne branche</strong></p>
-<p>Pour ce faire aller dans <strong>"settings"</strong></p>
-<p>Puis aller sur l'onget <strong>"pages"</strong> :</p>
-<p><img alt="Onglet page" src="../../../images/page.jpg"/></p>
-<p>Ensuite sélectionner github action</p>
-<p><img alt="page" src="../../../images/page_2.0.jpg"/></p>
-<p>et vous allez mettre <strong>"Deploy from a branch"</strong> :</p>
-<p><img alt="deploy" src="../../../images/deploy_ghpage.jpg"/></p>
-<h1 id="attention_1"><strong><span style="color:red"> Attention </span></strong></h1>
-<p><strong>Il faudra penser à mettre les bons droits pour le workflows</strong></p>
-<p>Pour ce faire aller dans <strong>"settings"</strong></p>
-<p>Ensuite aller dans l'onglet <strong>"actions"</strong> :</p>
-<p><img alt="actions" src="../../../images/actions.jpg"/></p>
-<p>Ensuite il faudra descendre jusqu'à trouver ceci : </p>
-<p><img alt="Droit Workflows" src="../../../images/droit.jpg"/></p>
-<p>Cocher les mêmes choses que moi !</p>
-<p><strong>Pensez à "save"</strong></p>
-<p><strong><span style="color:red">Voilà dépôt prêt à être utiliser !!! </span></strong></p>
+<h3 id="attention"><strong><span style="color:red">Attention</span></strong></h3>
+<p>Assurer vous que votre script a les permissions d’exécution :</p>
+<pre><code class="language-bash">”chmod +x &lt;Chemin du script&gt;”
+</code></pre>
+<h2 id="crontab">Crontab :</h2>
+<h3 id="cest-quoi-crontab">C’est quoi “crontab” ?</h3>
+<p><strong><span style="color:red">Crontab est le nom du programme sous Unix (et Linux) qui permet d'éditer des tables de configuration du programme cron. Ces tables spécifient les tâches à exécuter et leur horaire d'exécution.</span></strong></p>
+<p>Tout d’abord, il faudra taper la commande crontab –e cela vous ouvrira un fichier.</p>
+<p>Ensuite en bas il vous faudra indiquer tout les combien de temps un fichier doit s’exécuter : </p>
+<pre><code class="language-bash">&lt;période&gt;  &lt;Chemin du fichier&gt;
+</code></pre>
+<h2 id="creation-de-la-table-dans-la-base-de-donnees">Création de la table dans la base de données :</h2>
+<p>Tout d’abord, il faudra vous connecter à votre docker :</p>
+<pre><code class="language-bash">“docker exec –it &lt;nom du conteneur&gt; /bin/bash”
+</code></pre>
+<p>Pour cela connecter vous en tant qu'Administrateur de la Base de Données :</p>
+<pre><code class="language-bash">“mysql -u root –p”
+</code></pre>
+<p>Une fois connecté à la base de données MariaDB il va falloir indiquer sur quelle base de données créer la table :</p>
+<pre><code class="language-bash">“USE &lt;nom de la base de données&gt;”
+</code></pre>
+<p>Une fois la base de données sélectionne vous pouvez créer votre table. Voici un exemple :</p>
+<pre><code class="language-bash">“CREATE TABLE partitions_home (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  size VARCHAR(20),
+  timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);”
+</code></pre>
+<p>Ensuite pour voir si votre table est créée, il vous suffira de faire un :</p>
+<pre><code class="language-bash">“SHOW TABLES”
+</code></pre>
+<p><strong>Vous verrez votre table normalement.</strong> </p>
+<h2 id="voir-si-le-script-fonctionne">Voir si le script fonctionne</h2>
+<p>Pour voir si le script fonctionne, il vous suffira de faire :</p>
+<pre><code class="language-bash">“SELECT * FROM &lt;nom de la table crée&gt;”
+</code></pre>
+<p><strong><span style="color:red"> Voilà vos informations de votre script seront sur votre Base De Données MariaDB !!</span></strong></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
