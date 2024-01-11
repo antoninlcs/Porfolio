@@ -18,8 +18,8 @@
 
 * Mes 2 présentations de situations pour l'épreuve E5 dans **l'onglet epreuve E5**
 
-* Mon stage de 2ème année dans **l'onglet Stage CD 72 (2ème année)**
+* Mon stage de 2ème année dans **l'onglet Stage 2024 CD72**
 
-* Mon stage de 1ère année dans **l'onglet Stage CD 72 (1ère année)** 
+* Mon stage de 1ère année dans **l'onglet Stage 2023 CD72** 
 
 * Ma veille techno dans **l'onglet Veille Techno**

@@ -60,62 +60,48 @@ Ceci est un exemple de fichier que j'ai pu réaliser :
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-# All Vagrant configuration is done below. The "2" in Vagrant.configure
-# configures the configuration version (we support older styles for
-# backwards compatibility). Please don't change it unless you know what
-# you're doing.
-
 require 'yaml'
 
 # Chargez les informations depuis le fichier config.yml
 config_data = YAML.load_file('config.yml')
 
-# Toute la configuration Vagrant se trouve ci-dessous. Le "2" dans Vagrant.configure
-# configure la version de configuration (nous prenons en charge les anciens styles pour
-# la compatibilité ascendante). Ne le changez pas à moins de savoir ce que
-# vous faites.
-
 Vagrant.configure("2") do |config|
+  config.vm.box = "generic/ubuntu2204"
 
-  # Définit la machine virtuelle avec le nom "srv-test"
-  config.vm.define "srv-test" do |machine_config|
 
-    # Définit la boîte de base pour la machine virtuelle
-    machine_config.vm.box = "generic/ubuntu2204"
-    
+
+  config.vm.define 'srv-test' do |node|
+    node.vm.hostname = 'srv-test'
+  end
+  
+  
     # Spécifie le fournisseur pour la machine virtuelle (Hyper-V)
-    machine_config.vm.provider "hyperv" do |h|
-
-      # Active les extensions de virtualisation
+    config.vm.provider "hyperv" do |h|
+      h.vmname = "srv-test"
       h.enable_virtualization_extensions = true
-
-      # Utilise un clonage lié
       h.linked_clone = true
+      
     end
-
-    # Configure le réseau public pour la machine virtuelle
-    machine_config.vm.network "public_network", dns: ["DNS1", "DNS2"]
-
-
-
-
-    # Configuration du proxy pour la machine virtuelle
-    machine_config.proxy.http     = "ADRESSE PROXY"
-    machine_config.proxy.https    = "ADRESSE PROXY"
-    machine_config.proxy.no_proxy = "localhost,127.0.0.1"
-
     
     # Configuration du proxy pour l'environnement
     config.proxy.http     = "ADRESSE PROXY"
     config.proxy.https    = "ADRESSE PROXY"
     config.proxy.no_proxy = "localhost,127.0.0.1"
+   
+    
+    # Configuration du dossier partagé pour Nginx en utilisant SMB
+    config.vm.synced_folder "D:/nginx-mkdocs", "/home/vagrant/test_partage",
+      type: "smb",
+      smb_username: config_data['smb_username'],
+      smb_password: config_data['smb_password']
 
-    # Configure le dossier partagé pour Nginx en utilisant SMB
-    machine_config.vm.synced_folder "Chemin du dossier machine hôte", "chemin du dossier VM", type: "smb", smb_username: config_data['smb_username'], smb_password: config_data['smb_password'], mfsymlinks: true
-  end
+    # Provisionnement en utilisant un script shell directement dans le Vagrantfile
+    config.vm.provision "shell", inline: <<-SHELL
+      echo "nameserver DNS1" | sudo tee /etc/resolv.conf
+      echo "nameserver DNS2" | sudo tee -a /etc/resolv.conf
+    SHELL
+  
 end
-
-Pour les chemin mettre / au lieu de \
 
 ~~~
 
@@ -131,9 +117,9 @@ et ensuite faire c'est trois commandes :
 
 ~~~bash 
 
-set http_proxy=ADRESSE PROXY
+set http_proxy= "ADRESSE PROXY"
 
-set https_proxy=ADRESSE PROXY
+set https_proxy= "ADRESSE PROXY"
 
 vagrant plugin install vagrant-proxyconf
 
@@ -175,3 +161,7 @@ Ainsi le fichier Vagrantfile ira chercher les valeurs des variables qu'on lui a 
 **vagrant destroy** : supprime la Vagrant Box. Cette commande arrête la box et la supprime de ta machine. Tu peux utiliser cette commande pour nettoyer ton environnement de développement
 
 **Vagrant reload** : redémarrer l'environnement 
+
+**vagrant ssh-config** : accèder a la conf ssh de la vm 
+
+**vagrant up --provision** : lancer les scripts mis dans le vagrantfile au lancement de la vm
