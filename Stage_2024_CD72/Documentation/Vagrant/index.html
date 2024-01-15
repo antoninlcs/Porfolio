@@ -588,6 +588,20 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installer-des-paquets-automatiquement">
+<span class="md-ellipsis">
+      Installer des paquets automatiquement
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#les-commandes-utiles">
+<span class="md-ellipsis">
+      Les commandes utiles
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -716,6 +730,20 @@
 <a class="md-nav__link" href="#connecter-la-vm-en-ssh-sur-vscode">
 <span class="md-ellipsis">
       Connecter la VM en ssh sur Vscode
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installer-des-paquets-automatiquement">
+<span class="md-ellipsis">
+      Installer des paquets automatiquement
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#les-commandes-utiles">
+<span class="md-ellipsis">
+      Les commandes utiles
     </span>
 </a>
 </li>
@@ -892,7 +920,7 @@ vagrant ssh-config
 <p><strong>Important</strong> sur la ligne <strong>Hostname</strong> remplacer l'ip par le nom de votre machine !!!!</p>
 <p>Une fois fini Cliquez sur l'icône remote et selectionner <strong>Connect To Host</strong></p>
 <p>Ensuite vous verrez le nom de votre machine, cliquez dessus et vous serrez connecté en ssh sur votre vm.</p>
-<h1 id="installer-des-paquets-automatiquement">Installer des paquets automatiquement</h1>
+<h2 id="installer-des-paquets-automatiquement">Installer des paquets automatiquement</h2>
 <p>Prenons l'exemple du paquet ansible </p>
 <p>Il faudra rajouter ceci dans votre <strong>VagrantFile</strong> :</p>
 <pre><code class="language-bash">
@@ -928,7 +956,7 @@ vagrant up --provision
 ansible --version 
 
 </code></pre>
-<h1 id="les-commandes-utiles">Les commandes utiles</h1>
+<h2 id="les-commandes-utiles">Les commandes utiles</h2>
 <p><strong>vagrant init</strong> : crée un fichier Vagrantfile dans le répertoire courant. Ce fichier contient la configuration de la Vagrant Box à utiliser. Tu peux utiliser cette commande pour créer un nouveau projet Vagrant.</p>
 <p><strong>vagrant up</strong> : démarre la Vagrant Box. Si la box n’est pas encore installée, Vagrant la téléchargera et la configura avant de la démarrer.</p>
 <p><strong>vagrant ssh</strong>: se connecte à la Vagrant Box en utilisant SSH. Tu peux utiliser cette commande pour accéder à la console de la box et exécuter des commandes sur le système d’exploitation de la box.</p>
