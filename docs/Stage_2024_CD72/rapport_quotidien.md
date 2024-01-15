@@ -14,3 +14,19 @@
 ### Problèmes 
 
 Blocage au niveau du proxy qui empêche la vm d'accèder a certains site ou faire des apt-update 
+
+## 10/01/2024 
+
+- Utilisation de vagrant 
+- Poursuite  de la documentation 
+
+
+## 11/01/2024 
+
+- Utilisation de vagrant 
+- Fin de la documentation 
+
+## 12/01/2024
+
+- Début du projet donné par mon tuteur (Déployer automatiquement des Vm sur un hyperviseur avec des provisionneur selon le besoin du CD72)
+- Analyse du besoin (Choix de l'hyperviseur ainsi que du provisionneur)
