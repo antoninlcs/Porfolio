@@ -26,7 +26,7 @@ Un approvisionneur est un outil pour configurer l'environnement virtuel. Il peut
 
 Les approvisionneurs de Vagrant vous permettent d'installer automatiquement des logiciels, de modifier les configurations et plus encore sur la machine dans le processus de démarrage.
 
-# Prérequis 
+## Prérequis 
 
 Pour utiliser vagrant, il faut avoir des moyens de virtualisations sur son PC tel que : 
 
@@ -52,7 +52,7 @@ Il faudra choisir le **packages** correspondant a votre système d'exploitation 
 
 Plus qu'a télécharger !! 
 
-# Crée son environemment
+## Crée son environemment
 
 Tout d'abord créé un dossier dans l'emplacement de votre choix 
 
@@ -68,7 +68,7 @@ vagrant init
 
 Cette commande va ainsi vous créer un fichier **VagrantFile** qui va vous permettre de génerer et gérer vos vm dans votre environnement 
 
-# Le fichier Vagrantfile 
+## Le fichier Vagrantfile 
 
 Ce fichier va vous permettre de configurer votre environnement 
 
@@ -133,9 +133,9 @@ end
 
 ~~~
 
-# Quelques manipulations avant de lancer votre fichier si besoin ! 
+## Quelques manipulations avant de lancer votre fichier si besoin ! 
 
-## Configuration Proxy 
+### Configuration Proxy 
 
 Le proxy risque de vous pose problèmes pour aller chercher des box, ou faire des apt-update etc...
 
@@ -160,7 +160,7 @@ Si vous voyez ceci s'afficher c'est que c'est bon !!
 
 
 
-## Conf fichier.yml 
+### Conf fichier.yml 
 
 Comme vous le voyez il y a des variables pour le partage de fichier ceci permet a vagrant d'accèder a nos fichiers sauf qu'il faut mettre notre login P@ssword en clair ce qui n'est pas une bonne pratiques. C'est pour cela qui vous faudra crée des variables ainsi que ce fichier 
 
@@ -178,7 +178,7 @@ smb_password: "Votre P@ssword"
 
 Ainsi le fichier Vagrantfile ira chercher les valeurs des variables qu'on lui a mis pour la partage de fichier
 
-# Lancement de votre environnement 
+## Lancement de votre environnement 
 
 Quand tout cela est effectué vous pourrez lancer votre environnement
 
@@ -204,7 +204,7 @@ Une fois cette commande effectué vous devrez attendre que le fichier génére l
 
 Ensuite aller dans votre outil de virtualisation utilisé et si tout ce passe bien vous devriez apercevoir votre machine.
 
-# Connecter la VM en ssh sur Vscode 
+## Connecter la VM en ssh sur Vscode 
 
 Pour cela ouvrez un invite de commande et placer vous dans dossier d'environnement 
 
