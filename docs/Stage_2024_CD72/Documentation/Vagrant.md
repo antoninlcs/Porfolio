@@ -250,7 +250,7 @@ Une fois fini Cliquez sur l'icône remote et selectionner **Connect To Host**
 
 Ensuite vous verrez le nom de votre machine, cliquez dessus et vous serrez connecté en ssh sur votre vm.
 
-# Installer des paquets automatiquement
+## Installer des paquets automatiquement
 
 Prenons l'exemple du paquet ansible 
 
@@ -301,7 +301,7 @@ ansible --version
 ~~~
 
 
-# Les commandes utiles 
+## Les commandes utiles 
 
 **vagrant init** : crée un fichier Vagrantfile dans le répertoire courant. Ce fichier contient la configuration de la Vagrant Box à utiliser. Tu peux utiliser cette commande pour créer un nouveau projet Vagrant.
 
