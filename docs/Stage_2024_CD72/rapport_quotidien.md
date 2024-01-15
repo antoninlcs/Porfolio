@@ -30,3 +30,10 @@ Blocage au niveau du proxy qui empêche la vm d'accèder a certains site ou fair
 
 - Début du projet donné par mon tuteur (Déployer automatiquement des Vm sur un hyperviseur avec des provisionneur selon le besoin du CD72)
 - Analyse du besoin (Choix de l'hyperviseur ainsi que du provisionneur)
+
+## 13/01/2024
+
+- Choix de l'hyperviseur qui sera promox 
+- Lecture de la documentation promox pour l'installer sur un serveur le 16/01/2024
+- Choix du stockage LVM ou ZFS 
+
