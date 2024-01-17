@@ -37,3 +37,10 @@ Blocage au niveau du proxy qui empêche la vm d'accèder a certains site ou fair
 - Lecture de la documentation promox pour l'installer sur un serveur le 16/01/2024
 - Choix du stockage LVM ou ZFS 
 
+## 15/01/2024
+
+- Analyse du besoin (Choix de l'hyperviseur ainsi que du provisionneur)
+  
+## 16/01/2024
+
+- Suite a l'analyse de vendredi et lundi on a décidé de partir sur l'hyperviseur Proxmox
