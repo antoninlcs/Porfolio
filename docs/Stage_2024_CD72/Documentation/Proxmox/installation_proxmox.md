@@ -37,13 +37,13 @@ Tout d'abord il faudra vous rendre sur le site proxmox et installer l'iso proxmo
 
 Une fois que l'iso sera boot sur votr machine via différent système (Idrac, clé bootable...), il vous sera affiché ceci : 
 
-![console-proxmox](../images/console_proxmox.jpg)
+![console-proxmox](/docs/images/console_proxmox.jpg)
 
 Pour plus de confort selectionner le mode console 
 
 Ensuite il vous faudra accepter le contrat de licence : 
 
-![Licence_proxmox](/images/contrat_licence_prox.jpg)
+![Licence_proxmox](/docs/images/contrat_licence_prox.jpg)
 
 Il faudra ensuite cliquer sur **I agree**
 
