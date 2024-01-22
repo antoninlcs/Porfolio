@@ -57,3 +57,7 @@ Blocage au niveau du proxy qui empêche la vm d'accèder a certains site ou fair
 ## 19/01/2024
 
 - Manipulation du provisionner ( Terraform ) pour déployer les marchines automatiquement sur Proxmox
+
+## 22/01/2024
+
+Poursuite de la manipulation de Terraform. On résou des problème de syntaxe, d'accès erreur par erreur.
