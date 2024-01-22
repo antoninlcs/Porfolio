@@ -44,3 +44,16 @@ Blocage au niveau du proxy qui empêche la vm d'accèder a certains site ou fair
 ## 16/01/2024
 
 - Suite a l'analyse de vendredi et lundi on a décidé de partir sur l'hyperviseur Proxmox
+  
+## 17/01/2024
+
+- Installation en mode test de proxmox sur une veille machine en attendant un serveur de test qui sera mis en place 
+
+## 18/01/2024
+
+- Mise en place du serveur avec promox dessus 
+- Configuration du stockage ( LVM-Thin ) sur proxmox
+
+## 19/01/2024
+
+- Manipulation du provisionner ( Terraform ) pour déployer les marchines automatiquement sur Proxmox
