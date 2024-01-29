@@ -60,4 +60,29 @@ Blocage au niveau du proxy qui empêche la vm d'accèder a certains site ou fair
 
 ## 22/01/2024
 
-Poursuite de la manipulation de Terraform. On résou des problème de syntaxe, d'accès erreur par erreur.
+Poursuite de la manipulation de Terraform. On résous des problème de syntaxe, d'accès erreur par erreur.
+
+## 23/01/2024
+
+Poursuite de la manipulation de Terraform. On résous des problème de syntaxe, d'accès erreur par erreur.
+
+## 24/01/2024 
+
+Message de l'ANSSI reçu par le département qu'il y a une fuite des données qui provienne du portail.sarthe.fr sur des blogs de hacker 
+Pas de connexion de la journée le temps de résoudre le problème
+
+## 25/01/2024
+
+A ce jour, j'arrive a déployer une vm avec une configuration de base (Hostname, OS, IP, DNS, SSHKEY, user, password)
+
+## 26/01/2024
+
+Etude pour pouvoir combiné ansible + terraform. Ansible va servir a installer des services ( Apache, MariaDb) sur la vm lors de l'installation 
+
+## 29/01/2024
+
+Toujours entrain d'étudier ansible 
+
+## 30/01/2024
+
+Absent en raison de l'entretien pour intégrer le CESI
