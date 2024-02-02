@@ -57,7 +57,7 @@ Tout d'abord, allez sur votre proxmox : **http://ip_de_votre_machine:8006**
 
 Ensuite, allez sur l'onglet **API Tokens**
 
-![api_token](/images/API-Token.jpg)
+![api_token](/docs/images/API-Token.jpg)
 
 Puis, cliquez sur **Add** 
 
