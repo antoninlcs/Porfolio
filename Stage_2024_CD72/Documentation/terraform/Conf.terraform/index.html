@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../../Proxmox/installation_proxmox/" rel="prev"/>
+<link href="../../ansible/conf_ansible/" rel="prev"/>
 <link href="../../../../Veille%20techno/Ma%20veille/" rel="next"/>
 <link href="../../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.6" name="generator"/>
@@ -523,16 +523,40 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_9_3_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9_3_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_9_3_3" id="__nav_9_3_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Ansible
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_3_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_9_3_3">
+<span class="md-nav__icon md-icon"></span>
+            Ansible
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ansible/conf_ansible/">
+<span class="md-ellipsis">
+    Utilsation de Ansible pour installer des services sur la vm
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_9_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9_3_4" id="__nav_9_3_4_label" tabindex="0">
 <span class="md-ellipsis">
     Terraform
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_9_3_3_label" class="md-nav" data-md-level="3">
-<label class="md-nav__title" for="__nav_9_3_3">
+<nav aria-expanded="true" aria-labelledby="__nav_9_3_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_9_3_4">
 <span class="md-nav__icon md-icon"></span>
             Terraform
           </label>
@@ -631,11 +655,11 @@ sudo apt-get update
 <h1 id="creation-de-lapi-jeton-proxmox">Création de l'API JETON PROXMOX</h1>
 <p>Tout d'abord, allez sur votre proxmox : <strong>http://ip_de_votre_machine:8006</strong></p>
 <p>Ensuite, allez sur l'onglet <strong>API Tokens</strong></p>
-<p><img alt="api_token" src="/docs/images/API-Token.jpg"/></p>
+<p><img alt="api_token" src="/images/API-Token.jpg"/></p>
 <p>Puis, cliquez sur <strong>Add</strong> </p>
-<p><img alt="add" src="/docs/images/add.jpg"/></p>
+<p><img alt="add" src="/images/add.jpg"/></p>
 <p>Vous aurez cette fenêtre apparaître : </p>
-<p><img alt="fenetre_token" src="/docs/images/fenetre_token.jpg"/></p>
+<p><img alt="fenetre_token" src="/images/fenetre_token.jpg"/></p>
 <ul>
 <li>Renseigner l'utilisateur associé a ce jeton </li>
 <li>Lui mettre un nom (ID)</li>
@@ -643,7 +667,7 @@ sudo apt-get update
 <li>Faites <strong>add</strong></li>
 </ul>
 <p>Une cela fait vous verrez cette fenêtre apparaitre :</p>
-<p><img alt="Secret_id" src="/docs/images/secret_id.jpg"/></p>
+<p><img alt="Secret_id" src="/images/secret_id.jpg"/></p>
 <p><strong>NOTEZ CES INFORMATIONS QUELQUES PART CAR VOUS EN AUREZ BESOIN ET CES INFORMATIONS NE PEUVENT PAS ETRE RELUE PLUSIEURS FOIS</strong></p>
 <h1 id="creation-des-fichier-terraform">Création des fichier terraform</h1>
 <p>Tout dd'abord créer un dossier dans lequel vous mettrez vos fichiers terraform :</p>
@@ -691,10 +715,6 @@ variable "proxmox_api_token_secret" {
     sensitive = true   # Marque la variable comme sensible pour masquer sa valeur
 }
 
-# Variable pour la clé SSH utilisée pour l'accès aux machines virtuelles
-variable "ssh_key" {
-  default = "ssh-rsa AAAAB3NzaC1yc2EAAAADA...&lt;clé SSH complète&gt;"
-}
 
 # Fournisseur Proxmox avec les détails d'authentification
 provider "proxmox" {
@@ -710,59 +730,164 @@ provider "proxmox" {
 <p>Il s'appelera généralement <strong>main.tf</strong></p>
 <p>Voici ce qu'on peut retrouver dans ce fichier </p>
 <pre><code class="language-bash">
-# Définition de la ressource Proxmox VM QEMU
-resource "proxmox_vm_qemu" "test_vm" {
+# Définition de la ressource de la machine virtuelle Proxmox
+resource "proxmox_vm_qemu" "vm_basic" {
   # Nom de la machine virtuelle
-  name       = "test-vm"
-
-  # Noeud de destination pour la création de la VM
+  name       = "test-vm-anto-tst-6"
+  # Noeud cible sur lequel déployer la machine virtuelle
   target_node = "SRV-VIR-PRXMX"
-
-  # Modèle de clonage basé sur une machine virtuelle existante (ubuntu-template)
-  clone      = "ubuntu-template"
-
-  # Pool auquel appartient la machine virtuelle
+  # Modèle à utiliser pour le clonage
+  clone      = "tmplt-ubt2204-propre"
+  # Pool dans lequel la machine virtuelle sera placée
   pool       = "test"
-
-  # Activation de l'agent QEMU Guest
+  # Activation de l'agent de Proxmox pour la gestion de la machine virtuelle
   agent      = 1
-
-  # Type de système d'exploitation avec prise en charge de cloud-init
+  # Type de système d'exploitation utilisé
   os_type    = "cloud-init"
-
-  # Configuration du processeur
+  # Nombre de cœurs CPU
   cores      = 2
+  # Nombre de sockets CPU
   sockets    = 1
-  cpu        = "host"  # Utilisation des fonctionnalités de CPU de l'hôte
-
-  # Configuration de la mémoire
+  # Configuration CPU pour correspondre au modèle de CPU de l'hôte
+  cpu        = "host"
+  # Mémoire RAM de la machine virtuelle (en Mo)
   memory     = 2048
-
   # Disque de démarrage
   bootdisk   = "virtio0"
 
   # Configuration du réseau
   network {
+    # Modèle de carte réseau virtuelle
     model  = "virtio"
-    bridge = "vmbr0"  # Pont réseau utilisé
+    # Pont réseau sur lequel la machine virtuelle sera connectée
+    bridge = "vmbr0"
   }
 
-  # Configuration de l'adresse IP et de la passerelle pour l'interface réseau 0
-  ipconfig0 = "ip=172.16.100.2/16,gw=172.16.255.254"
+  # Configuration de l'adresse IP et de la passerelle
+  ipconfig0    = "ip=172.16.100.6/16,gw=172.16.255.254"
+  # Serveur de noms DNS à utiliser
+  nameserver   = "172.16.20.160"
+  # Domaine de recherche DNS
+  searchdomain = "cg72.fr"
+  # Nom d'utilisateur pour l'initialisation cloud-init
+  ciuser       = "root"
+  # Mot de passe pour l'initialisation cloud-init
+  cipassword   = "root"
+
+  # Provisionnement avec un exécuteur local
+  provisioner "local-exec" {
+    # Commande à exécuter après le déploiement de la machine virtuelle
+    command = "sleep 1m &amp;&amp; ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i '172.16.100.6,' -u root   /home/anto/automatisation/ansible/setup_vm.yml"
+  }
 }
 
 </code></pre>
-<p>Une fois vos 3 fichier créer allez sur votre machine est aller sur votre dossier précedemment créer.</p>
-<p>Une fois cela fait vous aurez trois commande a effectuer :</p>
+<h1 id="utilsation-de-ansible-pour-installer-des-services-sur-la-vm">Utilsation de Ansible pour installer des services sur la vm</h1>
+<p>Tout d'abord créer un dossier ansible </p>
+<pre><code class="language-bash">
+mkdir ansible
+
+</code></pre>
+<p>Il faudra créer un dossier task où il y aura votre playbook</p>
+<pre><code class="language-bash">
+mkdir task
+
+</code></pre>
+<p>Il faudra créer un dossier template on vous y mettrez vos template </p>
+<pre><code class="language-bash">
+mkdir template
+
+</code></pre>
+<p>Ensuite dans ce dossier il faudra créer un playbook dans lequel vous allez définire les tâches à réaliser </p>
+<pre><code class="language-bash">
+- name: Configure Proxy and Timezone, Update Packages, Install and Start Apache
+  hosts: all
+  become: yes  # Autoriser l'exécution des tâches en tant que superutilisateur
+
+  tasks:
+
+    - name: COPY SET PROXY CONF
+      become: yes  # Exécuter cette tâche en tant que superutilisateur
+      ansible.builtin.template:  # Utilisation du module template pour copier un fichier template
+        src: /home/anto/automatisation/ansible/90curtin-aptproxy.j2
+        dest: '/etc/apt/apt.conf.d/90curtin-aptproxy'  # Destination du fichier généré
+        owner: root  # Propriétaire du fichier
+        group: root  # Groupe du fichier
+        mode: '0644'  # Permissions du fichier
+
+
+    - name: Configure proxy in /etc/environment for HTTP
+      lineinfile:  # Utilisation du module lineinfile pour gérer les lignes dans un fichier texte
+        path: /etc/environment  # Chemin du fichier
+        regexp: '^http_proxy='  # Expression régulière pour rechercher une ligne
+        line: 'http_proxy=proxy'  # Ligne à ajouter ou modifier
+        state: present  # État de la ligne (présent dans ce cas)
+
+
+    - name: Configure proxy in /etc/environment for HTTPS
+      lineinfile:  # Utilisation du module lineinfile pour gérer les lignes dans un fichier texte
+        path: /etc/environment  # Chemin du fichier
+        regexp: '^https_proxy='  # Expression régulière pour rechercher une ligne
+        line: 'https_proxy=proxy'  # Ligne à ajouter ou modifier
+        state: present  # État de la ligne (présent dans ce cas)
+
+
+    - name: Set timezone
+      timezone:  # Utilisation du module timezone pour configurer le fuseau horaire
+        name: "Europe/Paris"  # Nom du fuseau horaire à configurer
+
+
+    - name: Update packages
+      apt:  # Utilisation du module apt pour gérer les packages sous Debian/Ubuntu
+        update_cache: yes  # Mise à jour de la cache des paquets
+        upgrade: yes  # Mise à jour des packages installés
+
+
+    - name: Install Apache web server
+      apt:  # Utilisation du module apt pour gérer les packages sous Debian/Ubuntu
+        name: apache2  # Nom du package à installer
+        state: present  # État souhaité du package (présent dans ce cas)
+
+    - name: Ensure Apache service is started and enabled
+      service:  # Utilisation du module service pour gérer les services système
+        name: apache2  # Nom du service à gérer (Apache dans ce cas)
+        state: started  # État souhaité du service (démarré dans ce cas)
+        enabled: yes  # Activer le service au démarrage du système
+
+</code></pre>
+<p>Ensuite pour indiquer le proxy, il faudra créer un template comme indiquer dans le code. Dans ce fichier vous allez indiquer l'addresse de votre proxy : </p>
+<pre><code class="language-bash">
+Acquire::http::Proxy "{{ http_proxy }}";
+Acquire::https::Proxy "{{ https_proxy }}";
+
+</code></pre>
+<p>Enfin dans votre fichier <strong>main.tf</strong> il faudra renseigner cette ligne :</p>
+<pre><code class="language-bash">
+ # Commande à exécuter après le déploiement de la machine virtuelle
+    command = "sleep 1m &amp;&amp; ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i '172.16.100.6,' -u root   /home/anto/automatisation/ansible/setup_vm.yml"
+
+</code></pre>
+<p>Elle va permettre d'executer l'ansible sur la vm provisionnée automatiquement.</p>
+<p>Une fois les fichiers dont a besoin terraform et ansible sont crée allez sur votre machine est aller sur votre dossier <strong>terraform</strong>.</p>
+<p>Une fois cela fait vous aurez 5 commandes a effectuer :</p>
 <ul>
-<li>La première commande va permettre d'installer le plugin : </li>
+<li>Les deux premières commandes va servir a renseigner la clé ssh parce que ansible ne peut pas la renseigné tout seul</li>
+</ul>
+<pre><code class="language-bash">
+ssh-agent $SHELL
+
+ssh-add 
+</code></pre>
+<p>Ensuite renseigner votre clé ssh </p>
+<ul>
+<li>La troisième commande va permettre d'installer le plugin : </li>
 </ul>
 <pre><code class="language-bash">
 sudo terraform init -upgrade 
 
 </code></pre>
 <ul>
-<li>La deuxième sera pour voir si votre fichier est valide </li>
+<li>La quatrième sera pour voir si votre fichier est valide </li>
 </ul>
 <pre><code class="language-bash">
 sudo terraform validate 
@@ -776,10 +901,10 @@ sudo terraform apply -auto-approuve
 
 </code></pre>
 <p>Une fois ce processus effectuer vous pourrez voir votre vm dans le menu de gauche de proxmox </p>
-<p><img alt="vm" src="/docs/images/vm.jpg"/></p>
+<p><img alt="vm" src="/images/vm.jpg"/></p>
 <h1 id="note">Note</h1>
 <p>Dans proxmox, une fois le apply fait vous verrez les logs de cette commande dans proxmox en bas de votre écran :</p>
-<p><img alt="logs" src="/docs/images/vm2.jpg"/></p>
+<p><img alt="logs" src="/images/vm2.jpg"/></p>
 <h1 id="attention">Attention</h1>
 <p><strong>Veuillez enlever les commantaires des fichiers cela est juste a titre explicatif, car sinon votre déploiment va mal se passer</strong></p>
 </article>
