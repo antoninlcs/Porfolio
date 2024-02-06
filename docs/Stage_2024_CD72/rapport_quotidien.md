@@ -86,3 +86,34 @@ Toujours entrain d'étudier ansible
 ## 30/01/2024
 
 Absent en raison de l'entretien pour intégrer le CESI
+
+## 31/01/2024
+
+Toujours entrain d'étudier ansible 
+
+Problème de connexion ssh avec ansible 
+
+## 1/02/2024
+
+Terraform + ansible marche 
+
+Problème = ssh-agent 
+
+Donc j'arrive à déployer une vm avec une configuration nécessaire ainsi que des services automatiquement
+
+## 2/02/2024
+
+Réalisation du diaporamara pour le 12/02
+
+Poursuite de la documentation 
+
+## 5/02/2024
+
+Essai de déployer 2 vm d'affiler avec l'outil **count**
+
+Probléme de syntaxe mais en fin de journée c'était opérationnel 
+
+
+## 6/02/2024 
+
+Etude de l'outil powerdns
