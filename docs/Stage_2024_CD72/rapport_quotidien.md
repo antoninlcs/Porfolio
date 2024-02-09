@@ -117,3 +117,30 @@ Probléme de syntaxe mais en fin de journée c'était opérationnel
 ## 6/02/2024 
 
 Etude de l'outil powerdns
+
+## 7/02/2024
+
+Réunion présenté par moi-même pour faire un point de l'avancement de mon projet avec le service conception 
+
+
+Etude de l'outil powerdns
+
+## 8/02/2024 
+
+Découverte SDN (Software-Defined Networking) qui permet de créer des réseaux virtuels privé 
+
+Problème on ne peut pas communiquer avec ce réseau avec le réseau joinville. Il faut crée des ip routes sur leur routeur pas possible.
+
+Donc solution = VPN 
+
+
+## 9/02/2024 
+
+
+Abandon de l'outil powerdns 
+
+Installation d'un serveur opnsense ( DHCP, DNS, NAT et VPN )
+
+Configuration DHCP pour le réseau privé 
+
+Reste a faire le DNS, NAT et vpn 
