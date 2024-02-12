@@ -9,7 +9,7 @@
 <link href="../../../../../Veille%20techno/Ma%20veille/" rel="next"/>
 <link href="../../../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.9" name="generator"/>
-<title>Pourquoi ce dépôt - Portfolio</title>
+<title>Création des fichier terraform - Portfolio</title>
 <link href="../../../../../assets/stylesheets/main.f2e4d321.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#pourquoi-ce-depot">
+<a class="md-skip" href="#creation-des-fichier-terraform">
           Skip to content
         </a>
 </div>
@@ -46,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Pourquoi ce dépôt
+              Création des fichier terraform
             
           </span>
 </div>
@@ -584,11 +584,32 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Création des fichier terraform
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Pourquoi ce dépôt
+    Création des fichier terraform
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#le-dossier-module">
+<span class="md-ellipsis">
+      Le dossier module
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -635,152 +656,25 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#le-dossier-module">
+<span class="md-ellipsis">
+      Le dossier module
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="pourquoi-ce-depot">Pourquoi ce dépôt</h1>
-<p>Ce dépôt a était crée pour but de vous aider a créer des templates sur proxmox pour ensuite utiliser l'outil cloud-init pour pouvoir configurer vos VM comme bon vous semble.</p>
-<h1 id="pourquoi-creer-des-templates">Pourquoi créer des templates</h1>
-<p>Il vous faut crée des templates dans prmox car l'outil cloud-init est compatible qu'en faisant des clones c'est pour cela qu'il faudra créer des templates</p>
-<h2 id="installer-images-cloud">Installer images cloud</h2>
-<p>Ceci ce fait avec quelques lignes de commandes : </p>
-<p>Tout d'abord il faudra vous connecter en ssh sur votre <strong>serveur proxmox</strong></p>
-<p>Ensuite il faudra télécharger une image cloud de votre disbutrion de votre choix </p>
-<p>Il faudra prendre la version de votre choix </p>
-<p>Il faudra prendre en <strong>.img</strong> ou <strong>qcow2</strong></p>
-<p>exemple : <a href="https://cloud-images.ubuntu.com/">lien cloud ubuntu</a>
-        : <a href="https://cloud.debian.org/images/cloud/bullseye/daily/latest/">Lien cloud debian</a> </p>
-<h3 id="notes">Notes</h3>
-<p>Pour l'installer faites un wget + <strong>le lien de l'image cloud</strong></p>
-<pre><code class="language-bash">
-wget https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img
-
-</code></pre>
-<p>Ensuite il faudra installer une <strong>blibliothèque</strong> pour l'agent :</p>
-<pre><code class="language-bash">
- apt install guestfs-tools
-
-</code></pre>
-<p>Une fois installer il faudra installer le <strong>qemu-guest-agent</strong> pour cela faites : </p>
-<pre><code class="language-bash">
-virt-customize -a nom_de_l'image_telecharger --timezone Europe/Paris --install qemu-guest-agent --run-command 'systemctl enable qemu-guest-agent.service'
-
-</code></pre>
-<p>Il est aussi possible de réduire votre disque où se trouvera l'image je conseille fortement 5G au minimum </p>
-<pre><code class="language-bash">
-qemu-img resize --shrink nom_de_l'image_telecharger 5G
-
-</code></pre>
-<p>Il est temps de créer votre template.</p>
-<h2 id="creation-de-la-template">Création de la template</h2>
-<p>Pour cela faites : </p>
-<pre><code class="language-bash">
-9000 = ID de la machine 
-
-net 0 virtio,bridge=vmbr0 = interface réseau
-
-name = le nom de la machine 
-
-memory = la mémoire 
-
-ciupgrade = 0 : Cela sert a desactivé la mise à jour des paquets a chaque boot de la machine 
-
- qm create 9000 --name nom_de_votre_vm --memory 2048 --cores 2 --ciupgrade 0 --net0 virtio,bridge=vmbr0
-
-</code></pre>
-<p>Ensuite vous devrez importer le disque sur votre stockage :</p>
-<pre><code class="language-bash">
- qm importdisk 9000 nom_de_l'image_telecharger pve-data
-
-</code></pre>
-<p>Ensuite, il faudra attacher le disque a la vm comme disque virtio</p>
-<pre><code class="language-bash">
- qm set 9000 --virtio0 pve-data:vm-9000-disk-0
-
-</code></pre>
-<p>Ajout d'un disque de type cloud-init : </p>
-<pre><code class="language-bash">
- qm set 9000 --ide2 pve-data:cloudinit
-
-</code></pre>
-<p>Ensuite faudra indiquer a la template le boot :</p>
-<pre><code class="language-bash">
-qm set 9000 --boot c --bootdisk virtio0
-</code></pre>
-<p>Ensuite pour éviter d'avoir un écran noir sur la template il faut faire cette commande :</p>
-<pre><code class="language-bash">
- qm set 9000 --serial0 socket --vga serial0
-
-</code></pre>
-<p>Ensuite il faudra activé l'agent </p>
-<pre><code class="language-bash">
- qm set 9000 --agent enabled=1
-
-</code></pre>
-<p>Pour finir il vous suffira de la convertir en template</p>
-<pre><code class="language-bash">
- qm template 9000
-
-</code></pre>
-<h1 id="attention">Attention</h1>
-<ul>
-<li>N'oubliez pas si vous avez plusieurs template mettre un ID différent  </li>
-</ul>
-<h1 id="creation-du-projet-terraform">Création du projet terraform</h1>
-<p>Tout d'abord, il faudra installer terraform sur votre machine </p>
-<p>Il y aura quelques a effectuer tout d'abord assurez-vous que votre système est à jour et que vous avez installé les packages <strong>gnupg</strong>, <strong>software-properties-commonet</strong> installés <strong>.curl</strong>. Vous utiliserez ces packages pour vérifier la signature GPG de HashiCorp et installer le référentiel de packages Debian de HashiCorp :</p>
-<pre><code class="language-bash">
- sudo  apt-get update &amp;&amp;  sudo  apt-get  install -y gnupg software-properties-common
-
- ~~~
-
-Ensuite, Installez la **clé GPG HashiCorp**.
-
- ~~~bash 
-
-wget -O- https://apt.releases.hashicorp.com/gpg |  \
-gpg --chermor |  \ 
-sudo  tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
-
-</code></pre>
-<p>La commande <strong>gpg</strong> rapportera l'empreinte de la clé </p>
-<p>Puis, ajoutez le référentiel officiel HashiCorp à votre système. La commande <strong>La lsb_release -cs</strong> recherche le nom de code de la version de distribution de votre système actuel, tel que <strong>buster</strong>, <strong>groovy</strong> ou <strong>id</strong>.</p>
-<pre><code class="language-bash">
- echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
-https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
-sudo tee /etc/apt/sources.list.d/hashicorp.list
-
-</code></pre>
-<p>Maintenant, il faudra mettre a jour vos paquets </p>
-<pre><code class="language-bash">
-sudo apt-get update
-
-</code></pre>
-<p>Enfin vous pourrez installer <strong>Terraform</strong></p>
-<pre><code class="language-bash">
- sudo  apt-get  install terraform
-
-</code></pre>
-<h1 id="creation-de-lapi-jeton-proxmox">Création de l'API JETON PROXMOX</h1>
-<p>Tout d'abord, allez sur votre proxmox : <strong>http://ip_de_votre_machine:8006</strong></p>
-<p>Ensuite, allez sur l'onglet <strong>API Tokens</strong></p>
-<p><img alt="api_token" src="/images/API-Token.jpg"/></p>
-<p>Puis, cliquez sur <strong>Add</strong> </p>
-<p><img alt="add" src="/images/add.jpg"/></p>
-<p>Vous aurez cette fenêtre apparaître : </p>
-<p><img alt="fenetre_token" src="/images/fenetre_token.jpg"/></p>
-<ul>
-<li>Renseigner l'utilisateur associé a ce jeton </li>
-<li>Lui mettre un nom (ID)</li>
-<li>Décocher <strong>Privilege Separation</strong></li>
-<li>Faites <strong>add</strong></li>
-</ul>
-<p>Une cela fait vous verrez cette fenêtre apparaitre :</p>
-<p><img alt="Secret_id" src="/images/secret_id.jpg"/></p>
-<p><strong>NOTEZ CES INFORMATIONS QUELQUES PART CAR VOUS EN AUREZ BESOIN ET CES INFORMATIONS NE PEUVENT PAS ETRE RELUE PLUSIEURS FOIS</strong></p>
 <h1 id="creation-des-fichier-terraform">Création des fichier terraform</h1>
 <p>Tout d'abord créer un fichier automatisation dans lequel vous mettrez un dossier ansible et terraform.
 Concentrons-nous sur le dossier terraform vous devrez créer 3 dossiers :</p>
@@ -941,7 +835,7 @@ Votre Clef pub
 }
 
 </code></pre>
-<h4 id="notes_1">Notes</h4>
+<h4 id="notes">Notes</h4>
 <p>Pour la variable Ip il y a que 3 octets car il y a le <strong>count.index</strong> qui va lui attribué le dernier selon la valeurs qu'on a renseigné après le +. Cela est utile quand vous allez créer plusieurs vm </p>
 <h3 id="le-fichier-maintf">Le fichier main.tf</h3>
 <p>Ce fichier va vous permettre de configurer les bases de votre vm </p>
@@ -985,127 +879,6 @@ resource "proxmox_vm_qemu" "vm-multi" {
 }
 
 </code></pre>
-<h1 id="utilsation-de-ansible-pour-installer-des-services-sur-la-vm">Utilsation de Ansible pour installer des services sur la vm</h1>
-<p>Tout d'abord créer un dossier ansible </p>
-<pre><code class="language-bash">
-mkdir ansible
-
-</code></pre>
-<p>Il faudra créer un dossier task où il y aura votre playbook</p>
-<pre><code class="language-bash">
-mkdir task
-
-</code></pre>
-<p>Il faudra créer un dossier template on vous y mettrez vos template </p>
-<pre><code class="language-bash">
-mkdir template
-
-</code></pre>
-<p>Ensuite dans ce dossier il faudra créer un playbook dans lequel vous allez définire les tâches à réaliser </p>
-<pre><code class="language-bash">
-- name: Configure Proxy and Timezone, Update Packages, Install and Start Apache
-  hosts: all
-  become: yes  # Autoriser l'exécution des tâches en tant que superutilisateur
-
-  tasks:
-
-    - name: COPY SET PROXY CONF
-      become: yes  # Exécuter cette tâche en tant que superutilisateur
-      ansible.builtin.template:  # Utilisation du module template pour copier un fichier template
-        src: /home/anto/automatisation/ansible/90curtin-aptproxy.j2
-        dest: '/etc/apt/apt.conf.d/90curtin-aptproxy'  # Destination du fichier généré
-        owner: root  # Propriétaire du fichier
-        group: root  # Groupe du fichier
-        mode: '0644'  # Permissions du fichier
-
-
-    - name: Configure proxy in /etc/environment for HTTP
-      lineinfile:  # Utilisation du module lineinfile pour gérer les lignes dans un fichier texte
-        path: /etc/environment  # Chemin du fichier
-        regexp: '^http_proxy='  # Expression régulière pour rechercher une ligne
-        line: 'http_proxy=proxy'  # Ligne à ajouter ou modifier
-        state: present  # État de la ligne (présent dans ce cas)
-
-
-    - name: Configure proxy in /etc/environment for HTTPS
-      lineinfile:  # Utilisation du module lineinfile pour gérer les lignes dans un fichier texte
-        path: /etc/environment  # Chemin du fichier
-        regexp: '^https_proxy='  # Expression régulière pour rechercher une ligne
-        line: 'https_proxy=proxy'  # Ligne à ajouter ou modifier
-        state: present  # État de la ligne (présent dans ce cas)
-
-
-
-    - name: Update packages
-      apt:  # Utilisation du module apt pour gérer les packages sous Debian/Ubuntu
-        update_cache: yes  # Mise à jour de la cache des paquets
-        upgrade: yes  # Mise à jour des packages installés
-
-
-    - name: Install Apache web server
-      apt:  # Utilisation du module apt pour gérer les packages sous Debian/Ubuntu
-        name: apache2  # Nom du package à installer
-        state: present  # État souhaité du package (présent dans ce cas)
-
-    - name: Ensure Apache service is started and enabled
-      service:  # Utilisation du module service pour gérer les services système
-        name: apache2  # Nom du service à gérer (Apache dans ce cas)
-        state: started  # État souhaité du service (démarré dans ce cas)
-        enabled: yes  # Activer le service au démarrage du système
-
-</code></pre>
-<p>Ensuite pour indiquer le proxy, il faudra créer un template comme indiquer dans le code. Dans ce fichier vous allez indiquer l'addresse de votre proxy : </p>
-<pre><code class="language-bash">
-Acquire::http::Proxy "{{ http_proxy }}";
-Acquire::https::Proxy "{{ https_proxy }}";
-
-</code></pre>
-<p>Enfin dans votre fichier <strong>main.tf</strong> il faudra renseigner cette ligne :</p>
-<pre><code class="language-bash">
- # Commande à exécuter après le déploiement de la machine virtuelle
-    command = "sleep 1m &amp;&amp; ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i '172.16.99.${count.index + 2},' -u root   /home/anto/automatisation/ansible/setup_vm.yml"
-
-</code></pre>
-<p>Elle va permettre d'executer l'ansible sur la vm provisionnée automatiquement.</p>
-<p>Une fois les fichiers dont a besoin terraform et ansible sont crée allez sur votre machine est aller sur votre dossier <strong>terraform</strong>.</p>
-<p>Une fois cela fait vous aurez 5 commandes a effectuer :</p>
-<ul>
-<li>Les deux premières commandes va servir a renseigner la clé ssh parce que ansible ne peut pas la renseigné tout seul</li>
-</ul>
-<pre><code class="language-bash">
-ssh-agent $SHELL
-
-ssh-add 
-</code></pre>
-<p>Ensuite renseigner votre clé ssh </p>
-<ul>
-<li>La troisième commande va permettre d'installer le plugin : </li>
-</ul>
-<pre><code class="language-bash">
-sudo terraform init -upgrade 
-
-</code></pre>
-<ul>
-<li>La quatrième sera pour voir si votre fichier est valide </li>
-</ul>
-<pre><code class="language-bash">
-sudo terraform validate 
-
-</code></pre>
-<ul>
-<li>Enfin la dernière sera pour créer la vm sur proxmox </li>
-</ul>
-<pre><code class="language-bash">
-sudo terraform apply -auto-approuve 
-
-</code></pre>
-<p>Une fois ce processus effectuer vous pourrez voir votre vm dans le menu de gauche de proxmox </p>
-<p><img alt="vm" src="/images/vm.jpg"/></p>
-<h1 id="note">Note</h1>
-<p>Dans proxmox, une fois le apply fait vous verrez les logs de cette commande dans proxmox en bas de votre écran :</p>
-<p><img alt="logs" src="/images/vm2.jpg"/></p>
-<h1 id="attention_1">Attention</h1>
-<p><strong>Veuillez enlever les commantaires des fichiers cela est juste a titre explicatif, car sinon votre déploiment va mal se passer</strong></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
