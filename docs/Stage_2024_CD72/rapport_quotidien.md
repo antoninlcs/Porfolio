@@ -144,3 +144,19 @@ Installation d'un serveur opnsense ( DHCP, DNS, NAT et VPN )
 Configuration DHCP pour le réseau privé 
 
 Reste a faire le DNS, NAT et vpn 
+
+
+## 12/02/2024
+
+Oral avec M.Villaines 
+
+## 13/02/2024
+
+Mettre la documentation à jour 
+
+Mise en place du dhcp et du dns sur le srv opnsense
+
+
+## 14/02/2024
+
+Mise en place de OpenVPN sur OPNsense 
