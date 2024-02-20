@@ -43,7 +43,7 @@ Pour plus de confort selectionner le mode console
 
 Ensuite il vous faudra accepter le contrat de licence : 
 
-![Licence_proxmox](../images/contrat_licence_prox.jpg)
+![Licence_proxmox](/images/contrat_licence_prox.jpg)
 
 Il faudra ensuite cliquer sur **I agree**
 
