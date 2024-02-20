@@ -37,7 +37,7 @@ Tout d'abord il faudra vous rendre sur le site proxmox et installer l'iso proxmo
 
 Une fois que l'iso sera boot sur votr machine via différent système (Idrac, clé bootable...), il vous sera affiché ceci : 
 
-![console-proxmox](../images/console_proxmox.jpg)
+![console-proxmox](/docs//images/console_proxmox.jpg)
 
 Pour plus de confort selectionner le mode console 
 
@@ -51,7 +51,7 @@ Il faudra ensuite cliquer sur **I agree**
 
 Ensuite, vous allez arriver sur cette page 
 
-![disque_proxmox](../images/disk_prox.jpg)
+![disque_proxmox](/docs/images/disk_prox.jpg)
 
 Vous allez avoir 2 options qui s'offre à vous :
 
@@ -63,13 +63,13 @@ Choissisez l'option qui correspond à vos besoins.
 
 ## Configuration Country 
 
-![country_prox](../images/country_prox.jpg)
+![country_prox](/docs/images/country_prox.jpg)
 
 Il faudra juste choisir dans quel pays vous résidez pour le fuseau horaire et la langue.
 
 ## Création compte root 
 
-![compte_prox](../images/compte_prox.jpg)
+![compte_prox](/docs/images/compte_prox.jpg)
 
 Il faudra renseignez un mot de passe fort et votre adresse mail pour être prevenu en cas de souci avec proxmox.
 
@@ -77,14 +77,14 @@ Il faudra renseignez un mot de passe fort et votre adresse mail pour être preve
 
 Pour la configuration réseaux vous aurez ceci :
 
-![reseau_prox](../images/reseau_prox.jpg)
+![reseau_prox](/docs/images/reseau_prox.jpg)
  
 Il vous suffira de selectionner votre bonne carte réseau ainsi que le nom de votre serveur proxmox et ses paramètres IP 
 
 
 ## Recap de l'installation 
 
-![récap_prox.jpg](../images/récap_prox.jpg)
+![récap_prox.jpg](/docs/images/récap_prox.jpg)
 
 Voici le recap de votre installation 
 
@@ -103,7 +103,7 @@ Proxmox est entrain de s'installer sur votre machine cela prendra quelques minut
 
 Une fois votre proxmox installer vous verrez cette fênetre apparaitre : 
 
-![url_prox](../images/url_prox.jpg)
+![url_prox](/docs/images/url_prox.jpg)
 
 Ceci sera votre url pour accèder pour accèder à l'interface de proxmox sur un navigateur web (Firefox, Chrome)
 
@@ -113,7 +113,7 @@ Rentrez l'url qui vous avez était donner lors de votre installation : **"http:/
 
 Une fois cela rentrer vous verrez ceci : 
 
-![connexion_web_prox](../images/connection_web_prox.jpg)
+![connexion_web_prox](/docs/images/connection_web_prox.jpg)
 
 
 
