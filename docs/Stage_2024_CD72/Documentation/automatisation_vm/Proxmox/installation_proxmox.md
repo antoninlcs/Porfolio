@@ -94,7 +94,7 @@ Ensuite, une fois que vous avez bien vérifier votre récapitulatif vous pouvez 
 
 Une fois que vous allez appuyer sur **Install** vous verrez cette fenêtre :
 
-![install_proxmox](../images/install_prox.jpg)
+![install_proxmox](/docs/images/install_prox.jpg)
 
 Proxmox est entrain de s'installer sur votre machine cela prendra quelques minutes
 
