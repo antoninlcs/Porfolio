@@ -18,23 +18,23 @@ Tout d'abord rendez-vous sur votre proxmox : **http://ip_de_votre_machine:8006**
 
 Ensuite connectez vous avec votre compte root : 
 
-![compte-root](/images/connection_web_prox.jpg)
+![compte-root](/docs/images/connection_web_prox.jpg)
 
 Ensuite une fois connecté cliquez sur votre serveur : 
 
-![srv](/images/nom_srv_prox.jpg)
+![srv](/docs/images/nom_srv_prox.jpg)
 
 Ensuite allez sur l'onglet **disques** puis **lvm-thin**
 
-![disk](/images/rdv_disk.jpg)
+![disk](/docs/images/rdv_disk.jpg)
 
 Ensuite cliquez sur **Create:thinpool**
 
-![thinppol](/images/lvm-thin.jpg)
+![thinppol](/docs/images/lvm-thin.jpg)
 
 Vous aurez cette fenêtre apparaitre : 
 
-![pool](/images/thin_pool.jpg)
+![pool](/docs/images/thin_pool.jpg)
 
 - Il vous proposera un disque qui n'est pas utilisé
 - Il faudra lui donné un nom 
@@ -44,7 +44,7 @@ Vous aurez cette fenêtre apparaitre :
 
 Une fois l'opération vous pourrez voir le thinpool crée 
 
-![pool_fini](/images/pool_fini.jpg)
+![pool_fini](/docs/images/pool_fini.jpg)
 
 Vous pouvez le voir aussi en ligne de commande en faisant la commande suivante : 
 

@@ -131,7 +131,7 @@ sudo qm template 9000
 
 # Configuration Cloud-init dans Proxmox :
 
-![cloud-init](../images/template.jpg)
+![cloud-init](/docs/images/template.jpg)
 
 Il faudra renseigner un user et password 
 
