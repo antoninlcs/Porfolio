@@ -1,1 +1,1 @@
-![Tableau de competence](../images/Tableau_de_competence.jpg)
+![Tableau de competence](../images/competence.jpg)
