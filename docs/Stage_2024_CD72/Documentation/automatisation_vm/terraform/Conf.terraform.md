@@ -1,3 +1,219 @@
+# Pourquoi créer des templates
+
+Il vous faut crée des templates dans prmox car l'outil cloud-init est compatible qu'en faisant des clones c'est pour cela qu'il faudra créer des templates
+
+## Installer images cloud
+Ceci ce fait avec quelques lignes de commandes : 
+
+Tout d'abord il faudra vous connecter en ssh sur votre **serveur proxmox**
+
+Ensuite il faudra télécharger une image cloud de votre disbutrion de votre choix 
+
+Il faudra prendre la version de votre choix 
+
+Il faudra prendre en **.img** ou **qcow2**
+
+exemple : [lien cloud ubuntu](https://cloud-images.ubuntu.com/)
+        : [Lien cloud debian](https://cloud.debian.org/images/cloud/bullseye/daily/latest/)   
+
+### Notes 
+
+
+
+Pour l'installer faites un wget + **le lien de l'image cloud**
+
+~~~bash 
+
+wget https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img
+
+~~~
+
+Ensuite il faudra installer une **blibliothèque** pour l'agent :
+
+~~~bash 
+
+ apt install guestfs-tools
+
+~~~
+
+Une fois installer il faudra installer le **qemu-guest-agent** pour cela faites : 
+
+~~~bash 
+
+virt-customize -a nom_de_l'image_telecharger --timezone Europe/Paris --install qemu-guest-agent --run-command 'systemctl enable qemu-guest-agent.service'
+
+~~~
+
+Il est aussi possible de réduire votre disque où se trouvera l'image je conseille fortement 5G au minimum 
+
+~~~bash 
+
+qemu-img resize --shrink nom_de_l'image_telecharger 5G
+
+~~~
+Il est temps de créer votre template.
+
+## Création de la template
+
+Pour cela faites : 
+
+~~~bash
+
+9000 = ID de la machine 
+
+net 0 virtio,bridge=vmbr0 = interface réseau
+
+name = le nom de la machine 
+
+memory = la mémoire 
+
+ciupgrade = 0 : Cela sert a desactivé la mise à jour des paquets a chaque boot de la machine 
+
+ qm create 9000 --name nom_de_votre_vm --memory 2048 --cores 2 --ciupgrade 0 --net0 virtio,bridge=vmbr0
+
+~~~
+
+Ensuite vous devrez importer le disque sur votre stockage :
+
+~~~bash 
+
+ qm importdisk 9000 nom_de_l'image_telecharger pve-data
+
+~~~
+
+Ensuite, il faudra attacher le disque a la vm comme disque virtio
+
+~~~bash 
+
+ qm set 9000 --virtio0 pve-data:vm-9000-disk-0
+
+~~~
+
+Ajout d'un disque de type cloud-init : 
+ 
+~~~bash 
+
+ qm set 9000 --ide2 pve-data:cloudinit
+
+~~~
+
+
+Ensuite faudra indiquer a la template le boot :
+
+~~~bash
+
+qm set 9000 --boot c --bootdisk virtio0
+~~~
+
+
+Ensuite pour éviter d'avoir un écran noir sur la template il faut faire cette commande :
+
+~~~bash 
+
+ qm set 9000 --serial0 socket --vga serial0
+
+~~~
+
+Ensuite il faudra activé l'agent 
+
+~~~bash
+
+ qm set 9000 --agent enabled=1
+
+~~~
+
+Pour finir il vous suffira de la convertir en template
+
+~~~bash
+
+ qm template 9000
+
+~~~
+
+
+# Attention 
+
+- N'oubliez pas si vous avez plusieurs template mettre un ID différent  
+  
+# Création du projet terraform 
+
+Tout d'abord, il faudra installer terraform sur votre machine 
+
+Il y aura quelques a effectuer tout d'abord assurez-vous que votre système est à jour et que vous avez installé les packages **gnupg**, **software-properties-commonet** installés **.curl**. Vous utiliserez ces packages pour vérifier la signature GPG de HashiCorp et installer le référentiel de packages Debian de HashiCorp :
+
+~~~bash 
+
+ sudo  apt-get update &&  sudo  apt-get  install -y gnupg software-properties-common
+
+ ~~~
+
+Ensuite, Installez la **clé GPG HashiCorp**.
+
+ ~~~bash 
+
+wget -O- https://apt.releases.hashicorp.com/gpg |  \
+gpg --chermor |  \ 
+sudo  tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+
+~~~
+
+La commande **gpg** rapportera l'empreinte de la clé 
+
+
+Puis, ajoutez le référentiel officiel HashiCorp à votre système. La commande **La lsb_release -cs** recherche le nom de code de la version de distribution de votre système actuel, tel que **buster**, **groovy** ou **id**.
+
+~~~bash 
+
+ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
+https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
+sudo tee /etc/apt/sources.list.d/hashicorp.list
+
+~~~
+
+Maintenant, il faudra mettre a jour vos paquets 
+
+~~~bash 
+
+sudo apt-get update
+
+~~~
+
+Enfin vous pourrez installer **Terraform**
+
+~~~bash 
+
+ sudo  apt-get  install terraform
+
+~~~
+
+# Création de l'API JETON PROXMOX
+
+Tout d'abord, allez sur votre proxmox : **http://ip_de_votre_machine:8006**
+
+Ensuite, allez sur l'onglet **API Tokens**
+
+![api_token](/images/API-Token.jpg)
+
+Puis, cliquez sur **Add** 
+
+![add](/images/add.jpg)
+
+Vous aurez cette fenêtre apparaître : 
+
+![fenetre_token](/images/fenetre_token.jpg)
+
+- Renseigner l'utilisateur associé a ce jeton 
+- Lui mettre un nom (ID)
+- Décocher **Privilege Separation**
+- Faites **add**
+
+Une cela fait vous verrez cette fenêtre apparaitre :
+
+![Secret_id](/images/secret_id.jpg)
+
+**NOTEZ CES INFORMATIONS QUELQUES PART CAR VOUS EN AUREZ BESOIN ET CES INFORMATIONS NE PEUVENT PAS ETRE RELUE PLUSIEURS FOIS**
+
+
 # Création des fichier terraform 
 
 Tout d'abord créer un fichier automatisation dans lequel vous mettrez un dossier ansible et terraform.
