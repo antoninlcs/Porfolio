@@ -581,13 +581,6 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Proxmox/Creation_template/">
-<span class="md-ellipsis">
-    Pourquoi créer des templates
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../../Proxmox/Gestion_du_stockage/">
 <span class="md-ellipsis">
     Le stockage sur Proxmox
@@ -799,26 +792,26 @@
 <p><strong>https://ip_interface_WAN:8443</strong></p>
 <p>Connectez vous en root et le mot de passe que vous avez défini.</p>
 <p>Une fois connecté allez sur <strong>Interfaces&gt;WAN</strong></p>
-<p><img alt="interface_wan" src="/images/interface_WAN.jpg"/></p>
+<p><img alt="interface_wan" src="../../../../images/interface_WAN.jpg"/></p>
 <p>Une fois que vous êtes sur l'interface WAN il est important que ces deux options soit décoché </p>
-<p><img alt="modif_wan" src="/images/modif_wan.jpg"/></p>
+<p><img alt="modif_wan" src="../../../../images/modif_wan.jpg"/></p>
 <p>Faites la même manipulation pour l'interface <strong>LAN</strong></p>
 <h2 id="le-dns">Le DNS</h2>
 <p>Pour configurer le dns, il faudra vous rendre dans <strong>Systèmes&gt;Paramètres&gt;Général</strong></p>
 <p>Tout d'abord, renseignez votre nom de domaine ainsi que votre bonne Timezone : </p>
-<p><img alt="Timezone" src="/images/Timezone.jpg"/></p>
+<p><img alt="Timezone" src="../../../../images/Timezone.jpg"/></p>
 <p>Ensuite, il faudra mettre votre serveur DNS </p>
-<p><img alt="dns" src="/images/dns.jpg"/></p>
+<p><img alt="dns" src="../../../../images/dns.jpg"/></p>
 <p>Une fois tout ceci effectué faite <strong>Sauvegarder</strong> tout en bas de la page </p>
 <p>Ensuite, il faudra configurer votre serveur DNS pour cela, il faudra vous rendre dans <strong>Services&gt;DNS Dnsmasq&gt;Paramètres</strong></p>
 <p>Une fois sur la page renseignez ces informations : </p>
-<p><a href="/images/conf_dns.JPG">conf_dns</a></p>
+<p><a href="../../../images/conf_dns.JPG">conf_dns</a></p>
 <p>Enfin faites <strong>sauvegarder</strong></p>
 <p>Pour tester, il faudra vous rendre sur une machine cliente est faire un ping d'une vm dans le même réseaux de son nom plus <strong>.nom de domaine</strong></p>
 <h2 id="dhcp">DHCP</h2>
 <p>Pour configurer le DHCP, il faudra vous rendre dans <strong>Services&gt;ISC DHCPv4&gt;Dans l'interface que vous voulez activer le DHCP</strong></p>
 <p>Voici un exemple de configuration DHCP, il faudra l'adaptée à vos besoins :</p>
-<p><img alt="exemple_dhcp" src="/images/exemple.dhcp.jpg"/></p>
+<p><img alt="exemple_dhcp" src="../../../../images/exemple.dhcp.jpg"/></p>
 <p>Une fois votre configuration fini, il faudra prendre le dépôt <strong>proxmox-vm-reseauxvirt</strong> dans Git-Lab crée votre vm et voir dans votre OPNsense dans le baux : <strong>Services&gt;ISC DHCPv4&gt;Baux</strong> si il y a bien votre vm </p>
 <h2 id="vpn">VPN</h2>
 <h3 id="certificat-dautorite">Certificat d'autorité</h3>
@@ -826,31 +819,31 @@
 <p>Pour ce faire, il faudra vous rendre dans <strong>Système&gt;Gestion des certificats&gt;Autorités</strong></p>
 <p>Ensuite, appuyer sur la petite croix en haut a droite</p>
 <p>Ensuite, voici un exemple de configuration : </p>
-<p><img alt="Certificat_autorite" src="/images/certificat_autorite.jpg"/></p>
+<p><img alt="Certificat_autorite" src="../../../../images/certificat_autorite.jpg"/></p>
 <p>Adaptez selon vos besoins </p>
 <h3 id="certificat-serveur">Certificat serveur</h3>
 <p>Ensuite, il faudra créer un certificat pour le serveur. Pour cela il faudra vous rendre dans <strong>Système&gt;Gestion des certificats&gt;Certificats</strong></p>
 <p>Ensuite, appuyer sur la petite croix en haut a droite</p>
 <p>Ensuite, voici un exemple de configuration :</p>
-<p><img alt="Certificat serveur" src="/images/certif_serveur.jpg"/></p>
+<p><img alt="Certificat serveur" src="../../../../images/certif_serveur.jpg"/></p>
 <h3 id="creation-du-user-pour-le-vpn">Création du User pour le VPN</h3>
 <p>Pour cela il faudra aller dans <strong>Système&gt;Accès&gt;Utilisateurs</strong> </p>
 <p>Ensuite, cliquez sur la petite croix en haut à droite </p>
 <p>Ensuite, il faudra remplir vos informations mais surtout il faudra cocher ceci : </p>
-<p><img alt="User" src="/images/user.jpg"/></p>
+<p><img alt="User" src="../../../../images/user.jpg"/></p>
 <p>Ensuite, faites sauvegarder. Vous serez rédirigé vers la page des certificats pour pouvoir faire un certificat associé a l'utilisateur </p>
 <p>Voici un exemple de configuration : </p>
-<p><img alt="certif_user" src="/images/certif_user.jpg"/></p>
+<p><img alt="certif_user" src="../../../../images/certif_user.jpg"/></p>
 <p>Quand ceci est fait, il faudra sauvegarder </p>
 <h3 id="configuration-serveur-vpn">Configuration Serveur VPN</h3>
 <p>Pour configurer votre serveur OpenVPN il faudra se rendre dans <strong>VPN&gt;OpenVPN&gt;Servers [legacy]</strong> </p>
 <p>Ensuite, cliquez sur la petite croix en haut à droite </p>
 <p>Ensuite, il faudra remplir vos informations :</p>
-<p><img alt="srv_vpn1" src="/images/srv_vpn1.jpg"/></p>
-<p><img alt="srv_vpn2" src="/images/srv_vpn2.jpg"/></p>
+<p><img alt="srv_vpn1" src="../../../../images/srv_vpn1.jpg"/></p>
+<p><img alt="srv_vpn2" src="../../../../images/srv_vpn2.jpg"/></p>
 <p>Ensuite, il y le paramètre réseaux du tunnel, adaptez ceci avec vos besoins </p>
-<p><img alt="srv_vpn3" src="/images/srv_vpn3.jpg"/></p>
-<p><img alt="srv_vpn4" src="/images/srv_vpn4.jpg"/></p>
+<p><img alt="srv_vpn3" src="../../../../images/srv_vpn3.jpg"/></p>
+<p><img alt="srv_vpn4" src="../../../../images/srv_vpn4.jpg"/></p>
 <p>Quand vous aurez terminer la configuration du serveur faites <strong>sauvegarder</strong></p>
 <h3 id="configuration-du-client">Configuration du client</h3>
 <p>Pour utiliser un vpn, il vous faut un client.</p>
@@ -898,7 +891,7 @@ lunaire (Ubuntu 23.04)</p>
 </code></pre>
 <p>Ensuite, il faut importer votre configuration VPN pour cela il faudra vous rendre dans <strong>VPN&gt;OpenVPN&gt;Exporter le client</strong></p>
 <p>Vous aller télécharger celle qui correspond a votre user VPN </p>
-<p><img alt="client" src="/images/client.jpg"/></p>
+<p><img alt="client" src="../../../../images/client.jpg"/></p>
 <p>Ensuite, il vous suffira de retourner sur votre machine cliente et faire ceci </p>
 <pre><code class="language-bash">
 sudo openvpn "votre fichier importé"

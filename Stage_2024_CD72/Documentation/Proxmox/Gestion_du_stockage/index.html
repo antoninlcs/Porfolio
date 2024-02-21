@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../Creation_template/" rel="prev"/>
+<link href="../../OPNsense/Installation_OPNSense/" rel="prev"/>
 <link href="../installation_proxmox/" rel="next"/>
 <link href="../../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.10" name="generator"/>
@@ -537,13 +537,6 @@
             Proxmox
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Creation_template/">
-<span class="md-ellipsis">
-    Pourquoi créer des templates
-  </span>
-</a>
-</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -810,15 +803,15 @@
 <h2 id="creation-stockage-lvm-thin">Création stockage lvm-thin</h2>
 <p>Tout d'abord rendez-vous sur votre proxmox : <strong>http://ip_de_votre_machine:8006</strong></p>
 <p>Ensuite connectez vous avec votre compte root : </p>
-<p><img alt="compte-root" src="/docs/images/connection_web_prox.jpg"/></p>
+<p><img alt="compte-root" src="../../../../images/connection_web_prox.jpg"/></p>
 <p>Ensuite une fois connecté cliquez sur votre serveur : </p>
-<p><img alt="srv" src="/docs/images/nom_srv_prox.jpg"/></p>
+<p><img alt="srv" src="../../../../images/nom_srv_prox.jpg"/></p>
 <p>Ensuite allez sur l'onglet <strong>disques</strong> puis <strong>lvm-thin</strong></p>
-<p><img alt="disk" src="/docs/images/rdv_disk.jpg"/></p>
+<p><img alt="disk" src="../../../../images/rdv_disk.jpg"/></p>
 <p>Ensuite cliquez sur <strong>Create:thinpool</strong></p>
-<p><img alt="thinppol" src="/docs/images/lvm-thin.jpg"/></p>
+<p><img alt="thinppol" src="../../../../images/lvm-thin.jpg"/></p>
 <p>Vous aurez cette fenêtre apparaitre : </p>
-<p><img alt="pool" src="/docs/images/thin_pool.jpg"/></p>
+<p><img alt="pool" src="../../../../images/thin_pool.jpg"/></p>
 <ul>
 <li>Il vous proposera un disque qui n'est pas utilisé</li>
 <li>Il faudra lui donné un nom </li>
@@ -826,25 +819,25 @@
 </ul>
 <h3 id="resultat">Résultat</h3>
 <p>Une fois l'opération vous pourrez voir le thinpool crée </p>
-<p><img alt="pool_fini" src="/docs/images/pool_fini.jpg"/></p>
+<p><img alt="pool_fini" src="../../../../images/pool_fini.jpg"/></p>
 <p>Vous pouvez le voir aussi en ligne de commande en faisant la commande suivante : </p>
 <pre><code class="language-bash">
 lsblk
 
 </code></pre>
-<p><img alt="lsblk" src="/images/lsbl.jpg"/></p>
+<p><img alt="lsblk" src="../../../lsbl.jpg"/></p>
 <h2 id="pourquoi-faire-un-pool">Pourquoi faire un pool</h2>
 <p>Le pool va vous permettre de mieux organiser le stockage de vos VMs</p>
 <h2 id="creation-du-pool">Création du pool</h2>
 <p>Tout d'abord rendez-vous sur votre proxmox : <strong>http://ip_de_votre_machine:8006</strong></p>
 <p>Ensuite connectez vous avec votre compte root : </p>
-<p><img alt="compte-root" src="/images/connection_web_prox.jpg"/></p>
+<p><img alt="compte-root" src="../../../../images/connection_web_prox.jpg"/></p>
 <p>Ensuite, il faut se rendre sur l'onglet <strong>pool</strong></p>
-<p><img alt="pool" src="/images/pool.jpg"/></p>
+<p><img alt="pool" src="../../../../images/pool.jpg"/></p>
 <p>Une fois sur cette onglet ilo faudra appuyer sur <strong>crée</strong></p>
-<p><img alt="create_pool" src="/images/create_pool1.jpg"/></p>
+<p><img alt="create_pool" src="../../../../images/create_pool1.jpg"/></p>
 <p>Vous aurez cette fenêtre apparaitre : </p>
-<p><img alt="create_pool" src="/images/create_pool2.jpg"/></p>
+<p><img alt="create_pool" src="../../../../images/create_pool2.jpg"/></p>
 <ul>
 <li>Il faudra lui renseigner un nom </li>
 <li>Mettre un commentaire </li>
@@ -855,11 +848,11 @@ lsblk
 <ul>
 <li>Dans l'onglet pool </li>
 </ul>
-<p><img alt="pool" src="/images/create_pool1.jpg"/></p>
+<p><img alt="pool" src="../../../../images/create_pool1.jpg"/></p>
 <ul>
 <li>Sur l'onglet général à votre gauche </li>
 </ul>
-<p><img alt="pool" src="/images/onglet_pool.jpg"/></p>
+<p><img alt="pool" src="../../../../images/onglet_pool.jpg"/></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
