@@ -6,10 +6,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../../ansible/conf_ansible/" rel="prev"/>
-<link href="../../../../../Veille%20techno/Ma%20veille/" rel="next"/>
+<link href="../../../../Mission/mission1/" rel="next"/>
 <link href="../../../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.10" name="generator"/>
-<title>Création des fichier terraform - Portfolio</title>
+<title>Pourquoi créer des templates - Portfolio</title>
 <link href="../../../../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#creation-des-fichier-terraform">
+<a class="md-skip" href="#pourquoi-creer-des-templates">
           Skip to content
         </a>
 </div>
@@ -46,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Création des fichier terraform
+              Pourquoi créer des templates
             
           </span>
 </div>
@@ -617,13 +617,13 @@
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    Création des fichier terraform
+    Pourquoi créer des templates
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Création des fichier terraform
+    Pourquoi créer des templates
   </span>
 </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
@@ -633,9 +633,16 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#le-dossier-module">
+<a class="md-nav__link" href="#installer-images-cloud">
 <span class="md-ellipsis">
-      Le dossier module
+      Installer images cloud
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creation-de-la-template">
+<span class="md-ellipsis">
+      Création de la template
     </span>
 </a>
 </li>
@@ -647,6 +654,44 @@
 </li>
 </ul>
 </nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9_4" id="__nav_9_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Mission
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_9_4">
+<span class="md-nav__icon md-icon"></span>
+            Mission
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Mission/mission1/">
+<span class="md-ellipsis">
+    Déploiement de vm automatique avec terraform proxmox et ansible
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Mission/mission2/">
+<span class="md-ellipsis">
+    Installation d'un serveur Proxmox
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Mission/mission3/">
+<span class="md-ellipsis">
+    Installation d'un serveur OPNsense ( DNS-DHCP-VPN)
+  </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -693,9 +738,16 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#le-dossier-module">
+<a class="md-nav__link" href="#installer-images-cloud">
 <span class="md-ellipsis">
-      Le dossier module
+      Installer images cloud
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creation-de-la-template">
+<span class="md-ellipsis">
+      Création de la template
     </span>
 </a>
 </li>
@@ -706,6 +758,144 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
+<h1 id="pourquoi-creer-des-templates">Pourquoi créer des templates</h1>
+<p>Il vous faut crée des templates dans prmox car l'outil cloud-init est compatible qu'en faisant des clones c'est pour cela qu'il faudra créer des templates</p>
+<h2 id="installer-images-cloud">Installer images cloud</h2>
+<p>Ceci ce fait avec quelques lignes de commandes : </p>
+<p>Tout d'abord il faudra vous connecter en ssh sur votre <strong>serveur proxmox</strong></p>
+<p>Ensuite il faudra télécharger une image cloud de votre disbutrion de votre choix </p>
+<p>Il faudra prendre la version de votre choix </p>
+<p>Il faudra prendre en <strong>.img</strong> ou <strong>qcow2</strong></p>
+<p>exemple : <a href="https://cloud-images.ubuntu.com/">lien cloud ubuntu</a>
+        : <a href="https://cloud.debian.org/images/cloud/bullseye/daily/latest/">Lien cloud debian</a> </p>
+<h3 id="notes">Notes</h3>
+<p>Pour l'installer faites un wget + <strong>le lien de l'image cloud</strong></p>
+<pre><code class="language-bash">
+wget https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img
+
+</code></pre>
+<p>Ensuite il faudra installer une <strong>blibliothèque</strong> pour l'agent :</p>
+<pre><code class="language-bash">
+ apt install guestfs-tools
+
+</code></pre>
+<p>Une fois installer il faudra installer le <strong>qemu-guest-agent</strong> pour cela faites : </p>
+<pre><code class="language-bash">
+virt-customize -a nom_de_l'image_telecharger --timezone Europe/Paris --install qemu-guest-agent --run-command 'systemctl enable qemu-guest-agent.service'
+
+</code></pre>
+<p>Il est aussi possible de réduire votre disque où se trouvera l'image je conseille fortement 5G au minimum </p>
+<pre><code class="language-bash">
+qemu-img resize --shrink nom_de_l'image_telecharger 5G
+
+</code></pre>
+<p>Il est temps de créer votre template.</p>
+<h2 id="creation-de-la-template">Création de la template</h2>
+<p>Pour cela faites : </p>
+<pre><code class="language-bash">
+9000 = ID de la machine 
+
+net 0 virtio,bridge=vmbr0 = interface réseau
+
+name = le nom de la machine 
+
+memory = la mémoire 
+
+ciupgrade = 0 : Cela sert a desactivé la mise à jour des paquets a chaque boot de la machine 
+
+ qm create 9000 --name nom_de_votre_vm --memory 2048 --cores 2 --ciupgrade 0 --net0 virtio,bridge=vmbr0
+
+</code></pre>
+<p>Ensuite vous devrez importer le disque sur votre stockage :</p>
+<pre><code class="language-bash">
+ qm importdisk 9000 nom_de_l'image_telecharger pve-data
+
+</code></pre>
+<p>Ensuite, il faudra attacher le disque a la vm comme disque virtio</p>
+<pre><code class="language-bash">
+ qm set 9000 --virtio0 pve-data:vm-9000-disk-0
+
+</code></pre>
+<p>Ajout d'un disque de type cloud-init : </p>
+<pre><code class="language-bash">
+ qm set 9000 --ide2 pve-data:cloudinit
+
+</code></pre>
+<p>Ensuite faudra indiquer a la template le boot :</p>
+<pre><code class="language-bash">
+qm set 9000 --boot c --bootdisk virtio0
+</code></pre>
+<p>Ensuite pour éviter d'avoir un écran noir sur la template il faut faire cette commande :</p>
+<pre><code class="language-bash">
+ qm set 9000 --serial0 socket --vga serial0
+
+</code></pre>
+<p>Ensuite il faudra activé l'agent </p>
+<pre><code class="language-bash">
+ qm set 9000 --agent enabled=1
+
+</code></pre>
+<p>Pour finir il vous suffira de la convertir en template</p>
+<pre><code class="language-bash">
+ qm template 9000
+
+</code></pre>
+<h1 id="attention">Attention</h1>
+<ul>
+<li>N'oubliez pas si vous avez plusieurs template mettre un ID différent  </li>
+</ul>
+<h1 id="creation-du-projet-terraform">Création du projet terraform</h1>
+<p>Tout d'abord, il faudra installer terraform sur votre machine </p>
+<p>Il y aura quelques a effectuer tout d'abord assurez-vous que votre système est à jour et que vous avez installé les packages <strong>gnupg</strong>, <strong>software-properties-commonet</strong> installés <strong>.curl</strong>. Vous utiliserez ces packages pour vérifier la signature GPG de HashiCorp et installer le référentiel de packages Debian de HashiCorp :</p>
+<pre><code class="language-bash">
+ sudo  apt-get update &amp;&amp;  sudo  apt-get  install -y gnupg software-properties-common
+
+ ~~~
+
+Ensuite, Installez la **clé GPG HashiCorp**.
+
+ ~~~bash 
+
+wget -O- https://apt.releases.hashicorp.com/gpg |  \
+gpg --chermor |  \ 
+sudo  tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+
+</code></pre>
+<p>La commande <strong>gpg</strong> rapportera l'empreinte de la clé </p>
+<p>Puis, ajoutez le référentiel officiel HashiCorp à votre système. La commande <strong>La lsb_release -cs</strong> recherche le nom de code de la version de distribution de votre système actuel, tel que <strong>buster</strong>, <strong>groovy</strong> ou <strong>id</strong>.</p>
+<pre><code class="language-bash">
+ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
+https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
+sudo tee /etc/apt/sources.list.d/hashicorp.list
+
+</code></pre>
+<p>Maintenant, il faudra mettre a jour vos paquets </p>
+<pre><code class="language-bash">
+sudo apt-get update
+
+</code></pre>
+<p>Enfin vous pourrez installer <strong>Terraform</strong></p>
+<pre><code class="language-bash">
+ sudo  apt-get  install terraform
+
+</code></pre>
+<h1 id="creation-de-lapi-jeton-proxmox">Création de l'API JETON PROXMOX</h1>
+<p>Tout d'abord, allez sur votre proxmox : <strong>http://ip_de_votre_machine:8006</strong></p>
+<p>Ensuite, allez sur l'onglet <strong>API Tokens</strong></p>
+<p><img alt="api_token" src="/images/API-Token.jpg"/></p>
+<p>Puis, cliquez sur <strong>Add</strong> </p>
+<p><img alt="add" src="/images/add.jpg"/></p>
+<p>Vous aurez cette fenêtre apparaître : </p>
+<p><img alt="fenetre_token" src="/images/fenetre_token.jpg"/></p>
+<ul>
+<li>Renseigner l'utilisateur associé a ce jeton </li>
+<li>Lui mettre un nom (ID)</li>
+<li>Décocher <strong>Privilege Separation</strong></li>
+<li>Faites <strong>add</strong></li>
+</ul>
+<p>Une cela fait vous verrez cette fenêtre apparaitre :</p>
+<p><img alt="Secret_id" src="/images/secret_id.jpg"/></p>
+<p><strong>NOTEZ CES INFORMATIONS QUELQUES PART CAR VOUS EN AUREZ BESOIN ET CES INFORMATIONS NE PEUVENT PAS ETRE RELUE PLUSIEURS FOIS</strong></p>
 <h1 id="creation-des-fichier-terraform">Création des fichier terraform</h1>
 <p>Tout d'abord créer un fichier automatisation dans lequel vous mettrez un dossier ansible et terraform.
 Concentrons-nous sur le dossier terraform vous devrez créer 3 dossiers :</p>
@@ -866,7 +1056,7 @@ Votre Clef pub
 }
 
 </code></pre>
-<h4 id="notes">Notes</h4>
+<h4 id="notes_1">Notes</h4>
 <p>Pour la variable Ip il y a que 3 octets car il y a le <strong>count.index</strong> qui va lui attribué le dernier selon la valeurs qu'on a renseigné après le +. Cela est utile quand vous allez créer plusieurs vm </p>
 <h3 id="le-fichier-maintf">Le fichier main.tf</h3>
 <p>Ce fichier va vous permettre de configurer les bases de votre vm </p>
