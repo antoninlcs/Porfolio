@@ -5,24 +5,24 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../../rapport_quotidien/" rel="prev"/>
-<link href="../OPNsense/Configuration_graphique/" rel="next"/>
-<link href="../../../assets/images/favicon.png" rel="icon"/>
+<link href="../Gestion_du_stockage/" rel="prev"/>
+<link href="../../automatisation_vm/ansible/conf_ansible/" rel="next"/>
+<link href="../../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.10" name="generator"/>
-<title>Le fonctionnement de Vagrant - Portfolio</title>
-<link href="../../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
+<title>Installation Proxmox VE 8.1 - Portfolio</title>
+<link href="../../../../assets/stylesheets/main.7e359304.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
 <body dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#le-fonctionnement-de-vagrant">
+<a class="md-skip" href="#installation-proxmox-ve-81">
           Skip to content
         </a>
 </div>
@@ -30,7 +30,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Portfolio" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Portfolio">
+<a aria-label="Portfolio" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="Portfolio">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -46,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Le fonctionnement de Vagrant
+              Installation Proxmox VE 8.1
             
           </span>
 </div>
@@ -93,14 +93,14 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Portfolio" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Portfolio">
+<a aria-label="Portfolio" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="Portfolio">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
     Portfolio
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+<a class="md-nav__link" href="../../../..">
 <span class="md-ellipsis">
     Bienvenue sur mon Portfolio
   </span>
@@ -135,7 +135,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../AP/AP%203/AP3/">
+<a class="md-nav__link" href="../../../../AP/AP%203/AP3/">
 <span class="md-ellipsis">
     Mission agencement de Windows
   </span>
@@ -162,7 +162,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BTS%20SIO%20/%20BTS%20SIO/">
+<a class="md-nav__link" href="../../../../BTS%20SIO%20/%20BTS%20SIO/">
 <span class="md-ellipsis">
      BTS SIO
   </span>
@@ -186,7 +186,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../CV%20/Mon%20CV/">
+<a class="md-nav__link" href="../../../../CV%20/Mon%20CV/">
 <span class="md-ellipsis">
     Mon CV
   </span>
@@ -210,7 +210,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Contact/Comment%20me%20contacter/">
+<a class="md-nav__link" href="../../../../Contact/Comment%20me%20contacter/">
 <span class="md-ellipsis">
     Comment me contacter
   </span>
@@ -234,7 +234,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Epreuve%20E4/Tableau%20de%20competence/">
+<a class="md-nav__link" href="../../../../Epreuve%20E4/Tableau%20de%20competence/">
 <span class="md-ellipsis">
     Tableau de competence
   </span>
@@ -258,7 +258,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Epreuve%20E5/Situation%201/">
+<a class="md-nav__link" href="../../../../Epreuve%20E5/Situation%201/">
 <span class="md-ellipsis">
     Situation 1
   </span>
@@ -282,7 +282,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Stage_2023_CD_72/CD72/">
+<a class="md-nav__link" href="../../../../Stage_2023_CD_72/CD72/">
 <span class="md-ellipsis">
     Présentation de l'organisme
   </span>
@@ -303,7 +303,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Stage_2023_CD_72/Besoin%20du%20CD72/besoin/">
+<a class="md-nav__link" href="../../../../Stage_2023_CD_72/Besoin%20du%20CD72/besoin/">
 <span class="md-ellipsis">
     Pourquoi avoir effectuer cette mission
   </span>
@@ -327,56 +327,56 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Stage_2023_CD_72/Documentation/Docker-compose/">
+<a class="md-nav__link" href="../../../../Stage_2023_CD_72/Documentation/Docker-compose/">
 <span class="md-ellipsis">
     Docker-compose, apache, php, mariadb
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Stage_2023_CD_72/Documentation/GITHUB/">
+<a class="md-nav__link" href="../../../../Stage_2023_CD_72/Documentation/GITHUB/">
 <span class="md-ellipsis">
     Création d'un dépôt GITHUB pour héberger mon Portfolio
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Stage_2023_CD_72/Documentation/GITLAB/">
+<a class="md-nav__link" href="../../../../Stage_2023_CD_72/Documentation/GITLAB/">
 <span class="md-ellipsis">
     SSH : Clé privée, clé publique, gitlab
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Stage_2023_CD_72/Documentation/Mkdocs/">
+<a class="md-nav__link" href="../../../../Stage_2023_CD_72/Documentation/Mkdocs/">
 <span class="md-ellipsis">
     Mkdocs
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Stage_2023_CD_72/Documentation/Multipass%26docker/">
+<a class="md-nav__link" href="../../../../Stage_2023_CD_72/Documentation/Multipass%26docker/">
 <span class="md-ellipsis">
     Multipass, docker
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Stage_2023_CD_72/Documentation/Registry%20docker/">
+<a class="md-nav__link" href="../../../../Stage_2023_CD_72/Documentation/Registry%20docker/">
 <span class="md-ellipsis">
     Installation SRV-DOCK et Registry Docker
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Stage_2023_CD_72/Documentation/Script/">
+<a class="md-nav__link" href="../../../../Stage_2023_CD_72/Documentation/Script/">
 <span class="md-ellipsis">
     Création Script pour récupérer le volume de la partitions “home” et mettre cette information dans la base de données MariaDB
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Stage_2023_CD_72/Documentation/gitlab-ci.yml/">
+<a class="md-nav__link" href="../../../../Stage_2023_CD_72/Documentation/gitlab-ci.yml/">
 <span class="md-ellipsis">
     Pipelines, CI, CD
   </span>
@@ -400,14 +400,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Stage_2023_CD_72/Mission/Mission%201/">
+<a class="md-nav__link" href="../../../../Stage_2023_CD_72/Mission/Mission%201/">
 <span class="md-ellipsis">
     Le déploiment continue avec docker
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Stage_2023_CD_72/Mission/Mission%202/">
+<a class="md-nav__link" href="../../../../Stage_2023_CD_72/Mission/Mission%202/">
 <span class="md-ellipsis">
     La documentation
   </span>
@@ -431,7 +431,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Stage_2023_CD_72/Rapport%20quotidien/Tableau%20rapport%20quotidien/">
+<a class="md-nav__link" href="../../../../Stage_2023_CD_72/Rapport%20quotidien/Tableau%20rapport%20quotidien/">
 <span class="md-ellipsis">
     Tableau rapport quotidien
   </span>
@@ -458,14 +458,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../CD72/">
+<a class="md-nav__link" href="../../../CD72/">
 <span class="md-ellipsis">
     Présentation de l'organisme
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../rapport_quotidien/">
+<a class="md-nav__link" href="../../../rapport_quotidien/">
 <span class="md-ellipsis">
     Rapport quotidien
   </span>
@@ -485,125 +485,12 @@
             Documentation
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Le fonctionnement de Vagrant
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Vagrant/">
 <span class="md-ellipsis">
     Le fonctionnement de Vagrant
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#les-box">
-<span class="md-ellipsis">
-      Les "box":
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-partage-denvironnement">
-<span class="md-ellipsis">
-      Le partage d'environnement :
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#les-providers">
-<span class="md-ellipsis">
-      Les providers
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#les-provisions-aprovisionement">
-<span class="md-ellipsis">
-      Les provisions / Aprovisionement
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#prerequis">
-<span class="md-ellipsis">
-      Prérequis
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#activer-hyperv-en-commande-powershell">
-<span class="md-ellipsis">
-      Activer HyperV en commande powershell
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#installation-de-vagrant">
-<span class="md-ellipsis">
-      Installation de Vagrant
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cree-son-environemment">
-<span class="md-ellipsis">
-      Crée son environemment
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#le-fichier-vagrantfile">
-<span class="md-ellipsis">
-      Le fichier Vagrantfile
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#quelques-manipulations-avant-de-lancer-votre-fichier-si-besoin">
-<span class="md-ellipsis">
-      Quelques manipulations avant de lancer votre fichier si besoin !
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#lancement-de-votre-environnement">
-<span class="md-ellipsis">
-      Lancement de votre environnement
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#connecter-la-vm-en-ssh-sur-vscode">
-<span class="md-ellipsis">
-      Connecter la VM en ssh sur Vscode
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#installer-des-paquets-automatiquement">
-<span class="md-ellipsis">
-      Installer des paquets automatiquement
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#les-commandes-utiles">
-<span class="md-ellipsis">
-      Les commandes utiles
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_9_3_2" type="checkbox"/>
@@ -620,14 +507,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../OPNsense/Configuration_graphique/">
+<a class="md-nav__link" href="../../OPNsense/Configuration_graphique/">
 <span class="md-ellipsis">
     Configuration sur l'interface graphique
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../OPNsense/Installation_OPNSense/">
+<a class="md-nav__link" href="../../OPNsense/Installation_OPNSense/">
 <span class="md-ellipsis">
     Installation d'OPNsense
   </span>
@@ -636,40 +523,132 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_9_3_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_9_3_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_9_3_3" id="__nav_9_3_3_label" tabindex="0">
 <span class="md-ellipsis">
     Proxmox
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_9_3_3_label" class="md-nav" data-md-level="3">
+<nav aria-expanded="true" aria-labelledby="__nav_9_3_3_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_9_3_3">
 <span class="md-nav__icon md-icon"></span>
             Proxmox
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Proxmox/Creation_template/">
+<a class="md-nav__link" href="../Creation_template/">
 <span class="md-ellipsis">
     Pourquoi créer des templates
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Proxmox/Gestion_du_stockage/">
+<a class="md-nav__link" href="../Gestion_du_stockage/">
 <span class="md-ellipsis">
     Le stockage sur Proxmox
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Proxmox/installation_proxmox/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Installation Proxmox VE 8.1
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Installation Proxmox VE 8.1
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-requises">
+<span class="md-ellipsis">
+      Configuration requises
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#attention">
+<span class="md-ellipsis">
+      Attention
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#console-dinstallation-proxmox">
+<span class="md-ellipsis">
+      Console d'installation Proxmox
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-stockage">
+<span class="md-ellipsis">
+      Configuration stockage
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-country">
+<span class="md-ellipsis">
+      Configuration Country
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creation-compte-root">
+<span class="md-ellipsis">
+      Création compte root
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-reseaux">
+<span class="md-ellipsis">
+      Configuration réseaux
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recap-de-linstallation">
+<span class="md-ellipsis">
+      Recap de l'installation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installation-proxmox">
+<span class="md-ellipsis">
+      Installation Proxmox
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fin-dinstallation">
+<span class="md-ellipsis">
+      Fin d'installation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#se-connecter-sur-linterface-web-proxmox">
+<span class="md-ellipsis">
+      Se connecter sur l'interface Web proxmox
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -703,7 +682,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../automatisation_vm/ansible/conf_ansible/">
+<a class="md-nav__link" href="../../automatisation_vm/ansible/conf_ansible/">
 <span class="md-ellipsis">
     Utilsation de Ansible pour installer des services sur la vm
   </span>
@@ -727,7 +706,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../automatisation_vm/terraform/Conf.terraform/">
+<a class="md-nav__link" href="../../automatisation_vm/terraform/Conf.terraform/">
 <span class="md-ellipsis">
     Création des fichier terraform
   </span>
@@ -760,7 +739,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Veille%20techno/Ma%20veille/">
+<a class="md-nav__link" href="../../../../Veille%20techno/Ma%20veille/">
 <span class="md-ellipsis">
     Une veille c'est quoi ?
   </span>
@@ -784,100 +763,79 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#les-box">
+<a class="md-nav__link" href="#configuration-requises">
 <span class="md-ellipsis">
-      Les "box":
+      Configuration requises
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#le-partage-denvironnement">
+<a class="md-nav__link" href="#attention">
 <span class="md-ellipsis">
-      Le partage d'environnement :
+      Attention
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#les-providers">
+<a class="md-nav__link" href="#console-dinstallation-proxmox">
 <span class="md-ellipsis">
-      Les providers
+      Console d'installation Proxmox
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#les-provisions-aprovisionement">
+<a class="md-nav__link" href="#configuration-stockage">
 <span class="md-ellipsis">
-      Les provisions / Aprovisionement
+      Configuration stockage
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#prerequis">
+<a class="md-nav__link" href="#configuration-country">
 <span class="md-ellipsis">
-      Prérequis
+      Configuration Country
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#activer-hyperv-en-commande-powershell">
+<a class="md-nav__link" href="#creation-compte-root">
 <span class="md-ellipsis">
-      Activer HyperV en commande powershell
+      Création compte root
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#installation-de-vagrant">
+<a class="md-nav__link" href="#configuration-reseaux">
 <span class="md-ellipsis">
-      Installation de Vagrant
+      Configuration réseaux
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#cree-son-environemment">
+<a class="md-nav__link" href="#recap-de-linstallation">
 <span class="md-ellipsis">
-      Crée son environemment
+      Recap de l'installation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#le-fichier-vagrantfile">
+<a class="md-nav__link" href="#installation-proxmox">
 <span class="md-ellipsis">
-      Le fichier Vagrantfile
+      Installation Proxmox
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#quelques-manipulations-avant-de-lancer-votre-fichier-si-besoin">
+<a class="md-nav__link" href="#fin-dinstallation">
 <span class="md-ellipsis">
-      Quelques manipulations avant de lancer votre fichier si besoin !
+      Fin d'installation
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#lancement-de-votre-environnement">
+<a class="md-nav__link" href="#se-connecter-sur-linterface-web-proxmox">
 <span class="md-ellipsis">
-      Lancement de votre environnement
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#connecter-la-vm-en-ssh-sur-vscode">
-<span class="md-ellipsis">
-      Connecter la VM en ssh sur Vscode
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#installer-des-paquets-automatiquement">
-<span class="md-ellipsis">
-      Installer des paquets automatiquement
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#les-commandes-utiles">
-<span class="md-ellipsis">
-      Les commandes utiles
+      Se connecter sur l'interface Web proxmox
     </span>
 </a>
 </li>
@@ -888,217 +846,89 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="le-fonctionnement-de-vagrant">Le fonctionnement de Vagrant</h1>
-<p>Vagrant est un logiciel anciennement libre et open-source pour la création et la configuration des environnements de développement virtuels. Il peut être considéré comme un wrapper autour de logiciels de virtualisation comme VirtualBox.
-Depuis la version 1.1, Vagrant n'impose plus VirtualBox, mais fonctionne également avec d'autres logiciels de virtualisation tels que VMware. Depuis la version 1.62 Vagrant prend nativement en charge les 
-conteneurs Docker à l'exécution, au lieu d'un système d'exploitation entièrement virtualisé. Cela permet de réduire la charge en ressources puisque Docker utilise des conteneurs Linux légers.</p>
-<h2 id="les-box">Les "box":</h2>
-<p>Vagrant utilise des "box" qui fonctionne comme un registry, c'esy-à'dire qu'au lieu de repartir de 0 en recréant une machine de A à Z il va chercher dans les différentes "box dans le catalogue d'HashiCorp.</p>
-<p>Fichiers synchronisé : 
-Vagrant synchronise automatiquement les fichiers vers et depuis la machine invitée.</p>
-<h2 id="le-partage-denvironnement">Le partage d'environnement :</h2>
-<p>Vagrant Share est un plugin qui vous permet de partager l'environnement Vagrant avec n’importe qui autour de la monde entier avec une connexion Internet. 
-Il vous donnera une URL qui sera acheminée directement à votre environnement Vagrant à partir de n’importe quel appareil dans le monde connecté à Internet.</p>
-<h2 id="les-providers">Les providers</h2>
-<p>Un provider est l'emplacement dans lequel l'environnement virtuel s'exécute. Il peut être local (la valeur par défaut est d'utiliser VirtualBox) ou distant.</p>
-<h2 id="les-provisions-aprovisionement">Les provisions / Aprovisionement</h2>
-<p>Un approvisionneur est un outil pour configurer l'environnement virtuel. Il peut être aussi simple qu'un script shell, mais en variante, un outil plus avancé comme Chef, Puppet ou Ansible peut être utilisé.</p>
-<p>Les approvisionneurs de Vagrant vous permettent d'installer automatiquement des logiciels, de modifier les configurations et plus encore sur la machine dans le processus de démarrage.</p>
-<h2 id="prerequis">Prérequis</h2>
-<p>Pour utiliser vagrant, il faut avoir des moyens de virtualisations sur son PC tel que : </p>
+<h1 id="installation-proxmox-ve-81">Installation Proxmox VE 8.1</h1>
+<p>Pour cette documentation je me suis inspiré de la documentation fournie par Proxmox</p>
+<h2 id="configuration-requises">Configuration requises</h2>
 <ul>
-<li>HyperV</li>
-<li>VirtualBox</li>
-<li>Docker</li>
+<li>
+<p>Intel EMT64 ou AMD64 avec indicateur CPU Intel VT/AMD-V.</p>
+</li>
+<li>
+<p>Mémoire : minimum 2 Go pour le système d'exploitation et les services Proxmox VE, plus la mémoire désignée pour les invités. Pour Ceph et ZFS, une mémoire supplémentaire est requise ; environ 1 Go de mémoire pour chaque To de stockage utilisé.</p>
+</li>
+<li>
+<p>Stockage rapide et redondant, les meilleurs résultats sont obtenus avec les SSD.</p>
+</li>
+<li>
+<p>Stockage du système d'exploitation : utilisez un RAID matériel avec cache en écriture protégé par batterie (« BBU ») ou non-RAID avec ZFS (SSD en option pour ZIL).</p>
+</li>
 </ul>
-<h2 id="activer-hyperv-en-commande-powershell">Activer HyperV en commande powershell</h2>
-<pre><code class="language-bash">nable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
-</code></pre>
-<h2 id="installation-de-vagrant">Installation de Vagrant</h2>
-<p>Tout d'abord, il faudra vous rendre sur le <a href="https://developer.hashicorp.com/vagrant/install?product_intent=vagrant">site de vagrant</a></p>
-<p>Il faudra choisir le <strong>packages</strong> correspondant a votre système d'exploitation (MacOs,Windows,Linux)</p>
-<p><img alt="exemple de packages" src="../images/packages_vagrant.jpg"/></p>
-<p>Plus qu'a télécharger !! </p>
-<h2 id="cree-son-environemment">Crée son environemment</h2>
-<p>Tout d'abord créé un dossier dans l'emplacement de votre choix </p>
-<p>Ensuite il vous faudra ouvrir un invite de commande et se positionner sur le dossier crée </p>
-<p>Une fois cela fait il faudra fait la commande suivante : </p>
-<pre><code class="language-bash">
-vagrant init 
-
-</code></pre>
-<p>Cette commande va ainsi vous créer un fichier <strong>VagrantFile</strong> qui va vous permettre de génerer et gérer vos vm dans votre environnement </p>
-<h2 id="le-fichier-vagrantfile">Le fichier Vagrantfile</h2>
-<p>Ce fichier va vous permettre de configurer votre environnement </p>
-<p>Ceci est un exemple de fichier que j'ai pu réaliser :</p>
-<pre><code class="language-bash"># -*- mode: ruby -*-
-# vi: set ft=ruby :
-
-require 'yaml'
-
-# Chargez les informations depuis le fichier config.yml
-config_data = YAML.load_file('config.yml')
-
-Vagrant.configure("2") do |config|
-  config.vm.box = "generic/ubuntu2204"
-
-
-
-  config.vm.define 'srv-test' do |node|
-    node.vm.hostname = 'srv-test'
-  end
-
-
-    # Spécifie le fournisseur pour la machine virtuelle (Hyper-V)
-    config.vm.provider "hyperv" do |h|
-      h.vmname = "srv-test"
-      h.enable_virtualization_extensions = true
-      h.linked_clone = true
-
-    end
-
-    # Configuration du proxy pour l'environnement
-    config.proxy.http     = "http://172.16.20.90:8080"
-    config.proxy.https    = "http://172.16.20.90:8080"
-    config.proxy.no_proxy = "localhost,127.0.0.1"
-
-    # Provisionnement en utilisant un script shell directement dans le Vagrantfile
-    config.vm.provision "shell", inline: &lt;&lt;-SHELL
-      echo "nameserver 172.16.20.160" | sudo tee /etc/resolv.conf
-      echo "nameserver 172.16.20.18" | sudo tee -a /etc/resolv.conf
-    SHELL
-
-    # Script d'installation d'Ansible
-    config.vm.provision "shell", inline: &lt;&lt;-SHELL
-
-      # Mise à jour de la liste des dépôts APT
-      sudo apt update
-
-      # Installation de software-properties-common pour gérer les dépôts
-      sudo apt install -y software-properties-common
-
-      # Ajout du repository Ansible
-      sudo apt-add-repository --yes --update ppa:ansible/ansible
-
-      # Installation d'Ansible
-      sudo apt install -y ansible
-    SHELL
-
-end
-
-
-</code></pre>
-<h2 id="quelques-manipulations-avant-de-lancer-votre-fichier-si-besoin">Quelques manipulations avant de lancer votre fichier si besoin !</h2>
-<h3 id="configuration-proxy">Configuration Proxy</h3>
-<p>Le proxy risque de vous pose problèmes pour aller chercher des box, ou faire des apt-update etc...</p>
-<p>C'est pour cela qui faudra effectuer quelques commandes avant de lancer votre environnement :</p>
-<p>Tout d'abord il faudra que vous ouvrez un <strong>cmd en admin</strong></p>
-<p>et ensuite faire c'est trois commandes :</p>
-<pre><code class="language-bash">
-set http_proxy=ADRESSE PROXY
-
-set https_proxy=ADRESSE PROXY
-
-vagrant plugin install vagrant-proxyconf
-
-</code></pre>
-<p>Si vous voyez ceci s'afficher c'est que c'est bon !!</p>
-<h3 id="conf-fichieryml">Conf fichier.yml</h3>
-<p>Comme vous le voyez il y a des variables pour le partage de fichier ceci permet a vagrant d'accèder a nos fichiers sauf qu'il faut mettre notre login P@ssword en clair ce qui n'est pas une bonne pratiques. C'est pour cela qui vous faudra crée des variables ainsi que ce fichier </p>
-<p>Il faudra créer un fichier <strong>yml</strong> dans votre <strong>dossier d'environnement</strong> </p>
-<p>Voici la configuration : </p>
-<pre><code class="language-bash">
-# config.yml
-smb_username: "votre User"
-smb_password: "Votre P@ssword"
-
-</code></pre>
-<p>Ainsi le fichier Vagrantfile ira chercher les valeurs des variables qu'on lui a mis pour la partage de fichier</p>
-<h2 id="lancement-de-votre-environnement">Lancement de votre environnement</h2>
-<p>Quand tout cela est effectué vous pourrez lancer votre environnement</p>
-<p>Il faudra bien sur être encore positionner dans le dossier crée auparavant </p>
-<p>Pour cela il vous faudra utlisé cette commande </p>
-<pre><code class="language-bash">
-vagrant up 
-
-</code></pre>
-<p>Si vous avez des scripts dans votre <strong>VagrantFile</strong> utilisé plutôt cette commande : </p>
-<pre><code class="language-bash">
-vagrant up --provision 
-
-</code></pre>
-<p>Une fois cette commande effectué vous devrez attendre que le fichier génére la vm.</p>
-<p>Ensuite aller dans votre outil de virtualisation utilisé et si tout ce passe bien vous devriez apercevoir votre machine.</p>
-<h2 id="connecter-la-vm-en-ssh-sur-vscode">Connecter la VM en ssh sur Vscode</h2>
-<p>Pour cela ouvrez un invite de commande et placer vous dans dossier d'environnement </p>
-<p>Ensuite faite cette commande : </p>
-<pre><code class="language-bash">
-vagrant ssh-config 
-
-</code></pre>
-<p>Vous aurez ceci : <img alt="ssh-config" src="../vagrant_starter/images/ssh-config.jpg"/></p>
-<p>Ensuite allez sur <strong>Vscode</strong> et installer l'extension <strong>Remote Development</strong></p>
-<p><img alt="remote-connection" src="../vagrant_starter/images/remote-connexion.jpg"/></p>
-<p>Une fois installer vous aurez cette petite icône apparaitre en bas a gauche de votre écran</p>
-<p><img alt="icône-ssh" src="../vagrant_starter/images/icone-ssh.jpg"/></p>
-<p>Cliquez dessus et selectionner <strong>Connect To Host</strong></p>
-<p>Ensuite cliquez sur <strong>Configure SSH Hosts</strong></p>
-<p>Ensuite cliquer sur votre fichier <strong>ssh-config</strong></p>
-<p>Puis copier toutes les informations que vous avez récolté en faisant la commande sur le fichier </p>
-<pre><code class="language-bash">
-vagrant ssh-config 
-
-</code></pre>
-<p>Sa devrait vous donner ceci : </p>
-<p><img alt="config-ssh" src="../vagrant_starter/images/config-ssh.jpg"/></p>
-<p><strong>Important</strong> sur la ligne <strong>Hostname</strong> remplacer l'ip par le nom de votre machine !!!!</p>
-<p>Une fois fini Cliquez sur l'icône remote et selectionner <strong>Connect To Host</strong></p>
-<p>Ensuite vous verrez le nom de votre machine, cliquez dessus et vous serrez connecté en ssh sur votre vm.</p>
-<h2 id="installer-des-paquets-automatiquement">Installer des paquets automatiquement</h2>
-<p>Prenons l'exemple du paquet ansible </p>
-<p>Il faudra rajouter ceci dans votre <strong>VagrantFile</strong> :</p>
-<pre><code class="language-bash">
- # Script d'installation d'Ansible
-    config.vm.provision "shell", inline: &lt;&lt;-SHELL
-
-      # Mise à jour de la liste des dépôts APT
-      sudo apt update
-
-      # Installation de software-properties-common pour gérer les dépôts
-      sudo apt install -y software-properties-common
-
-      # Ajout du repository Ansible
-      sudo apt-add-repository --yes --update ppa:ansible/ansible
-
-      # Installation d'Ansible
-      sudo apt install -y ansible
-    SHELL
-
-</code></pre>
-<p>Si vous avez déja une vm faites la commande : </p>
-<pre><code class="language-bash">
-vagrant reload --provision 
-
-</code></pre>
-<p>Si c'est votre premier lancement faites : </p>
-<pre><code class="language-bash">
-vagrant up --provision 
-
-</code></pre>
-<p>Pour vérifier que le script fonctionne connecter sur votre vm et faites :</p>
-<pre><code class="language-bash">
-ansible --version 
-
-</code></pre>
-<h2 id="les-commandes-utiles">Les commandes utiles</h2>
-<p><strong>vagrant init</strong> : crée un fichier Vagrantfile dans le répertoire courant. Ce fichier contient la configuration de la Vagrant Box à utiliser. Tu peux utiliser cette commande pour créer un nouveau projet Vagrant.</p>
-<p><strong>vagrant up</strong> : démarre la Vagrant Box. Si la box n’est pas encore installée, Vagrant la téléchargera et la configura avant de la démarrer.</p>
-<p><strong>vagrant ssh</strong>: se connecte à la Vagrant Box en utilisant SSH. Tu peux utiliser cette commande pour accéder à la console de la box et exécuter des commandes sur le système d’exploitation de la box.</p>
-<p><strong>vagrant halt</strong> : arrête la Vagrant Box. Tu peux utiliser cette commande pour mettre la box en pause ou pour l’arrêter complètement.</p>
-<p><strong>vagrant destroy</strong> : supprime la Vagrant Box. Cette commande arrête la box et la supprime de ta machine. Tu peux utiliser cette commande pour nettoyer ton environnement de développement</p>
-<p><strong>Vagrant reload</strong> : redémarrer l'environnement </p>
-<p><strong>vagrant ssh-config</strong> : accèder a la conf ssh de la vm </p>
-<p><strong>vagrant up --provision</strong> : lancer les scripts mis dans le vagrantfile au lancement de la vm</p>
+<h3 id="stockage-de-la-vm">Stockage de la VM :</h3>
+<ul>
+<li>
+<p>Pour le stockage local, utilisez soit un RAID matériel avec cache d'écriture sauvegardé par batterie (BBU), soit un non-RAID pour ZFS et Ceph. Ni ZFS ni Ceph ne sont compatibles avec un contrôleur RAID matériel.</p>
+</li>
+<li>
+<p>Le stockage partagé et distribué est possible.</p>
+</li>
+<li>
+<p>Cartes réseau (multi) Gbit redondantes, avec cartes réseau supplémentaires en fonction de la technologie de stockage préférée et de la configuration du cluster.</p>
+</li>
+<li>
+<p>Pour le relais PCI(e), le processeur doit prendre en charge l'indicateur VT-d/AMD-d.</p>
+</li>
+</ul>
+<h2 id="attention">Attention</h2>
+<p>Il faudra penser a activer la virtualisation dans votre BIOS/UEFI</p>
+<p><a href="https://lecrabeinfo.net/liste-des-touches-pour-acceder-au-bios-uefi-acer-asus-dell-lenovo-hp.htm">Liste touche bios</a></p>
+<p>Ce paramètre dépendra de votre bios </p>
+<h2 id="console-dinstallation-proxmox">Console d'installation Proxmox</h2>
+<p>Tout d'abord il faudra vous rendre sur le site proxmox et installer l'iso proxmox <a href="https://www.proxmox.com/en/downloads/proxmox-virtual-environment/iso">site iso proxmox</a></p>
+<p>Une fois que l'iso sera boot sur votr machine via différent système (Idrac, clé bootable...), il vous sera affiché ceci : </p>
+<p><img alt="console-proxmox" src="/images/console_proxmox.jpg"/></p>
+<p>Pour plus de confort selectionner le mode console </p>
+<p>Ensuite il vous faudra accepter le contrat de licence : </p>
+<p><img alt="Licence_proxmox" src="/docs/images/contrat_licence_prox.jpg"/></p>
+<p>Il faudra ensuite cliquer sur <strong>I agree</strong></p>
+<h2 id="configuration-stockage">Configuration stockage</h2>
+<p>Ensuite, vous allez arriver sur cette page </p>
+<p><img alt="disque_proxmox" src="/docs/images/disk_prox.jpg"/></p>
+<p>Vous allez avoir 2 options qui s'offre à vous :</p>
+<ul>
+<li>
+<p>1ère option : Vous ne voulez pas de redondance donc vous utilisez qu'un seul disque mais le risque est que si votre disque tombe vous ne pourrez plus accéder a proxmox et n'y récupérer c'est donner ( Donc utliser de préférence un disque plus petit pour le système ).</p>
+</li>
+<li>
+<p>2ème option : Vous voulez faire une backup ou de la redondance il sera préférable d'utliser <strong>ZFS</strong> qui correspond a différents types de <strong>RAID</strong>.</p>
+</li>
+</ul>
+<p>Choissisez l'option qui correspond à vos besoins.</p>
+<h2 id="configuration-country">Configuration Country</h2>
+<p><img alt="country_prox" src="/docs/images/country_prox.jpg"/></p>
+<p>Il faudra juste choisir dans quel pays vous résidez pour le fuseau horaire et la langue.</p>
+<h2 id="creation-compte-root">Création compte root</h2>
+<p><img alt="compte_prox" src="/docs/images/compte_prox.jpg"/></p>
+<p>Il faudra renseignez un mot de passe fort et votre adresse mail pour être prevenu en cas de souci avec proxmox.</p>
+<h2 id="configuration-reseaux">Configuration réseaux</h2>
+<p>Pour la configuration réseaux vous aurez ceci :</p>
+<p><img alt="reseau_prox" src="/docs/images/reseau_prox.jpg"/></p>
+<p>Il vous suffira de selectionner votre bonne carte réseau ainsi que le nom de votre serveur proxmox et ses paramètres IP </p>
+<h2 id="recap-de-linstallation">Recap de l'installation</h2>
+<p><img alt="récap_prox.jpg" src="/docs/images/récap_prox.jpg"/></p>
+<p>Voici le recap de votre installation </p>
+<p>Ensuite, une fois que vous avez bien vérifier votre récapitulatif vous pouvez lancer votre installation en cliquant sur <strong>Install</strong></p>
+<h2 id="installation-proxmox">Installation Proxmox</h2>
+<p>Une fois que vous allez appuyer sur <strong>Install</strong> vous verrez cette fenêtre :</p>
+<p><img alt="install_proxmox" src="/docs/images/install_prox.jpg"/></p>
+<p>Proxmox est entrain de s'installer sur votre machine cela prendra quelques minutes</p>
+<h2 id="fin-dinstallation">Fin d'installation</h2>
+<p>Une fois votre proxmox installer vous verrez cette fênetre apparaitre : </p>
+<p><img alt="url_prox" src="/docs/images/url_prox.jpg"/></p>
+<p>Ceci sera votre url pour accèder pour accèder à l'interface de proxmox sur un navigateur web (Firefox, Chrome)</p>
+<h2 id="se-connecter-sur-linterface-web-proxmox">Se connecter sur l'interface Web proxmox</h2>
+<p>Rentrez l'url qui vous avez était donner lors de votre installation : <strong>"http://ip_machine:8086"</strong></p>
+<p>Une fois cela rentrer vous verrez ceci : </p>
+<p><img alt="connexion_web_prox" src="/docs/images/connection_web_prox.jpg"/></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -1122,10 +952,10 @@ ansible --version
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-<script src="../../../javascripts/config.js"></script>
+<script src="../../../../javascripts/config.js"></script>
 </body>
 </html>
