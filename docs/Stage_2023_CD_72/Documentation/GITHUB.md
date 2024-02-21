@@ -6,7 +6,7 @@ Tout d'abord il faudra vous rendre sur ce site : [GITHUB](https://github.com/)
 
 Il faudra vous connectez avec vos codes fourni aux préalables :
 
-![Image connexion GITHUB](/docs/images/conexiongit.jpg)
+![Image connexion GITHUB](/images/conexiongit.jpg)
 
 Une fois connecté il faudra **Cliquer sur "new" en haut à droite de la page**
 
@@ -24,7 +24,7 @@ Aller dans l'onglet **"settings"**
 
 Puis aller dans l'onglet pages :
 
-![Page](docs/images/page.jpg)
+![Page](../../images/page.jpg)
 
 Vous devriez arriver sur cet onglet : 
 
