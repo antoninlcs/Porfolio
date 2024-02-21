@@ -37,7 +37,7 @@ Tout d'abord il faudra vous rendre sur le site proxmox et installer l'iso proxmo
 
 Une fois que l'iso sera boot sur votr machine via différent système (Idrac, clé bootable...), il vous sera affiché ceci : 
 
-![console-proxmox](/images/console_proxmox.jpg)
+![console-proxmox](../../../images/console_proxmox.jpg)
 
 Pour plus de confort selectionner le mode console 
 

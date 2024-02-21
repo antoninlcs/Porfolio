@@ -1,4 +1,4 @@
-# Le déploiment continue avec docker 
+# Le déploiement continue avec docker 
 
 ## Le contexte 
 
