@@ -6,7 +6,7 @@ Tout d'abord il faudra vous rendre sur ce site : [GITHUB](https://github.com/)
 
 Il faudra vous connectez avec vos codes fourni aux préalables :
 
-![Image connexion GITHUB](/images/conexiongit.jpg)
+![Image connexion GITHUB](../../images/conexiongit.jpg)
 
 Une fois connecté il faudra **Cliquer sur "new" en haut à droite de la page**
 
