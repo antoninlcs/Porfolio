@@ -18,11 +18,11 @@ Connectez vous en root et le mot de passe que vous avez défini.
 
 Une fois connecté allez sur **Interfaces>WAN**
 
-![interface_wan](/images/interface_WAN.jpg)
+![interface_wan](../../../images/interface_WAN.jpg)
 
 Une fois que vous êtes sur l'interface WAN il est important que ces deux options soit décoché 
 
-![modif_wan](/images/modif_wan.jpg)
+![modif_wan](../../../images/modif_wan.jpg)
 
 Faites la même manipulation pour l'interface **LAN**
 
@@ -34,12 +34,12 @@ Pour configurer le dns, il faudra vous rendre dans **Systèmes>Paramètres>Gén�
 
 Tout d'abord, renseignez votre nom de domaine ainsi que votre bonne Timezone : 
 
-![Timezone](/images/Timezone.jpg)
+![Timezone](../../../images/Timezone.jpg)
 
 Ensuite, il faudra mettre votre serveur DNS 
 
 
-![dns](/images/dns.jpg)
+![dns](../../../images/dns.jpg)
 
 Une fois tout ceci effectué faite **Sauvegarder** tout en bas de la page 
 
@@ -48,7 +48,7 @@ Ensuite, il faudra configurer votre serveur DNS pour cela, il faudra vous rendre
 
 Une fois sur la page renseignez ces informations : 
 
-[conf_dns](/images/conf_dns.JPG)
+[conf_dns](../../../images/conf_dns.JPG)
 
 Enfin faites **sauvegarder**
 
@@ -61,7 +61,7 @@ Pour configurer le DHCP, il faudra vous rendre dans **Services>ISC DHCPv4>Dans l
 
 Voici un exemple de configuration DHCP, il faudra l'adaptée à vos besoins :
 
-![exemple_dhcp](/images/exemple.dhcp.jpg)
+![exemple_dhcp](../../../images/exemple.dhcp.jpg)
 
 Une fois votre configuration fini, il faudra prendre le dépôt **proxmox-vm-reseauxvirt** dans Git-Lab crée votre vm et voir dans votre OPNsense dans le baux : **Services>ISC DHCPv4>Baux** si il y a bien votre vm 
 
@@ -77,7 +77,7 @@ Ensuite, appuyer sur la petite croix en haut a droite
 
 Ensuite, voici un exemple de configuration : 
 
-![Certificat_autorite](/images/certificat_autorite.jpg)
+![Certificat_autorite](../../../images/certificat_autorite.jpg)
 
 Adaptez selon vos besoins 
 
@@ -91,7 +91,7 @@ Ensuite, appuyer sur la petite croix en haut a droite
 
 Ensuite, voici un exemple de configuration :
 
-![Certificat serveur](/images/certif_serveur.jpg)
+![Certificat serveur](../../../images/certif_serveur.jpg)
 
 ### Création du User pour le VPN
 
@@ -101,13 +101,13 @@ Ensuite, cliquez sur la petite croix en haut à droite
 
 Ensuite, il faudra remplir vos informations mais surtout il faudra cocher ceci : 
 
-![User](/images/user.jpg)
+![User](../../../images/user.jpg)
 
 Ensuite, faites sauvegarder. Vous serez rédirigé vers la page des certificats pour pouvoir faire un certificat associé a l'utilisateur 
 
 Voici un exemple de configuration : 
 
-![certif_user](/images/certif_user.jpg)
+![certif_user](../../../images/certif_user.jpg)
 
 Quand ceci est fait, il faudra sauvegarder 
 
@@ -119,15 +119,15 @@ Ensuite, cliquez sur la petite croix en haut à droite
 
 Ensuite, il faudra remplir vos informations :
 
-![srv_vpn1](/images/srv_vpn1.jpg)
+![srv_vpn1](../../../images/srv_vpn1.jpg)
 
-![srv_vpn2](/images/srv_vpn2.jpg)
+![srv_vpn2](../../../images/srv_vpn2.jpg)
 
 Ensuite, il y le paramètre réseaux du tunnel, adaptez ceci avec vos besoins 
 
-![srv_vpn3](/images/srv_vpn3.jpg)
+![srv_vpn3](../../../images/srv_vpn3.jpg)
 
-![srv_vpn4](/images/srv_vpn4.jpg)
+![srv_vpn4](../../../images/srv_vpn4.jpg)
 
 Quand vous aurez terminer la configuration du serveur faites **sauvegarder**
 
@@ -199,7 +199,7 @@ Ensuite, il faut importer votre configuration VPN pour cela il faudra vous rendr
 
 Vous aller télécharger celle qui correspond a votre user VPN 
 
-![client](/images/client.jpg)
+![client](../../../images/client.jpg)
 
 Ensuite, il vous suffira de retourner sur votre machine cliente et faire ceci 
 

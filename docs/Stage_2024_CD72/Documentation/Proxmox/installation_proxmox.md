@@ -43,7 +43,7 @@ Pour plus de confort selectionner le mode console
 
 Ensuite il vous faudra accepter le contrat de licence : 
 
-![Licence_proxmox](/docs/images/contrat_licence_prox.jpg)
+![Licence_proxmox](../../../images/contrat_licence_prox.jpg)
 
 Il faudra ensuite cliquer sur **I agree**
 
@@ -51,7 +51,7 @@ Il faudra ensuite cliquer sur **I agree**
 
 Ensuite, vous allez arriver sur cette page 
 
-![disque_proxmox](/docs/images/disk_prox.jpg)
+![disque_proxmox](../../../images/disk_prox.jpg)
 
 Vous allez avoir 2 options qui s'offre à vous :
 
@@ -63,13 +63,13 @@ Choissisez l'option qui correspond à vos besoins.
 
 ## Configuration Country 
 
-![country_prox](/docs/images/country_prox.jpg)
+![country_prox](../../../images/country_prox.jpg)
 
 Il faudra juste choisir dans quel pays vous résidez pour le fuseau horaire et la langue.
 
 ## Création compte root 
 
-![compte_prox](/docs/images/compte_prox.jpg)
+![compte_prox](../../../images/compte_prox.jpg)
 
 Il faudra renseignez un mot de passe fort et votre adresse mail pour être prevenu en cas de souci avec proxmox.
 
@@ -77,14 +77,14 @@ Il faudra renseignez un mot de passe fort et votre adresse mail pour être preve
 
 Pour la configuration réseaux vous aurez ceci :
 
-![reseau_prox](/docs/images/reseau_prox.jpg)
+![reseau_prox](../../../images/reseau_prox.jpg)
  
 Il vous suffira de selectionner votre bonne carte réseau ainsi que le nom de votre serveur proxmox et ses paramètres IP 
 
 
 ## Recap de l'installation 
 
-![récap_prox.jpg](/docs/images/récap_prox.jpg)
+![récap_prox.jpg](../../../images/récap_prox.jpg)
 
 Voici le recap de votre installation 
 
@@ -94,7 +94,7 @@ Ensuite, une fois que vous avez bien vérifier votre récapitulatif vous pouvez 
 
 Une fois que vous allez appuyer sur **Install** vous verrez cette fenêtre :
 
-![install_proxmox](/docs/images/install_prox.jpg)
+![install_proxmox](../../../images/install_prox.jpg)
 
 Proxmox est entrain de s'installer sur votre machine cela prendra quelques minutes
 
@@ -103,7 +103,7 @@ Proxmox est entrain de s'installer sur votre machine cela prendra quelques minut
 
 Une fois votre proxmox installer vous verrez cette fênetre apparaitre : 
 
-![url_prox](/docs/images/url_prox.jpg)
+![url_prox](../../../images/url_prox.jpg)
 
 Ceci sera votre url pour accèder pour accèder à l'interface de proxmox sur un navigateur web (Firefox, Chrome)
 
@@ -113,7 +113,7 @@ Rentrez l'url qui vous avez était donner lors de votre installation : **"http:/
 
 Une fois cela rentrer vous verrez ceci : 
 
-![connexion_web_prox](/docs/images/connection_web_prox.jpg)
+![connexion_web_prox](../../../images/connection_web_prox.jpg)
 
 
 

@@ -18,23 +18,23 @@ Tout d'abord rendez-vous sur votre proxmox : **http://ip_de_votre_machine:8006**
 
 Ensuite connectez vous avec votre compte root : 
 
-![compte-root](/docs/images/connection_web_prox.jpg)
+![compte-root](../../../images/connection_web_prox.jpg)
 
 Ensuite une fois connecté cliquez sur votre serveur : 
 
-![srv](/docs/images/nom_srv_prox.jpg)
+![srv](../../../images/nom_srv_prox.jpg)
 
 Ensuite allez sur l'onglet **disques** puis **lvm-thin**
 
-![disk](/docs/images/rdv_disk.jpg)
+![disk](../../../images/rdv_disk.jpg)
 
 Ensuite cliquez sur **Create:thinpool**
 
-![thinppol](/docs/images/lvm-thin.jpg)
+![thinppol](../../../images/lvm-thin.jpg)
 
 Vous aurez cette fenêtre apparaitre : 
 
-![pool](/docs/images/thin_pool.jpg)
+![pool](../../../images/thin_pool.jpg)
 
 - Il vous proposera un disque qui n'est pas utilisé
 - Il faudra lui donné un nom 
@@ -44,7 +44,7 @@ Vous aurez cette fenêtre apparaitre :
 
 Une fois l'opération vous pourrez voir le thinpool crée 
 
-![pool_fini](/docs/images/pool_fini.jpg)
+![pool_fini](../../../images/pool_fini.jpg)
 
 Vous pouvez le voir aussi en ligne de commande en faisant la commande suivante : 
 
@@ -54,7 +54,7 @@ lsblk
 
 ~~~
 
-![lsblk](/images/lsbl.jpg)
+![lsblk](../../../lsbl.jpg)
 
 
 ## Pourquoi faire un pool 
@@ -67,20 +67,20 @@ Tout d'abord rendez-vous sur votre proxmox : **http://ip_de_votre_machine:8006**
 
 Ensuite connectez vous avec votre compte root : 
 
-![compte-root](/images/connection_web_prox.jpg)
+![compte-root](../../../images/connection_web_prox.jpg)
 
 
 Ensuite, il faut se rendre sur l'onglet **pool**
 
-![pool](/images/pool.jpg)
+![pool](../../../images/pool.jpg)
 
 Une fois sur cette onglet ilo faudra appuyer sur **crée**
 
-![create_pool](/images/create_pool1.jpg)
+![create_pool](../../../images/create_pool1.jpg)
 
 Vous aurez cette fenêtre apparaitre : 
 
-![create_pool](/images/create_pool2.jpg)
+![create_pool](../../../images/create_pool2.jpg)
 
 - Il faudra lui renseigner un nom 
 - Mettre un commentaire 
@@ -93,11 +93,11 @@ Une fois cela fait vous verrez apparaitre votre pool a 2 endroits :
 
 - Dans l'onglet pool 
   
-![pool](/images/create_pool1.jpg)
+![pool](../../../images/create_pool1.jpg)
 
 - Sur l'onglet général à votre gauche 
 
-![pool](/images/onglet_pool.jpg)
+![pool](../../../images/onglet_pool.jpg)
 
 
 
