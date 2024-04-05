@@ -192,15 +192,15 @@ Tout d'abord, allez sur votre proxmox : **http://ip_de_votre_machine:8006**
 
 Ensuite, allez sur l'onglet **API Tokens**
 
-![api_token](../../../images/API-Token.jpg)
+![api_token](../../../../images/API-Token.jpg)
 
 Puis, cliquez sur **Add** 
 
-![add](../../../images/add.jpg)
+![add](../../../../images/add.jpg)
 
 Vous aurez cette fenêtre apparaître : 
 
-![fenetre_token](../../../images/fenetre_token.jpg)
+![fenetre_token](../../../../images/fenetre_token.jpg)
 
 - Renseigner l'utilisateur associé a ce jeton 
 - Lui mettre un nom (ID)
@@ -209,7 +209,7 @@ Vous aurez cette fenêtre apparaître :
 
 Une cela fait vous verrez cette fenêtre apparaitre :
 
-![Secret_id](../../../images/secret_id.jpg)
+![Secret_id](../../../../images/secret_id.jpg)
 
 **NOTEZ CES INFORMATIONS QUELQUES PART CAR VOUS EN AUREZ BESOIN ET CES INFORMATIONS NE PEUVENT PAS ETRE RELUE PLUSIEURS FOIS**
 
