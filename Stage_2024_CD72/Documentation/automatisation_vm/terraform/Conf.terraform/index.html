@@ -9,7 +9,7 @@
 <link href="../../../../Mission/mission1/" rel="next"/>
 <link href="../../../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.17" name="generator"/>
-<title>Pourquoi créer des templates - Portfolio</title>
+<title>Conf Terraform - Portfolio</title>
 <link href="../../../../../assets/stylesheets/main.bcfcd587.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#pourquoi-creer-des-templates">
+<a class="md-skip" href="#conf-terraform">
           Skip to content
         </a>
 </div>
@@ -46,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Pourquoi créer des templates
+              Conf Terraform
             
           </span>
 </div>
@@ -634,13 +634,13 @@
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    Pourquoi créer des templates
+    Conf Terraform
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Pourquoi créer des templates
+    Conf Terraform
   </span>
 </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
@@ -775,7 +775,7 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="pourquoi-creer-des-templates">Pourquoi créer des templates</h1>
+<h1 id="conf-terraform">Conf Terraform</h1>
 <p>Il vous faut crée des templates dans prmox car l'outil cloud-init est compatible qu'en faisant des clones c'est pour cela qu'il faudra créer des templates</p>
 <h2 id="installer-images-cloud">Installer images cloud</h2>
 <p>Ceci ce fait avec quelques lignes de commandes : </p>
@@ -1117,6 +1117,22 @@ resource "proxmox_vm_qemu" "vm-multi" {
 }
 
 </code></pre>
+<h2 id="lancement-terraform">Lancement Terraform</h2>
+<p>Pour pouvoir lancer terraform, il faudra effectuer <strong>3 commandes</strong></p>
+<p>Tout d'abord, il faudra ce rendre à la racine du projet terraform</p>
+<p>Ensuite, il faudra faire en premier lieu cette commande : </p>
+<pre><code class="language-bash">
+sudo terraform init -upgrade 
+
+</code></pre>
+<p>Cette commande va vous peremettre d'initier les plugins </p>
+<p>Une fois cette commande effectuée, faites ceci : </p>
+<pre><code class="language-bash">
+sudo terraform plan 
+
+</code></pre>
+<p>Cette commande va vous faire un récapitulatif des paramètres de vos vm</p>
+<p>Enfin, il vous faudra appliquer ceci </p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
