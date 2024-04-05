@@ -1,4 +1,4 @@
-# Pourquoi créer des templates
+# Conf Terraform
 
 Il vous faut crée des templates dans prmox car l'outil cloud-init est compatible qu'en faisant des clones c'est pour cela qu'il faudra créer des templates
 
@@ -457,3 +457,32 @@ resource "proxmox_vm_qemu" "vm-multi" {
 }
 
 ~~~
+
+## Lancement Terraform 
+
+Pour pouvoir lancer terraform, il faudra effectuer **3 commandes**
+
+Tout d'abord, il faudra ce rendre à la racine du projet terraform
+
+
+Ensuite, il faudra faire en premier lieu cette commande : 
+
+~~~bash 
+
+sudo terraform init -upgrade 
+
+~~~
+
+Cette commande va vous peremettre d'initier les plugins 
+
+Une fois cette commande effectuée, faites ceci : 
+
+~~~bash 
+
+sudo terraform plan 
+
+~~~
+
+Cette commande va vous faire un récapitulatif des paramètres de vos vm
+
+Enfin, il vous faudra appliquer ceci 
