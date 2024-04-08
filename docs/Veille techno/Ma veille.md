@@ -5,11 +5,11 @@ J'effectue ma veille à chaque fin de semaine.
 
 ## Quel outil pour effectuer ma veille 
 
-J'utilise un flux RSS avec l'aide de google. J'ai prédéfini les thèmes des article et chaque matin, je reçois des mails pour me prévenir des articles qui sort chaques jours.
+J'utilise un flux RSS avec l'aide de google. J'ai prédéfini les thèmes des article et à chaque fin de semaine, je reçois des mails pour me prévenir des articles qui sort chaque semaine.
 
 ## Thème de ma veille 
 
-J'ai décider de travaille sur 3 thèmes : 
+J'ai décider de travaille sur 1 thème: 
 
 - Le Cloud 
 - Les I.A
