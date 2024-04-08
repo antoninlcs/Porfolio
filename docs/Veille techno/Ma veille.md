@@ -11,8 +11,6 @@ J'utilise un flux RSS avec l'aide de google. J'ai prédéfini les thèmes des ar
 
 J'ai décider de travaille sur 1 thème: 
 
-- Le Cloud 
 - Les I.A
-- VPN 
 
 **Pour accéder à ma veille technologique [Cliquez ici](https://www.pearltrees.com/antoninlcs)**
