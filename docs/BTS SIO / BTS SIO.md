@@ -1,8 +1,6 @@
 ## Présentation du BTS SIO 
 
 
-iez hlidhlihjli sjli
-
 **BTS SIO ( Service Informatique aux organisation ).** C'est une formation qui se déroule sur **2 ans.**
 
 Dans cette formation, on étudie trois grands axes qui sont :
