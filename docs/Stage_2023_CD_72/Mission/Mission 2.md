@@ -2,11 +2,7 @@
 
 ## Contexte 
 
-J'était en stage au sein du service informatique du Conseil départemental du département de la Sarthe.
-
-## L'objectif 
-
-La documentation est aussi important que la partie technique donc pour le département il était important de leur laisser une trace pour qu'il l'utilise pour leur futur projet.
+La documentation était un besoin essentiel pour le département car c'était une nouvelle technologie  pour moi ainsi que pour eux donc il fallait que je fasse une documentation qui puisse l'utilisé pour leur pojet futur.
 
 ## La réalisation 
 
