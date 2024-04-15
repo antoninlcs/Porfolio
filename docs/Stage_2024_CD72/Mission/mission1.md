@@ -2,7 +2,7 @@
 
 ## Le contexte 
 
-Le besoin initial du département était de pouvoir réalisé des environnements de test identique à l'environnement de production. Il voulait aussi automatisé leur déploiement de machines virtuelles avec tout qui est déja installé d'où le besoin d'utilisé ansible qui va permettre d'installé les services nécessaires à l'ultiler de la VM
+Le besoin initial du département était de pouvoir réalisé des environnements de test identique à l'environnement de production. Il voulait aussi automatisé leur déploiement de machines virtuelles avec tout qui est déja installé d'où le besoin d'utilisé ansible qui va permettre d'installé les services nécessaires à l'ultiliter de la VM
 
 
 ## Objectif 
