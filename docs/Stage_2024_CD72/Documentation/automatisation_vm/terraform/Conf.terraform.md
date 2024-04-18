@@ -186,7 +186,7 @@ Enfin vous pourrez installer **Terraform**
 
 ~~~
 
-# Création de l'API JETON PROXMOX
+## Création de l'API JETON PROXMOX
 
 Tout d'abord, allez sur votre proxmox : **http://ip_de_votre_machine:8006**
 
@@ -214,7 +214,7 @@ Une cela fait vous verrez cette fenêtre apparaitre :
 **NOTEZ CES INFORMATIONS QUELQUES PART CAR VOUS EN AUREZ BESOIN ET CES INFORMATIONS NE PEUVENT PAS ETRE RELUE PLUSIEURS FOIS**
 
 
-# Création des fichier terraform 
+## Création des fichier terraform 
 
 Tout d'abord créer un fichier automatisation dans lequel vous mettrez un dossier ansible et terraform.
 Concentrons-nous sur le dossier terraform vous devrez créer 3 dossiers :
@@ -321,7 +321,7 @@ Les modules sert a créer des main.tf et variable.tf pour chaque sorte de vm ( e
 Ensuite il y a le main.tf qu'on a vu ci-dessus qui lui va reprendre le main.tf du modules mais dans lequel on va pouvoir modifier des informations sans toucher au main.tf du module
 
 
-### Création de variables.tf 
+## Création de variables.tf 
 
 Dans ce fichier vous allez renseigner toutes les variables necessaire a votre configuration de votre vm 
 
@@ -411,7 +411,7 @@ Votre Clef pub
 Pour la variable Ip il y a que 3 octets car il y a le **count.index** qui va lui attribué le dernier selon la valeurs qu'on a renseigné après le +. Cela est utile quand vous allez créer plusieurs vm 
 
 
-### Le fichier main.tf 
+## Le fichier main.tf 
 
 Ce fichier va vous permettre de configurer les bases de votre vm 
 
