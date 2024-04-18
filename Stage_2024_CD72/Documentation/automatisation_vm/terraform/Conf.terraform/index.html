@@ -639,6 +639,55 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creation-du-projet-terraform">
+<span class="md-ellipsis">
+      Création du projet terraform
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creation-de-lapi-jeton-proxmox">
+<span class="md-ellipsis">
+      Création de l'API JETON PROXMOX
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creation-des-fichier-terraform">
+<span class="md-ellipsis">
+      Création des fichier terraform
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#le-dossier-module">
+<span class="md-ellipsis">
+      Le dossier module
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creation-de-variablestf">
+<span class="md-ellipsis">
+      Création de variables.tf
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#le-fichier-maintf">
+<span class="md-ellipsis">
+      Le fichier main.tf
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lancement-terraform">
+<span class="md-ellipsis">
+      Lancement Terraform
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -744,6 +793,55 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creation-du-projet-terraform">
+<span class="md-ellipsis">
+      Création du projet terraform
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creation-de-lapi-jeton-proxmox">
+<span class="md-ellipsis">
+      Création de l'API JETON PROXMOX
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creation-des-fichier-terraform">
+<span class="md-ellipsis">
+      Création des fichier terraform
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#le-dossier-module">
+<span class="md-ellipsis">
+      Le dossier module
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creation-de-variablestf">
+<span class="md-ellipsis">
+      Création de variables.tf
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#le-fichier-maintf">
+<span class="md-ellipsis">
+      Le fichier main.tf
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lancement-terraform">
+<span class="md-ellipsis">
+      Lancement Terraform
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </div>
@@ -833,11 +931,11 @@ qm set 9000 --boot c --bootdisk virtio0
  qm template 9000
 
 </code></pre>
-<h1 id="attention">Attention</h1>
+<h3 id="attention">Attention</h3>
 <ul>
 <li>N'oubliez pas si vous avez plusieurs template mettre un ID différent  </li>
 </ul>
-<h1 id="creation-du-projet-terraform">Création du projet terraform</h1>
+<h2 id="creation-du-projet-terraform">Création du projet terraform</h2>
 <p>Tout d'abord, il faudra installer terraform sur votre machine </p>
 <p>Il y aura quelques a effectuer tout d'abord assurez-vous que votre système est à jour et que vous avez installé les packages <strong>gnupg</strong>, <strong>software-properties-commonet</strong> installés <strong>.curl</strong>. Vous utiliserez ces packages pour vérifier la signature GPG de HashiCorp et installer le référentiel de packages Debian de HashiCorp :</p>
 <pre><code class="language-bash">
