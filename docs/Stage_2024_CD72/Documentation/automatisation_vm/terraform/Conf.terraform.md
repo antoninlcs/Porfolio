@@ -131,11 +131,11 @@ Pour finir il vous suffira de la convertir en template
 ~~~
 
 
-# Attention 
+### Attention 
 
 - N'oubliez pas si vous avez plusieurs template mettre un ID différent  
   
-# Création du projet terraform 
+## Création du projet terraform 
 
 Tout d'abord, il faudra installer terraform sur votre machine 
 
