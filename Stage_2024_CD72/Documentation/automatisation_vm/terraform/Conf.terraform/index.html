@@ -8,9 +8,9 @@
 <link href="../../ansible/conf_ansible/" rel="prev"/>
 <link href="../../../../Mission/mission1/" rel="next"/>
 <link href="../../../../../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.5.3, mkdocs-material-9.5.17" name="generator"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.5.18" name="generator"/>
 <title>Conf Terraform - Portfolio</title>
-<link href="../../../../../assets/stylesheets/main.bcfcd587.min.css" rel="stylesheet"/>
+<link href="../../../../../assets/stylesheets/main.66ac8b77.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
@@ -872,7 +872,7 @@ sudo apt-get update
  sudo  apt-get  install terraform
 
 </code></pre>
-<h1 id="creation-de-lapi-jeton-proxmox">Création de l'API JETON PROXMOX</h1>
+<h2 id="creation-de-lapi-jeton-proxmox">Création de l'API JETON PROXMOX</h2>
 <p>Tout d'abord, allez sur votre proxmox : <strong>http://ip_de_votre_machine:8006</strong></p>
 <p>Ensuite, allez sur l'onglet <strong>API Tokens</strong></p>
 <p><img alt="api_token" src="../../../../../images/API-Token.jpg"/></p>
@@ -889,7 +889,7 @@ sudo apt-get update
 <p>Une cela fait vous verrez cette fenêtre apparaitre :</p>
 <p><img alt="Secret_id" src="../../../../../images/secret_id.jpg"/></p>
 <p><strong>NOTEZ CES INFORMATIONS QUELQUES PART CAR VOUS EN AUREZ BESOIN ET CES INFORMATIONS NE PEUVENT PAS ETRE RELUE PLUSIEURS FOIS</strong></p>
-<h1 id="creation-des-fichier-terraform">Création des fichier terraform</h1>
+<h2 id="creation-des-fichier-terraform">Création des fichier terraform</h2>
 <p>Tout d'abord créer un fichier automatisation dans lequel vous mettrez un dossier ansible et terraform.
 Concentrons-nous sur le dossier terraform vous devrez créer 3 dossiers :</p>
 <ul>
@@ -969,7 +969,7 @@ variable "proxmox_api_token_secret" {
 <h2 id="le-dossier-module">Le dossier module</h2>
 <p>Les modules sert a créer des main.tf et variable.tf pour chaque sorte de vm ( ex: un module pour créer des serveurs et un autre pour créer des postes client)</p>
 <p>Ensuite il y a le main.tf qu'on a vu ci-dessus qui lui va reprendre le main.tf du modules mais dans lequel on va pouvoir modifier des informations sans toucher au main.tf du module</p>
-<h3 id="creation-de-variablestf">Création de variables.tf</h3>
+<h2 id="creation-de-variablestf">Création de variables.tf</h2>
 <p>Dans ce fichier vous allez renseigner toutes les variables necessaire a votre configuration de votre vm </p>
 <p>Voici un exemple : </p>
 <pre><code class="language-bash">
@@ -1051,7 +1051,7 @@ Votre Clef pub
 </code></pre>
 <h4 id="notes_1">Notes</h4>
 <p>Pour la variable Ip il y a que 3 octets car il y a le <strong>count.index</strong> qui va lui attribué le dernier selon la valeurs qu'on a renseigné après le +. Cela est utile quand vous allez créer plusieurs vm </p>
-<h3 id="le-fichier-maintf">Le fichier main.tf</h3>
+<h2 id="le-fichier-maintf">Le fichier main.tf</h2>
 <p>Ce fichier va vous permettre de configurer les bases de votre vm </p>
 <p>Voici un exemple : </p>
 <pre><code class="language-bash">
@@ -1133,7 +1133,7 @@ sudo terraform plan
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "../../../../..", "features": [], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../../../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+<script src="../../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
 <script src="../../../../../javascripts/config.js"></script>
