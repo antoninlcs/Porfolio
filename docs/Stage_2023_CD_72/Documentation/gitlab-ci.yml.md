@@ -16,6 +16,7 @@ vim .gitlab-ci.yml
 
 Ensuite il faudra mettre ceci ( Pour l'instant c'est en période de test ) : 
 
+
 ~~~bash
 
 

@@ -1,28 +1,28 @@
-#  Création d'un dépôt GITHUB pour héberger mon Portfolio
+# Création d'un dépôt GITHUB pour héberger mon Portfolio
 
-## Comment crée un dépot GITHUB 
+## Comment créer un dépôt GITHUB :
 
-Tout d'abord il faudra vous rendre sur ce site : [GITHUB](https://github.com/)
+Tout d'abord, il faudra vous rendre sur ce site : [GITHUB](https://github.com/)
 
-Il faudra vous connectez avec vos codes fourni aux préalables :
+Il faudra vous connecter avec vos codes fournis au préalable :
 
 ![Image connexion GITHUB](../../images/conexiongit.jpg)
 
-Une fois connecté il faudra **Cliquer sur "new" en haut à droite de la page**
+Une fois connecté, il faudra **Cliquer sur "new" en haut à droite de la page** :
 
 ![new dépôt](../../images/new.jpg)
 
-Ensuite renseigner les informations suivante :
+Ensuite, renseignez les informations suivantes :
 
 ![dépôt](../../images/dépôt.jpg)
 
-**<span style="color:red">Voilà votre dépôt GITHUB créer !!</span>**
+**<span style="color:red">Voilà votre dépôt GITHUB créé !!</span>**
 
-## Activer la page web 
+## Activer la page web :
 
-Aller dans l'onglet **"settings"** 
+Allez dans l'onglet **"settings"** 
 
-Puis aller dans l'onglet pages :
+Puis allez dans l'onglet **pages** :
 
 ![Page](../../images/page.jpg)
 
@@ -30,9 +30,9 @@ Vous devriez arriver sur cet onglet :
 
 ![Page_2.0](../../images/page_2.0.jpg)
 
-## Création fichier "ci.yml"
+## Création du fichier "ci.yml"
 
-<span style="color:red">Ce fichier est un script qui permet de construire et de déployer son site automatiquement</span>
+**<span style="color:red">Ce fichier est un script qui permet de construire et de déployer son site automatiquement.</span>**
 
 Pour ce faire :
 
@@ -42,9 +42,9 @@ mkdir workflows
 vim ci.yml
 ~~~
 
-Ensuite il faudra inscrire ceci dans le fichier :
+Ensuite, il faudra inscrire ceci dans le fichier :
 
-~~~bash
+~~~yaml
 name: Deploy to GitHub Pages
 
 on:
@@ -80,15 +80,15 @@ jobs:
 ~~~
 # **<span style="color:red"> Attention </span>**
 
-**Il faudra penser à mettre le deploy dans la bonne branche**
+**Il faudra penser à mettre le déploiement dans la bonne branche.**
 
-Pour ce faire aller dans **"settings"**
+Pour ce faire, allez dans **"settings"**
 
-Puis aller sur l'onget **"pages"** :
+Puis allez sur l'onglet **"pages"** :
 
 ![Onglet page](../../images/page.jpg)
 
-Ensuite sélectionner github action
+Ensuite, sélectionnez github action :
 
 ![page](../../images/page_2.0.jpg)
 
@@ -98,21 +98,20 @@ et vous allez mettre **"Deploy from a branch"** :
 
 # **<span style="color:red"> Attention </span>**
 
-**Il faudra penser à mettre les bons droits pour le workflows**
+**Il faudra penser à mettre les bons droits pour les workflows.**
 
-Pour ce faire aller dans **"settings"**
+Pour ce faire, allez dans **"settings"**
 
-Ensuite aller dans l'onglet **"actions"** :
+Ensuite, allez dans l'onglet **"actions"** :
 
 ![actions](../../images/actions.jpg)
 
-Ensuite il faudra descendre jusqu'à trouver ceci : 
+Ensuite, il faudra descendre jusqu'à trouver ceci : 
 
 ![Droit Workflows](../../images/droit.jpg)
 
-Cocher les mêmes choses que moi !
+Cochez les mêmes choses que moi !
 
-**Pensez à "save"**
+**N'oubliez pas de "save".**
 
-**<span style="color:red">Voilà dépôt prêt à être utiliser !!! </span>**
-
+**<span style="color:red">Voilà, le dépôt est prêt à être utilisé !!!</span>**

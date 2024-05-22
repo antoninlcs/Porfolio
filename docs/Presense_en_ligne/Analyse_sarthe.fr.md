@@ -1,7 +1,6 @@
-#  Analyse SEO 
+# Analyse SEO
 
 ![seo_sarthe](../images/sarthe_seo.jpg)
-
 
 ## Analyse SEO de sarthe.fr basée sur l'image fournie :
 
