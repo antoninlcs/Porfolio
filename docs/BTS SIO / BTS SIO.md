@@ -1,4 +1,4 @@
-```markdown
+
 ## Présentation du BTS SIO
 
 **BTS SIO (Service Informatique aux organisations)**. C'est une formation qui se déroule sur **2 ans**.
@@ -35,4 +35,3 @@ Cette option permet d’approfondir le système informatique. La conception et l
 Cette option permet d'approfondir le développement. La conception, le développement des applications.
 
 **Pour plus d'informations sur l'option SLAM [cliquez-ici](https://www.onisep.fr/ressources/univers-formation/Formations/Post-bac/bts-services-informatiques-aux-organisations-option-b-solutions-logicielles-et-applications-metiers)**
-```
