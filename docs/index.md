@@ -16,8 +16,6 @@
 
 * Mon tableau de synthèse de compétences dans **l'onglet epreuve E4**
 
-* Mes 2 présentations de situations pour l'épreuve E5 dans **l'onglet epreuve E5**
-
 * Mon stage de 2ème année dans **l'onglet Stage 2024 CD72** dans lequel il y a la rédaction des missions qui valident certaines compétences
 
 * Mon stage de 1ère année dans **l'onglet Stage 2023 CD72** dans lequel il y a la rédaction des missions qui valident certaines compétences
